@@ -1,0 +1,11 @@
+{
+  "restaurant": {
+    "name": "Restaurant",
+    "phone": "",
+    "whatsapp": "",
+    "location": "",
+    "logo": "",
+    "backgroundVideo": ""
+  },
+  "products": []
+}
