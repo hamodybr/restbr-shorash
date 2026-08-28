@@ -3,8 +3,8 @@
 // Supabase service_role key in this repository or in any browser file.
 window.RESTBR_CONFIG = Object.freeze({
   restaurantName: 'Restaurant',
-  supabaseUrl: 'https://YOUR_PROJECT_REF.supabase.co',
-  supabasePublishableKey: 'YOUR_SUPABASE_PUBLISHABLE_KEY',
+  supabaseUrl: 'https://lwwiceogsuxiuorgvwod.supabase.co',
+  supabasePublishableKey: 'sb_publishable_DYylz257rs1v91Z3TW5kUw__qzi1wKv',
   enableUserManagement: false,
   enableRestaurantReset: false
 });
