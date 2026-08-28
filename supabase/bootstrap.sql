@@ -10,9 +10,9 @@ grant usage on schema private to authenticated;
 
 create table if not exists public.restaurant_settings (
   id uuid primary key default gen_random_uuid(),
-  restaurant_name_ar text default 'المطعم',
-  restaurant_name_ku text default 'Restaurant',
-  restaurant_name_en text default 'Restaurant',
+  restaurant_name_ar text default 'شورش',
+  restaurant_name_ku text default 'شورەش',
+  restaurant_name_en text default 'Shorash',
   phone text,
   whatsapp text,
   address_ar text,
