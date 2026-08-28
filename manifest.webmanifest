@@ -1,0 +1,25 @@
+{
+  "name": "Restaurant Menu",
+  "short_name": "Restaurant",
+  "description": "Restaurant menu and ordering experience",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080604",
+  "theme_color": "#080604",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/restaurant-placeholder.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/restaurant-placeholder.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
