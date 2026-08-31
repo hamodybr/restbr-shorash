@@ -28,4 +28,11 @@
     'restbrAdminAccountPasswordScript',
     'js/admin-account-password.js?v=2.0'
   );
+
+  // Harden the recovery redirect so it always opens the reset-password UI,
+  // even if Supabase establishes the recovery session before the plugin loads.
+  loadScript(
+    'restbrAdminPasswordRecoveryFixScript',
+    'js/admin-password-recovery-fix.js?v=1.0'
+  );
 })();
