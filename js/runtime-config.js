@@ -158,7 +158,6 @@ window.RESTBR_CONFIG = Object.freeze({
       return false;
     }
 
-    // Avoid duplicate checks for the same session while auth events settle.
     if (verifyingUserId === userId) return false;
     verifyingUserId = userId;
 
@@ -249,8 +248,6 @@ window.RESTBR_CONFIG = Object.freeze({
     return true;
   }
 
-  // Existing admin code can temporarily remove auth-locked while Supabase is
-  // settling. Until this independent authorization check succeeds, put it back.
   const classObserver = new MutationObserver(() => {
     if (!verifiedAdmin && !body.classList.contains('auth-locked')) {
       body.classList.add('auth-locked');
@@ -267,4 +264,15 @@ window.RESTBR_CONFIG = Object.freeze({
       clearInterval(timer);
     }
   }, 25);
+})();
+
+// Public/menu URL hardening. The guard allows only explicit safe schemes for
+// restaurant-configured action and social links.
+(() => {
+  if (document.getElementById('restbrUrlSafetyScript')) return;
+  const script = document.createElement('script');
+  script.id = 'restbrUrlSafetyScript';
+  script.src = 'js/url-safety.js?v=1.0';
+  script.defer = true;
+  document.head.appendChild(script);
 })();
