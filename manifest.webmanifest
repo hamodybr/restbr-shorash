@@ -1,7 +1,7 @@
 {
-  "name": "Restaurant Menu",
-  "short_name": "Restaurant",
-  "description": "Restaurant menu and ordering experience",
+  "name": "SHORASH Restaurant Menu",
+  "short_name": "SHORASH",
+  "description": "SHORASH Restaurant menu and ordering experience",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
