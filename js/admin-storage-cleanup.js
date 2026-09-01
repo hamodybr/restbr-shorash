@@ -11,6 +11,8 @@
   const safeProductId = value =>
     String(value ?? '').replace(/[^a-zA-Z0-9_-]/g, '_');
 
+  const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
   function projectOrigin() {
     try {
       const raw = String(window.RESTBR_CONFIG?.supabaseUrl || '').trim();
@@ -88,6 +90,15 @@
     }
   }
 
+  async function readProductWithRetry(productId) {
+    for (let attempt = 0; attempt < 3; attempt += 1) {
+      const row = await readProduct(productId);
+      if (row !== undefined) return row;
+      if (attempt < 2) await delay(250);
+    }
+    return undefined;
+  }
+
   function productImageUrl(product) {
     return String(product?.image_url ?? product?.image ?? '').trim();
   }
@@ -102,6 +113,55 @@
       ) || null;
     } catch (_) {
       return null;
+    }
+  }
+
+  async function reconcileSavedProduct(productId, oldUrl, reasonPrefix) {
+    const row = await readProductWithRetry(productId);
+    if (row === undefined) return false;
+
+    const currentUrl = productImageUrl(row);
+    const pendingUrl = pendingUploads.get(String(productId)) || '';
+
+    if (row && oldUrl && currentUrl !== oldUrl) {
+      await removeOwnedProductImage(
+        oldUrl,
+        productId,
+        `${reasonPrefix}: superseded product image`
+      );
+    }
+
+    if (pendingUrl && (!row || currentUrl !== pendingUrl)) {
+      await removeOwnedProductImage(
+        pendingUrl,
+        productId,
+        `${reasonPrefix}: orphaned product upload`
+      );
+    }
+
+    pendingUploads.delete(String(productId));
+    return true;
+  }
+
+  async function reconcileCreatedUploads(beforeKeys, reasonPrefix) {
+    const createdKeys = [...pendingUploads.keys()]
+      .filter(key => !beforeKeys.has(key));
+
+    for (const key of createdKeys) {
+      const pendingUrl = pendingUploads.get(key) || '';
+      const row = await readProductWithRetry(key);
+      if (row === undefined) continue;
+
+      const currentUrl = productImageUrl(row);
+      if (!row || currentUrl !== pendingUrl) {
+        await removeOwnedProductImage(
+          pendingUrl,
+          key,
+          `${reasonPrefix}: orphaned new-product upload`
+        );
+      }
+
+      pendingUploads.delete(key);
     }
   }
 
@@ -136,32 +196,14 @@
       const before = currentAdminProduct(productId);
       const oldUrl = productImageUrl(before);
 
-      const result = await original.call(this, productId, ...args);
-
-      const row = await readProduct(productId);
-      if (row === undefined) return result;
-
-      const currentUrl = productImageUrl(row);
-      const pendingUrl = pendingUploads.get(String(productId)) || '';
-
-      if (row && oldUrl && currentUrl !== oldUrl) {
-        await removeOwnedProductImage(
-          oldUrl,
-          productId,
-          'replaced product image'
-        );
+      try {
+        const result = await original.call(this, productId, ...args);
+        await reconcileSavedProduct(productId, oldUrl, 'saved product');
+        return result;
+      } catch (error) {
+        await reconcileSavedProduct(productId, oldUrl, 'failed product save');
+        throw error;
       }
-
-      if (pendingUrl && (!row || currentUrl !== pendingUrl)) {
-        await removeOwnedProductImage(
-          pendingUrl,
-          productId,
-          'orphaned failed product upload'
-        );
-      }
-
-      pendingUploads.delete(String(productId));
-      return result;
     };
 
     wrapped.__restbrStorageWrapped = true;
@@ -175,29 +217,15 @@
 
     const wrapped = async function(...args) {
       const beforeKeys = new Set(pendingUploads.keys());
-      const result = await original.apply(this, args);
 
-      const createdKeys = [...pendingUploads.keys()]
-        .filter(key => !beforeKeys.has(key));
-
-      for (const key of createdKeys) {
-        const pendingUrl = pendingUploads.get(key) || '';
-        const row = await readProduct(key);
-        if (row === undefined) continue;
-
-        const currentUrl = productImageUrl(row);
-        if (!row || currentUrl !== pendingUrl) {
-          await removeOwnedProductImage(
-            pendingUrl,
-            key,
-            'orphaned failed new-product upload'
-          );
-        }
-
-        pendingUploads.delete(key);
+      try {
+        const result = await original.apply(this, args);
+        await reconcileCreatedUploads(beforeKeys, 'created product');
+        return result;
+      } catch (error) {
+        await reconcileCreatedUploads(beforeKeys, 'failed product create');
+        throw error;
       }
-
-      return result;
     };
 
     wrapped.__restbrStorageWrapped = true;
@@ -215,7 +243,7 @@
 
       const result = await original.call(this, productId, ...args);
 
-      const row = await readProduct(productId);
+      const row = await readProductWithRetry(productId);
       if (row === undefined) return result;
 
       if (!row && oldUrl) {
