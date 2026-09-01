@@ -1,0 +1,72 @@
+name: Shorash branding once
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/shorash-branding-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  brand:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Apply Shorash branding
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              Path('js/runtime-config.js'): [
+                  ("restaurantName: 'Restaurant'", "restaurantName: 'SHORASH'"),
+              ],
+              Path('manifest.webmanifest'): [
+                  ('"name": "Restaurant Menu"', '"name": "SHORASH Restaurant Menu"'),
+                  ('"short_name": "Restaurant"', '"short_name": "SHORASH"'),
+                  ('"description": "Restaurant menu and ordering experience"', '"description": "SHORASH Restaurant menu and ordering experience"'),
+              ],
+              Path('index.html'): [
+                  ('<meta name="apple-mobile-web-app-title" content="Restaurant Menu">', '<meta name="apple-mobile-web-app-title" content="SHORASH Menu">'),
+                  ('<title>Restaurant Menu</title>', '<title>SHORASH Menu</title>'),
+                  ('<link rel="manifest" href="manifest.webmanifest">', '<link rel="manifest" href="manifest.webmanifest?v=1.1">'),
+              ],
+              Path('admin.html'): [
+                  ('<title>Restaurant — Admin Dashboard</title>', '<title>SHORASH — Admin Dashboard</title>'),
+              ],
+          }
+
+          for path, pairs in replacements.items():
+              text = path.read_text(encoding='utf-8')
+              for old, new in pairs:
+                  count = text.count(old)
+                  if count != 1:
+                      raise SystemExit(f'{path}: expected exactly one occurrence of {old!r}, found {count}')
+                  text = text.replace(old, new, 1)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Verify branding patch
+        run: |
+          grep -q "restaurantName: 'SHORASH'" js/runtime-config.js
+          grep -q '"name": "SHORASH Restaurant Menu"' manifest.webmanifest
+          grep -q '"short_name": "SHORASH"' manifest.webmanifest
+          grep -q '<title>SHORASH Menu</title>' index.html
+          grep -q '<title>SHORASH — Admin Dashboard</title>' admin.html
+          grep -q 'manifest.webmanifest?v=1.1' index.html
+          git diff --check
+
+      - name: Commit branding
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/runtime-config.js manifest.webmanifest index.html admin.html
+          git commit -m "brand: apply Shorash identity"
+          git push origin HEAD:main
