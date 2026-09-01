@@ -42,7 +42,11 @@
 
   async function waitForClient() {
     for (let i = 0; i < 240; i += 1) {
-      if (window.supabaseClient?.functions?.invoke) return window.supabaseClient;
+      try {
+        if (typeof supabaseClient !== 'undefined' && supabaseClient?.functions?.invoke) {
+          return supabaseClient;
+        }
+      } catch (_) {}
       await sleep(25);
     }
     throw new Error('Supabase client is not ready');
