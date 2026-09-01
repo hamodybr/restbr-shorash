@@ -284,7 +284,7 @@ window.RESTBR_CONFIG = Object.freeze({
   if (document.getElementById('restbrAdminStorageCleanupScript')) return;
   const script = document.createElement('script');
   script.id = 'restbrAdminStorageCleanupScript';
-  script.src = 'js/admin-storage-cleanup.js?v=1.0';
+  script.src = 'js/admin-storage-cleanup.js?v=1.1';
   script.defer = true;
   document.head.appendChild(script);
 })();
