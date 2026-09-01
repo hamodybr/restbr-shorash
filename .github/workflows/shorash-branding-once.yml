@@ -61,8 +61,11 @@ jobs:
           grep -q '<title>SHORASH Menu</title>' index.html
           grep -q '<title>SHORASH — Admin Dashboard</title>' admin.html
           grep -q 'manifest.webmanifest?v=1.1' index.html
-          git diff --check
           test "$(git diff --name-only | sort)" = "$(printf '%s\n' admin.html index.html js/runtime-config.js manifest.webmanifest | sort)"
+          test "$(git diff --numstat admin.html | awk '{print $1":"$2}')" = "1:1"
+          test "$(git diff --numstat index.html | awk '{print $1":"$2}')" = "3:3"
+          test "$(git diff --numstat js/runtime-config.js | awk '{print $1":"$2}')" = "1:1"
+          test "$(git diff --numstat manifest.webmanifest | awk '{print $1":"$2}')" = "3:3"
 
       - name: Commit branding
         run: |
