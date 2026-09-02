@@ -14,6 +14,8 @@
           min-width .28s cubic-bezier(.2,.8,.2,1),
           max-width .28s cubic-bezier(.2,.8,.2,1),
           padding .28s cubic-bezier(.2,.8,.2,1),
+          left .3s cubic-bezier(.2,.8,.2,1),
+          transform .3s cubic-bezier(.2,.8,.2,1),
           background .24s ease,
           border-color .24s ease,
           box-shadow .24s ease !important;
@@ -60,6 +62,63 @@
         font-size:23px !important;
         line-height:1 !important;
         transform-origin:center;
+      }
+
+      /* Keep the footer phone number clear without changing the cart's normal position. */
+      #smCartFab.sm-cart-fab-footer{
+        left:max(14px,env(safe-area-inset-left)) !important;
+        right:auto !important;
+        transform:none !important;
+        width:54px !important;
+        min-width:54px !important;
+        max-width:54px !important;
+        height:54px !important;
+        min-height:54px !important;
+        padding:0 !important;
+        border-radius:50% !important;
+        gap:0 !important;
+      }
+
+      #smCartFab.sm-cart-fab-footer #smCartFabText{
+        display:none !important;
+      }
+
+      #smRefreshBtn{
+        position:fixed;
+        z-index:46;
+        right:14px;
+        bottom:calc(16px + env(safe-area-inset-bottom));
+        width:46px;
+        height:46px;
+        display:grid;
+        place-items:center;
+        padding:0;
+        border:1px solid rgba(224,173,85,.68);
+        border-radius:50%;
+        background:rgba(10,8,6,.94);
+        color:#e5b55f;
+        box-shadow:0 10px 28px rgba(0,0,0,.42);
+        font:900 24px/1 system-ui,-apple-system,sans-serif;
+        cursor:pointer;
+        -webkit-tap-highlight-color:transparent;
+      }
+
+      #smRefreshBtn:active{
+        transform:scale(.92);
+      }
+
+      #smRefreshBtn.is-refreshing{
+        animation:smRefreshSpin .62s linear infinite;
+      }
+
+      @keyframes smRefreshSpin{
+        to{transform:rotate(360deg)}
+      }
+
+      @media (min-width:769px){
+        #smCartFab.sm-cart-fab-footer{
+          left:calc(50% - 206px) !important;
+        }
       }
 
       .sm-cart-fly{
@@ -147,6 +206,42 @@
         easing:"ease-out"
       });
     }
+  }
+
+  function installFooterAvoidance(){
+    const fab = document.getElementById("smCartFab");
+    const footer = document.querySelector(".sm-footer");
+    if(!fab || !footer) return;
+
+    const setAside = visible => {
+      fab.classList.toggle("sm-cart-fab-footer",visible);
+    };
+
+    if("IntersectionObserver" in window){
+      const observer = new IntersectionObserver(entries=>{
+        setAside(entries.some(entry=>entry.isIntersecting));
+      },{threshold:.05});
+      observer.observe(footer);
+      return;
+    }
+
+    const update = () => {
+      const rect = footer.getBoundingClientRect();
+      setAside(rect.top < window.innerHeight && rect.bottom > 0);
+    };
+    window.addEventListener("scroll",update,{passive:true});
+    update();
+  }
+
+  function installRefreshButton(){
+    const button = document.getElementById("smRefreshBtn");
+    if(!button || button.dataset.bound === "1") return;
+    button.dataset.bound = "1";
+    button.addEventListener("click",()=>{
+      button.classList.add("is-refreshing");
+      button.disabled = true;
+      window.setTimeout(()=>window.location.reload(),120);
+    });
   }
 
   function burstAt(x,y){
@@ -237,6 +332,8 @@
   }
 
   installStyles();
+  installFooterAvoidance();
+  installRefreshButton();
 
   // Capture the exact source before the original cart handler updates/closes its UI.
   document.addEventListener("click",event=>{
