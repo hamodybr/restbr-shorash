@@ -83,9 +83,20 @@
         display:none !important;
       }
 
+      #smTopBtn.sm-top-footer{
+        right:max(14px,env(safe-area-inset-right)) !important;
+        bottom:calc(var(--sm-ui-cart-bottom,16px) + env(safe-area-inset-bottom)) !important;
+        width:54px !important;
+        height:54px !important;
+      }
+
       @media (min-width:769px){
         #smCartFab.sm-cart-fab-footer{
           left:calc(50% - 206px) !important;
+        }
+
+        #smTopBtn.sm-top-footer{
+          right:calc(50% - 206px) !important;
         }
       }
 
@@ -183,6 +194,7 @@
 
     const setAside = visible => {
       fab.classList.toggle("sm-cart-fab-footer",visible);
+      document.getElementById("smTopBtn")?.classList.toggle("sm-top-footer",visible);
 
       const forced = {
         width:"54px",
