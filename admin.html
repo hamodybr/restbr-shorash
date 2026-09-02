@@ -2843,7 +2843,7 @@
                   <input
                     id="rs_logo_file"
                     type="file"
-                    accept="image/*"
+                    accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
                     onchange="previewRestaurantLogo(this)"
                   >
                 </label>
@@ -3615,8 +3615,9 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.112.4"></script>
 
 <!-- One per-restaurant public configuration; never contains service_role. -->
-<script src="js/runtime-config.js?v=1.2"></script>
-<script src="js/supabase-config.js?v=2.2"></script>
+<script id="restbrUrlSafetyScript" src="js/url-safety.js?v=1.2"></script>
+<script src="js/runtime-config.js?v=1.3"></script>
+<script src="js/supabase-config.js?v=2.3"></script>
 
 <!-- Touch-friendly Drag & Drop -->
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
@@ -3659,6 +3660,41 @@
       .replaceAll('"', '&quot;')
       .replaceAll("'", '&#039;');
 
+  }
+
+  function safeAdminId(value) {
+    const id=String(value ?? '').trim();
+    return /^[A-Za-z0-9][A-Za-z0-9_.:-]{0,199}$/.test(id) ? id : '';
+  }
+
+  function safeAdminConfiguredUrl(value) {
+    const raw=String(value ?? '').trim();
+    if(!raw)return '';
+    return typeof window.RESTBR_SAFE_CONFIGURED_URL==='function'
+      ? window.RESTBR_SAFE_CONFIGURED_URL(raw)
+      : '';
+  }
+
+  function safeAdminMediaUrl(value,fallback='') {
+    const raw=String(value ?? '').trim();
+    const safe=typeof window.RESTBR_SAFE_MEDIA_URL==='function'
+      ? window.RESTBR_SAFE_MEDIA_URL(raw)
+      : '';
+    if(safe)return safe;
+    if(!fallback)return '';
+    return typeof window.RESTBR_SAFE_MEDIA_URL==='function'
+      ? window.RESTBR_SAFE_MEDIA_URL(fallback)
+      : fallback;
+  }
+
+  function requireAdminUrl(value,label,kind='link') {
+    const raw=String(value ?? '').trim();
+    if(!raw)return '';
+    const safe=kind==='media'
+      ? safeAdminMediaUrl(raw)
+      : safeAdminConfiguredUrl(raw);
+    if(!safe)throw new Error(`${label}: الرابط غير آمن أو غير مدعوم.`);
+    return safe;
   }
 
 
@@ -4275,7 +4311,7 @@
   // ==========================================
   function jsonArray(value){if(Array.isArray(value))return JSON.parse(JSON.stringify(value));if(typeof value==='string'){try{const p=JSON.parse(value);return Array.isArray(p)?p:[]}catch(_){return []}}return []}
   function newDynamicId(prefix='item'){return globalThis.crypto?.randomUUID?prefix+'-'+crypto.randomUUID():prefix+'-'+Date.now()+'-'+Math.random().toString(36).slice(2,8)}
-  function normalizeDynamicItem(item,type){const x=item&&typeof item==='object'?item:{};if(type==='social')return{id:String(x.id||newDynamicId('social')),name:String(x.name??''),icon:String(x.icon??'🔗'),url:String(x.url??''),enabled:x.enabled!==false};return{id:String(x.id||newDynamicId(type)),icon:String(x.icon??'🔗'),label_ar:String(x.label_ar??''),label_ku:String(x.label_ku??''),label_en:String(x.label_en??''),url:String(x.url??''),enabled:x.enabled!==false}}
+  function normalizeDynamicItem(item,type){const x=item&&typeof item==='object'?item:{},id=safeAdminId(x.id)||newDynamicId(type==='social'?'social':type);if(type==='social')return{id,name:String(x.name??''),icon:String(x.icon??'🔗'),url:String(x.url??''),enabled:x.enabled!==false};return{id,icon:String(x.icon??'🔗'),label_ar:String(x.label_ar??''),label_ku:String(x.label_ku??''),label_en:String(x.label_en??''),url:String(x.url??''),enabled:x.enabled!==false}}
   function renderCustomManagers(){customSocialLinksDraft=jsonArray(adminRestaurantSettings.custom_social_links).map(x=>normalizeDynamicItem(x,'social'));customTopActionsDraft=jsonArray(adminRestaurantSettings.custom_top_actions).map(x=>normalizeDynamicItem(x,'top'));customFooterActionsDraft=jsonArray(adminRestaurantSettings.custom_footer_actions).map(x=>normalizeDynamicItem(x,'footer'));renderCustomSocialLinks();renderCustomActions('top');renderCustomActions('footer')}
   function renderCustomSocialLinks(){const h=document.getElementById('customSocialLinksList');if(!h)return;if(!customSocialLinksDraft.length){h.innerHTML='<div class="dynamic-empty">ماكو منصات إضافية حالياً.</div>';return}h.innerHTML=customSocialLinksDraft.map(i=>`<details class="dynamic-item"><summary><span class="dynamic-item-icon">${escapeAdminHtml(i.icon||'🔗')}</span><span class="dynamic-item-title"><strong>${escapeAdminHtml(i.name||'منصة جديدة')}</strong><small>${escapeAdminHtml(i.url||'بدون رابط')}</small></span><label class="mini-visibility" onclick="event.stopPropagation()"><span>إظهار</span><input type="checkbox" ${i.enabled!==false?'checked':''} onchange="updateCustomSocial('${escapeAdminHtml(i.id)}','enabled',this.checked)"><i></i></label></summary><div class="dynamic-item-body"><div class="dynamic-grid"><label class="dynamic-field"><span>الأيقونة / Emoji</span><input value="${escapeAdminHtml(i.icon)}" oninput="updateCustomSocial('${escapeAdminHtml(i.id)}','icon',this.value)" placeholder="▶️"></label><label class="dynamic-field"><span>اسم المنصة</span><input value="${escapeAdminHtml(i.name)}" oninput="updateCustomSocial('${escapeAdminHtml(i.id)}','name',this.value)" placeholder="YouTube"></label><label class="dynamic-field full"><span>الرابط</span><input type="url" value="${escapeAdminHtml(i.url)}" oninput="updateCustomSocial('${escapeAdminHtml(i.id)}','url',this.value)" placeholder="https://..." dir="ltr"></label></div><div class="dynamic-row-actions"><button type="button" onclick="moveCustomSocial('${escapeAdminHtml(i.id)}',-1)">↑ للأعلى</button><button type="button" onclick="moveCustomSocial('${escapeAdminHtml(i.id)}',1)">↓ للأسفل</button><button class="danger" type="button" onclick="removeCustomSocial('${escapeAdminHtml(i.id)}')">حذف</button></div></div></details>`).join('')}
   function addCustomSocial(){customSocialLinksDraft.push(normalizeDynamicItem({name:'منصة جديدة',icon:'🔗',url:'',enabled:true},'social'));renderCustomSocialLinks()}
@@ -4495,7 +4531,7 @@
 
     const preview=document.getElementById('rs_logo_preview');
     if(preview){
-      const logo=String(s.logo_url ?? '').trim();
+      const logo=safeAdminMediaUrl(s.logo_url);
 
       if(logo){
         preview.src=logo;
@@ -4531,7 +4567,15 @@
       return rsValue('rs_logo_url');
     }
 
-    if(!file.type.startsWith('image/')){
+    const allowedTypes={
+      'image/jpeg':'jpg',
+      'image/png':'png',
+      'image/webp':'webp',
+      'image/gif':'gif',
+      'image/avif':'avif'
+    };
+
+    if(!allowedTypes[file.type]){
       throw new Error('الملف المختار ليس صورة.');
     }
 
@@ -4539,12 +4583,7 @@
       throw new Error('حجم الشعار أكبر من 10MB.');
     }
 
-    const ext=({
-      'image/jpeg':'jpg',
-      'image/png':'png',
-      'image/webp':'webp',
-      'image/gif':'gif'
-    })[file.type] || 'jpg';
+    const ext=allowedTypes[file.type];
 
     const path=
       `settings/logo/${Date.now()}-${Math.random().toString(36).slice(2,8)}.${ext}`;
@@ -4588,7 +4627,25 @@
     btn.textContent='جاري الحفظ...';
 
     try{
-      const logoUrl=await uploadRestaurantLogo();
+      const logoUrl=requireAdminUrl(
+        await uploadRestaurantLogo(),
+        'رابط الشعار',
+        'media'
+      );
+
+      const locationUrl=requireAdminUrl(
+        rsValue('rs_location'),
+        'رابط الموقع'
+      );
+
+      const backgroundVideoUrl=requireAdminUrl(
+        rsValue('rs_background_video'),
+        'رابط فيديو الخلفية',
+        'media'
+      );
+
+      const socialUrl=(value,label)=>requireAdminUrl(value,label);
+      const customLink=(item,label)=>requireAdminUrl(item?.url,label);
 
       const whatsappNumber=
         normalizeWhatsappNumber(
@@ -4614,7 +4671,7 @@
 
         phone:rsValue('rs_phone'),
         whatsapp_number:whatsappNumber,
-        location:rsValue('rs_location'),
+        location:locationUrl,
 
         top_location_enabled:rsChecked('rs_top_location_enabled'),
         top_call_enabled:rsChecked('rs_top_call_enabled'),
@@ -4647,24 +4704,24 @@
         footer_call_enabled:rsChecked('rs_footer_call_enabled'),
         footer_whatsapp_enabled:rsChecked('rs_footer_whatsapp_enabled'),
 
-        instagram_url:rsValue('rs_instagram_url'),
-        facebook_url:rsValue('rs_facebook_url'),
-        tiktok_url:rsValue('rs_tiktok_url'),
-        snapchat_url:rsValue('rs_snapchat_url'),
+        instagram_url:socialUrl(rsValue('rs_instagram_url'),'رابط Instagram'),
+        facebook_url:socialUrl(rsValue('rs_facebook_url'),'رابط Facebook'),
+        tiktok_url:socialUrl(rsValue('rs_tiktok_url'),'رابط TikTok'),
+        snapchat_url:socialUrl(rsValue('rs_snapchat_url'),'رابط Snapchat'),
 
         instagram_enabled:rsChecked('rs_instagram_enabled'),
         facebook_enabled:rsChecked('rs_facebook_enabled'),
         tiktok_enabled:rsChecked('rs_tiktok_enabled'),
         snapchat_enabled:rsChecked('rs_snapchat_enabled'),
 
-        custom_social_links:customSocialLinksDraft.map(x=>({id:String(x.id||newDynamicId('social')),name:String(x.name||''),icon:String(x.icon||''),url:String(x.url||''),enabled:x.enabled!==false})),
-        custom_top_actions:customTopActionsDraft.map(x=>({id:String(x.id||newDynamicId('top')),icon:String(x.icon||''),label_ar:String(x.label_ar||''),label_ku:String(x.label_ku||''),label_en:String(x.label_en||''),url:String(x.url||''),enabled:x.enabled!==false})),
-        custom_footer_actions:customFooterActionsDraft.map(x=>({id:String(x.id||newDynamicId('footer')),icon:String(x.icon||''),label_ar:String(x.label_ar||''),label_ku:String(x.label_ku||''),label_en:String(x.label_en||''),url:String(x.url||''),enabled:x.enabled!==false})),
+        custom_social_links:customSocialLinksDraft.map(x=>({id:safeAdminId(x.id)||newDynamicId('social'),name:String(x.name||''),icon:String(x.icon||''),url:customLink(x,'رابط المنصة الإضافية'),enabled:x.enabled!==false})),
+        custom_top_actions:customTopActionsDraft.map(x=>({id:safeAdminId(x.id)||newDynamicId('top'),icon:String(x.icon||''),label_ar:String(x.label_ar||''),label_ku:String(x.label_ku||''),label_en:String(x.label_en||''),url:customLink(x,'رابط الزر العلوي'),enabled:x.enabled!==false})),
+        custom_footer_actions:customFooterActionsDraft.map(x=>({id:safeAdminId(x.id)||newDynamicId('footer'),icon:String(x.icon||''),label_ar:String(x.label_ar||''),label_ku:String(x.label_ku||''),label_en:String(x.label_en||''),url:customLink(x,'رابط الزر السفلي'),enabled:x.enabled!==false})),
 
         ui_design_settings:collectUiDesignSettings(),
 
         logo_url:logoUrl || '',
-        background_video:rsValue('rs_background_video'),
+        background_video:backgroundVideoUrl,
         background_video_enabled:rsChecked('rs_background_video_enabled'),
 
         intro_duration_ms:
@@ -5334,7 +5391,7 @@
               <button
                 class="mini-btn"
                 type="button"
-                onclick="editAdminCategory('${escapeAdminHtml(category.id)}')"
+                onclick="editAdminCategory('${safeAdminId(category.id)}')"
               >
                 تعديل
               </button>
@@ -5342,7 +5399,7 @@
               <button
                 class="danger-action-btn"
                 type="button"
-                onclick="deleteAdminCategory('${escapeAdminHtml(category.id)}')"
+                onclick="deleteAdminCategory('${safeAdminId(category.id)}')"
               >
                 حذف
               </button>
@@ -5444,7 +5501,10 @@
   function applyAdminBranding(){
     const s=adminRestaurantSettings||{};
     const name=getAdminRestaurantName();
-    const logo=s.logo_url || 'assets/restaurant-placeholder.svg';
+    const logo=safeAdminMediaUrl(
+      s.logo_url,
+      'assets/restaurant-placeholder.svg'
+    );
 
     const headerLogo=document.querySelector('.admin-logo');
     if(headerLogo)headerLogo.src=logo;
@@ -5557,7 +5617,7 @@
       ${fieldHtml('الاسم الكوردي','p_name_ku',firstExisting(product,['name_ku']))}
       ${fieldHtml('الاسم الإنجليزي','p_name_en',firstExisting(product,['name_en']))}
       <div class="field"><label>القسم</label><select id="p_category_id">${catOptions}</select></div>
-      <div class="image-upload-box"><div>صورة الصنف — من الجهاز أو رابط مباشر</div><div class="image-upload-row"><img id="p_image_preview" class="image-preview" src="${escapeAdminHtml(firstExisting(product,['image_url','image'],'assets/restaurant-placeholder.svg'))}"><label class="image-upload-btn">📷 اختيار صورة<input id="p_image_file" type="file" accept="image/*" onchange="previewAdminImage(this)"></label><span id="p_image_file_name" class="image-file-name">لم يتم اختيار صورة جديدة</span></div><div id="p_upload_progress" class="upload-progress"></div></div>${fieldHtml('رابط الصورة (اختياري)','p_image_url',firstExisting(product,['image_url','image']),'url',true)}
+      <div class="image-upload-box"><div>صورة الصنف — من الجهاز أو رابط مباشر</div><div class="image-upload-row"><img id="p_image_preview" class="image-preview" src="${escapeAdminHtml(safeAdminMediaUrl(firstExisting(product,['image_url','image']),'assets/restaurant-placeholder.svg'))}"><label class="image-upload-btn">📷 اختيار صورة<input id="p_image_file" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/avif" onchange="previewAdminImage(this)"></label><span id="p_image_file_name" class="image-file-name">لم يتم اختيار صورة جديدة</span></div><div id="p_upload_progress" class="upload-progress"></div></div>${fieldHtml('رابط الصورة (اختياري)','p_image_url',firstExisting(product,['image_url','image']),'url',true)}
       ${priceKey?fieldHtml('السعر الأساسي','p_base_price',product[priceKey]??0,'number'):''}
       ${hasField(product,'sort_order')?fieldHtml('الترتيب','p_sort_order',product.sort_order??0,'number'):''}
       ${hasField(product,'description_ar')?textAreaHtml('الوصف العربي','p_description_ar',product.description_ar||''):''}
@@ -5591,7 +5651,7 @@
       </div>
     </div>` : ''}
     <div class="field full"><label>خيارات الصنف والأسعار</label><div id="optionsEditor">${options.map(optionEditorHtml).join('')}</div><button class="btn btn-dark" type="button" style="margin-top:10px" onclick="addOptionEditor()">+ إضافة خيار</button></div>
-    <div class="modal-actions"><button class="btn btn-dark" type="button" onclick="closeAdminEditor()">إلغاء</button><button class="btn btn-gold" id="saveProductBtn" type="button" onclick="saveAdminProduct('${escapeAdminHtml(product.id)}')">حفظ التعديلات</button></div>`;
+    <div class="modal-actions"><button class="btn btn-dark" type="button" onclick="closeAdminEditor()">إلغاء</button><button class="btn btn-gold" id="saveProductBtn" type="button" onclick="saveAdminProduct('${safeAdminId(product.id)}')">حفظ التعديلات</button></div>`;
     openAdminEditor('تعديل الصنف',html);
   }
 
@@ -5603,7 +5663,34 @@
   function removeOptionEditor(btn){ const row=btn.closest('.option-editor'); if(row.dataset.optionId) row.dataset.deleted='1'; row.style.display='none'; }
 
   function previewAdminImage(input){const f=input?.files?.[0];if(!f)return;document.getElementById('p_image_file_name').textContent=f.name;document.getElementById('p_image_preview').src=URL.createObjectURL(f);}
-  async function uploadAdminProductImage(productId){const input=document.getElementById('p_image_file');const f=input?.files?.[0];if(!f)return val('p_image_url').trim();if(!f.type.startsWith('image/'))throw new Error('الملف المختار ليس صورة');if(f.size>10*1024*1024)throw new Error('حجم الصورة أكبر من 10MB');const p=document.getElementById('p_upload_progress');p.textContent='جاري رفع الصورة...';const ext=({'image/jpeg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif'})[f.type]||'jpg';const path=`products/${String(productId).replace(/[^a-zA-Z0-9_-]/g,'_')}/${Date.now()}-${Math.random().toString(36).slice(2,8)}.${ext}`;const u=await supabaseClient.storage.from('menu-images').upload(path,f,{cacheControl:'3600',upsert:false,contentType:f.type});if(u.error)throw u.error;const g=supabaseClient.storage.from('menu-images').getPublicUrl(path);const url=g?.data?.publicUrl;if(!url)throw new Error('تعذر إنشاء رابط الصورة');document.getElementById('p_image_url').value=url;p.textContent='تم رفع الصورة ✓';return url;}
+  async function uploadAdminProductImage(productId){
+    const input=document.getElementById('p_image_file');
+    const f=input?.files?.[0];
+    if(!f)return requireAdminUrl(val('p_image_url'),'رابط صورة الصنف','media');
+
+    const allowedTypes={
+      'image/jpeg':'jpg',
+      'image/png':'png',
+      'image/webp':'webp',
+      'image/gif':'gif',
+      'image/avif':'avif'
+    };
+
+    if(!allowedTypes[f.type])throw new Error('نوع الصورة غير مدعوم');
+    if(f.size>10*1024*1024)throw new Error('حجم الصورة أكبر من 10MB');
+
+    const p=document.getElementById('p_upload_progress');
+    p.textContent='جاري رفع الصورة...';
+    const ext=allowedTypes[f.type];
+    const path=`products/${String(productId).replace(/[^a-zA-Z0-9_-]/g,'_')}/${Date.now()}-${Math.random().toString(36).slice(2,8)}.${ext}`;
+    const u=await supabaseClient.storage.from('menu-images').upload(path,f,{cacheControl:'3600',upsert:false,contentType:f.type});
+    if(u.error)throw u.error;
+    const g=supabaseClient.storage.from('menu-images').getPublicUrl(path);
+    const url=requireAdminUrl(g?.data?.publicUrl,'رابط الصورة المرفوعة','media');
+    document.getElementById('p_image_url').value=url;
+    p.textContent='تم رفع الصورة ✓';
+    return url;
+  }
 
   async function saveAdminProduct(productId){
     const product=adminProducts.find(x=>String(x.id)===String(productId));
@@ -5830,7 +5917,7 @@
         <div class="image-upload-row">
           <img id="np_image_preview" class="image-preview" src="assets/restaurant-placeholder.svg" alt="">
           <label class="image-upload-btn">📷 اختيار صورة
-            <input id="np_image_file" type="file" accept="image/*" onchange="previewNewProductImage(this)">
+            <input id="np_image_file" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/avif" onchange="previewNewProductImage(this)">
           </label>
           <span id="np_image_file_name" class="image-file-name">لم يتم اختيار صورة</span>
         </div>
@@ -5914,15 +6001,23 @@
   async function uploadNewProductImage(productId){
     const input=document.getElementById('np_image_file');
     const file=input?.files?.[0];
-    if(!file) return val('np_image_url').trim();
+    if(!file) return requireAdminUrl(val('np_image_url'),'رابط صورة الصنف','media');
 
-    if(!file.type.startsWith('image/')) throw new Error('الملف المختار ليس صورة.');
+    const allowedTypes={
+      'image/jpeg':'jpg',
+      'image/png':'png',
+      'image/webp':'webp',
+      'image/gif':'gif',
+      'image/avif':'avif'
+    };
+
+    if(!allowedTypes[file.type]) throw new Error('نوع الصورة غير مدعوم.');
     if(file.size>10*1024*1024) throw new Error('حجم الصورة أكبر من 10MB.');
 
     const progress=document.getElementById('np_upload_progress');
     if(progress) progress.textContent='جاري رفع الصورة...';
 
-    const ext=({'image/jpeg':'jpg','image/png':'png','image/webp':'webp','image/gif':'gif'})[file.type]||'jpg';
+    const ext=allowedTypes[file.type];
     const path=`products/${String(productId).replace(/[^a-zA-Z0-9_-]/g,'_')}/${Date.now()}-${Math.random().toString(36).slice(2,8)}.${ext}`;
 
     const upload=await supabaseClient.storage
@@ -5932,8 +6027,11 @@
     if(upload.error) throw upload.error;
 
     const result=supabaseClient.storage.from('menu-images').getPublicUrl(path);
-    const publicUrl=result?.data?.publicUrl;
-    if(!publicUrl) throw new Error('تم رفع الصورة لكن تعذر إنشاء رابطها العام.');
+    const publicUrl=requireAdminUrl(
+      result?.data?.publicUrl,
+      'رابط الصورة المرفوعة',
+      'media'
+    );
 
     const urlInput=document.getElementById('np_image_url');
     if(urlInput) urlInput.value=publicUrl;
@@ -6334,7 +6432,7 @@
       <div style="font-size:12px;color:#9f9991;line-height:1.8;margin-top:8px">إلغاء «ظاهر في المنيو» يخفي القسم وكل أصنافه من منيو الزبائن بدون حذف أي بيانات.</div>
       <div class="modal-actions">
         <button class="btn btn-dark" type="button" onclick="closeAdminEditor()">إلغاء</button>
-        <button class="btn btn-gold" id="saveCategoryBtn" type="button" onclick="saveAdminCategory('${escapeAdminHtml(c.id)}')">حفظ القسم</button>
+        <button class="btn btn-gold" id="saveCategoryBtn" type="button" onclick="saveAdminCategory('${safeAdminId(c.id)}')">حفظ القسم</button>
       </div>`
     );
   }
@@ -6463,10 +6561,10 @@
             : 'بدون قسم';
 
 
-        const image =
-          product.image_url ||
-          product.image ||
-          'assets/restaurant-placeholder.svg';
+        const image = safeAdminMediaUrl(
+          product.image_url || product.image,
+          'assets/restaurant-placeholder.svg'
+        );
 
 
         return `
@@ -6509,7 +6607,7 @@
               <button
                 class="edit-product-btn"
                 type="button"
-                onclick="editAdminProduct('${escapeAdminHtml(product.id)}')"
+                onclick="editAdminProduct('${safeAdminId(product.id)}')"
               >
                 تعديل
               </button>
@@ -6517,7 +6615,7 @@
               <button
                 class="danger-action-btn"
                 type="button"
-                onclick="deleteAdminProduct('${escapeAdminHtml(product.id)}')"
+                onclick="deleteAdminProduct('${safeAdminId(product.id)}')"
               >
                 حذف
               </button>
@@ -6936,15 +7034,15 @@
         <p>اختر ما تريد فعله. قبل الحذف النهائي سننزّل تلقائياً نسخة احتياطية للقسم مع أصنافه وخياراته.</p>
       </div>
       <div class="modal-choice-grid">
-        <button class="modal-choice" type="button" onclick="moveCategoryToHiddenAndDelete('${escapeAdminHtml(categoryId)}')">
+        <button class="modal-choice" type="button" onclick="moveCategoryToHiddenAndDelete('${safeAdminId(categoryId)}')">
           <strong>📦 نقل الأصناف إلى «غير معروض» ثم حذف القسم</strong>
           <span>الخيار الآمن: تبقى الأصناف والخيارات محفوظة لكنها تختفي من المنيو.</span>
         </button>
-        <button class="modal-choice" type="button" onclick="backupOneCategory('${escapeAdminHtml(categoryId)}')">
+        <button class="modal-choice" type="button" onclick="backupOneCategory('${safeAdminId(categoryId)}')">
           <strong>💾 تنزيل Backup فقط</strong>
           <span>ينزّل نسخة لهذا القسم مع كل أصنافه وخياراته بدون حذف أي شيء.</span>
         </button>
-        <button class="modal-choice danger" type="button" onclick="deleteCategoryWithContents('${escapeAdminHtml(categoryId)}')">
+        <button class="modal-choice danger" type="button" onclick="deleteCategoryWithContents('${safeAdminId(categoryId)}')">
           <strong>🗑 حذف القسم وجميع محتوياته نهائياً</strong>
           <span>سيتم حذف الأصناف وخياراتها وأسعارها. ينشئ Backup تلقائياً قبل الحذف.</span>
         </button>
