@@ -2553,6 +2553,30 @@ function setupFooter() {
   const whatsapp =
     $("#smFooterWhatsapp");
 
+  const quickActions =
+    restaurant.quickActions || {};
+
+
+  if (location) {
+    location.textContent =
+      quickActions.location?.label?.[lang] ||
+      I18N[lang].location;
+  }
+
+
+  if (call) {
+    call.textContent =
+      quickActions.call?.label?.[lang] ||
+      I18N[lang].call;
+  }
+
+
+  if (whatsapp) {
+    whatsapp.textContent =
+      quickActions.whatsapp?.label?.[lang] ||
+      I18N[lang].whatsapp;
+  }
+
 
   const hasLocation =
     String(restaurant.location || "").trim() &&
