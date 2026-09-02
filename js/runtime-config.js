@@ -288,3 +288,15 @@ window.RESTBR_CONFIG = Object.freeze({
   script.defer = true;
   document.head.appendChild(script);
 })();
+
+// Temporary Shorash admin-only image migration runner. It performs a dry-run
+// automatically and requires an explicit confirmation before any migration.
+(() => {
+  if (!/(?:^|\/)admin(?:\.html)?\/?$/i.test(window.location.pathname)) return;
+  if (document.getElementById('restbrAdminImageMigrationOnceScript')) return;
+  const script = document.createElement('script');
+  script.id = 'restbrAdminImageMigrationOnceScript';
+  script.src = 'js/admin-image-migration-once.js?v=1.0';
+  script.defer = true;
+  document.head.appendChild(script);
+})();
