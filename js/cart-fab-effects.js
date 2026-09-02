@@ -83,38 +83,6 @@
         display:none !important;
       }
 
-      #smRefreshBtn{
-        position:fixed;
-        z-index:46;
-        right:14px;
-        bottom:calc(16px + env(safe-area-inset-bottom));
-        width:46px;
-        height:46px;
-        display:grid;
-        place-items:center;
-        padding:0;
-        border:1px solid rgba(224,173,85,.68);
-        border-radius:50%;
-        background:rgba(10,8,6,.94);
-        color:#e5b55f;
-        box-shadow:0 10px 28px rgba(0,0,0,.42);
-        font:900 24px/1 system-ui,-apple-system,sans-serif;
-        cursor:pointer;
-        -webkit-tap-highlight-color:transparent;
-      }
-
-      #smRefreshBtn:active{
-        transform:scale(.92);
-      }
-
-      #smRefreshBtn.is-refreshing{
-        animation:smRefreshSpin .62s linear infinite;
-      }
-
-      @keyframes smRefreshSpin{
-        to{transform:rotate(360deg)}
-      }
-
       @media (min-width:769px){
         #smCartFab.sm-cart-fab-footer{
           left:calc(50% - 206px) !important;
@@ -215,6 +183,29 @@
 
     const setAside = visible => {
       fab.classList.toggle("sm-cart-fab-footer",visible);
+
+      const forced = {
+        width:"54px",
+        "min-width":"54px",
+        "max-width":"54px",
+        height:"54px",
+        "min-height":"54px",
+        padding:"0px",
+        "border-radius":"50%",
+        gap:"0px",
+        "box-sizing":"border-box"
+      };
+
+      Object.entries(forced).forEach(([property,value])=>{
+        if(visible) fab.style.setProperty(property,value,"important");
+        else fab.style.removeProperty(property);
+      });
+
+      const text = document.getElementById("smCartFabText");
+      if(text){
+        if(visible) text.style.setProperty("display","none","important");
+        else text.style.removeProperty("display");
+      }
     };
 
     if("IntersectionObserver" in window){
@@ -231,17 +222,6 @@
     };
     window.addEventListener("scroll",update,{passive:true});
     update();
-  }
-
-  function installRefreshButton(){
-    const button = document.getElementById("smRefreshBtn");
-    if(!button || button.dataset.bound === "1") return;
-    button.dataset.bound = "1";
-    button.addEventListener("click",()=>{
-      button.classList.add("is-refreshing");
-      button.disabled = true;
-      window.setTimeout(()=>window.location.reload(),120);
-    });
   }
 
   function burstAt(x,y){
@@ -333,7 +313,6 @@
 
   installStyles();
   installFooterAvoidance();
-  installRefreshButton();
 
   // Capture the exact source before the original cart handler updates/closes its UI.
   document.addEventListener("click",event=>{
