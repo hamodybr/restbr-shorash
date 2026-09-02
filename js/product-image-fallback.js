@@ -3,7 +3,7 @@
 
   function restaurantLogo(){
     const liveLogo = String(
-      window.SHORASH_DB?.restaurant?.logo ||
+      window.RESTBR_DB?.restaurant?.logo ||
       document.querySelector('.sm-logo')?.getAttribute('src') ||
       document.querySelector('.sm-intro-logo')?.getAttribute('src') ||
       ''
@@ -12,7 +12,7 @@
     if (liveLogo) return liveLogo;
 
     try{
-      const cached = JSON.parse(localStorage.getItem('SHORASH_BRAND_CACHE_V1') || '{}');
+      const cached = JSON.parse(localStorage.getItem('RESTBR_BRAND_CACHE_V1') || '{}');
       return String(cached?.logo || '').trim();
     }catch(_){
       return '';

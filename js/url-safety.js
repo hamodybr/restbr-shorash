@@ -29,7 +29,6 @@
     const raw = String(value ?? '').trim();
     if (!raw) return '';
 
-    // Explicit same-site relative links are safe.
     if (
       raw.startsWith('#') ||
       raw.startsWith('/') && !raw.startsWith('//') ||
@@ -39,7 +38,6 @@
       return raw;
     }
 
-    // Reject protocol-relative and bare/ambiguous values.
     if (raw.startsWith('//')) return '';
 
     const schemeMatch = raw.match(/^([a-z][a-z0-9+.-]*:)/i);
@@ -53,8 +51,6 @@
       if (!ALLOWED_SCHEMES.has(parsed.protocol.toLowerCase())) return '';
       return raw;
     } catch (_) {
-      // tel:/mailto:/geo: are valid browser actions even when URL parsing is
-      // stricter on a particular browser. Their scheme was already approved.
       if (['tel:', 'mailto:', 'geo:'].includes(scheme)) return raw;
       return '';
     }

@@ -5,6 +5,7 @@
 
   const q = (sel, root = document) => root.querySelector(sel);
   const cleanAdminUrl = () => `${window.location.origin}${window.location.pathname}`;
+  const recoveryAdminUrl = () => `${cleanAdminUrl()}?recovery=1`;
 
   function installStyles(){
     if (q('#restbrAccountPasswordStyles')) return;
@@ -29,6 +30,7 @@
       .restbr-forgot-panel input{width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.1);background:#080604;color:#fff;border-radius:10px;padding:10px 11px;font:inherit;font-size:16px;direction:ltr;text-align:left;outline:none}
       .restbr-forgot-actions{display:grid;grid-template-columns:1fr auto;gap:7px}
       .restbr-forgot-send{border:0;border-radius:10px;background:#d8a958;color:#100b05;font:inherit;font-weight:900;padding:10px;cursor:pointer}
+      .restbr-forgot-send:disabled{opacity:.55;cursor:not-allowed}
       .restbr-forgot-cancel{border:1px solid rgba(255,255,255,.1);border-radius:10px;background:#15110d;color:#ddd;font:inherit;padding:10px 12px;cursor:pointer}
       .restbr-forgot-status{min-height:18px;font-size:10px;line-height:1.6}
 
@@ -119,6 +121,7 @@
       panel.classList.toggle('open');
       if (panel.classList.contains('open')) setTimeout(() => email?.focus(), 0);
     });
+
     q('#restbrForgotCancelBtn')?.addEventListener('click', () => {
       panel.classList.remove('open');
       forgotStatus('');
@@ -174,8 +177,9 @@
       if (typeof supabaseClient === 'undefined' || !supabaseClient?.auth) {
         throw new Error('Supabase Auth غير جاهز.');
       }
+
       const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-        redirectTo: cleanAdminUrl()
+        redirectTo: recoveryAdminUrl()
       });
       if (error) throw error;
 
@@ -338,21 +342,13 @@
     if (typeof supabaseClient === 'undefined' || !supabaseClient?.auth) return;
 
     supabaseClient.auth.onAuthStateChange((event) => {
-      if (event === 'PASSWORD_RECOVERY') {
-        setTimeout(showRecoveryOverlay, 0);
-      }
+      if (event === 'PASSWORD_RECOVERY') setTimeout(showRecoveryOverlay, 0);
     });
 
+    const params = new URLSearchParams(window.location.search || '');
     const hash = window.location.hash || '';
-    const search = window.location.search || '';
-    if (/type=recovery/i.test(hash) || /type=recovery/i.test(search)) {
-      setTimeout(async () => {
-        try {
-          const { data:{ session } } = await supabaseClient.auth.getSession();
-          if (session) showRecoveryOverlay();
-        } catch (_) {}
-      }, 350);
-    }
+    const marker = params.get('recovery') === '1' || /type=recovery/i.test(hash);
+    if (marker) setTimeout(showRecoveryOverlay, 0);
   }
 
   function init(){

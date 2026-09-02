@@ -56,7 +56,7 @@ const I18N = {
 
 
 let DB = null;
-let lang = localStorage.getItem("shorashLang") || "ar";
+let lang = localStorage.getItem("RESTBR_LANG_V1") || "ar";
 let active = "";
 let searchQuery = "";
 let searchTracked = false;
@@ -985,7 +985,7 @@ function trackPageViewOnce(){
     }
   ).format(new Date());
 
-  const key=`shorash:view:${day}`;
+  const key=`restbr:view:${day}`;
 
   if(sessionStorage.getItem(key))return;
 
@@ -997,7 +997,7 @@ function trackPageViewOnce(){
 function saveMenuOfflineCache(db){
   try{
     localStorage.setItem(
-      "SHORASH_MENU_OFFLINE_CACHE_V1",
+      "RESTBR_MENU_OFFLINE_CACHE_V1",
       JSON.stringify({
         saved_at:Date.now(),
         db
@@ -1009,7 +1009,7 @@ function saveMenuOfflineCache(db){
 
 function loadMenuOfflineCache(){
   try{
-    const raw=localStorage.getItem("SHORASH_MENU_OFFLINE_CACHE_V1");
+    const raw=localStorage.getItem("RESTBR_MENU_OFFLINE_CACHE_V1");
     if(!raw)return null;
 
     const parsed=JSON.parse(raw);
@@ -1795,7 +1795,7 @@ function formatRestaurantTemplate(value,targetLang=lang) {
     );
 
 
-  // Backward compatibility with old saved SHORASH text.
+  // Backward compatibility with old saved legacy restaurant text.
   const oldBrandPatterns =
     targetLang === "en"
       ? [/SHORASH/gi,/Shorash/g]
@@ -2446,7 +2446,7 @@ document.addEventListener(
         languageButton.dataset.lang;
 
       localStorage.setItem(
-        "shorashLang",
+        "RESTBR_LANG_V1",
         lang
       );
 
@@ -2875,7 +2875,7 @@ function saveBrandCache(){
 
   try{
     localStorage.setItem(
-      "SHORASH_BRAND_CACHE_V1",
+      "RESTBR_BRAND_CACHE_V1",
       JSON.stringify({
         saved_at:Date.now(),
         nameAr:restaurant.nameAr ?? "",
@@ -3195,7 +3195,7 @@ function setupIntro() {
 
   const alreadySeen=
     sessionStorage.getItem(
-      "shorashIntroSeen"
+      "RESTBR_INTRO_SEEN_V1"
     );
 
 
@@ -3206,7 +3206,7 @@ function setupIntro() {
 
 
   sessionStorage.setItem(
-    "shorashIntroSeen",
+    "RESTBR_INTRO_SEEN_V1",
     "1"
   );
 
@@ -3476,7 +3476,7 @@ async function loadMenuFromSupabase() {
     throw new Error("Supabase client is not available");
   }
 
-  console.log("🔄 Loading SHORASH menu from Supabase...");
+  console.log("🔄 Loading RESTBR menu from Supabase...");
 
 
   /* =========================
@@ -4348,10 +4348,10 @@ async function loadMenuFallback() {
 
 
 /* ========================================
-   START SHORASH
+   START RESTBR
 ======================================== */
 
-async function startShorash() {
+async function startRestbr() {
 
   /*
     Intro runs independently
@@ -4372,7 +4372,7 @@ async function startShorash() {
 
 
       console.log(
-        "✅ SHORASH MENU LOADED FROM SUPABASE"
+        "✅ RESTBR MENU LOADED FROM SUPABASE"
       );
 
       saveMenuOfflineCache(DB);
@@ -4395,7 +4395,7 @@ async function startShorash() {
           await loadMenuFallback();
 
         console.log(
-          "✅ SHORASH MENU LOADED FROM JSON FALLBACK"
+          "✅ RESTBR MENU LOADED FROM JSON FALLBACK"
         );
 
         saveMenuOfflineCache(DB);
@@ -4412,7 +4412,7 @@ async function startShorash() {
         DB=cached;
 
         console.log(
-          "✅ SHORASH MENU LOADED FROM OFFLINE CACHE"
+          "✅ RESTBR MENU LOADED FROM OFFLINE CACHE"
         );
 
         showOfflineDataBanner();
@@ -4494,12 +4494,12 @@ async function startShorash() {
        GLOBAL DATABASE
     ========================= */
 
-    window.SHORASH_DB = DB;
+    window.RESTBR_DB = DB;
 
-    window.SHORASH_LANG =
+    window.RESTBR_LANG =
       () => lang;
 
-    window.SHORASH_TRACK=
+    window.RESTBR_TRACK=
       trackMenuEvent;
 
     trackPageViewOnce();
@@ -4507,8 +4507,8 @@ async function startShorash() {
     scrollToDeepLink();
 
 
-    if(!window.__shorashScheduleTimer){
-      window.__shorashScheduleTimer=setInterval(
+    if(!window.__RESTBR_SCHEDULE_TIMER__){
+      window.__RESTBR_SCHEDULE_TIMER__=setInterval(
         refreshScheduledAvailability,
         60000
       );
@@ -4517,7 +4517,7 @@ async function startShorash() {
 
     window.dispatchEvent(
       new CustomEvent(
-        "shorash:ready",
+        "restbr:ready",
         {
           detail: {
             DB
@@ -4531,14 +4531,14 @@ async function startShorash() {
 
 
     console.log(
-      "🚀 SHORASH MENU READY"
+      "🚀 RESTBR MENU READY"
     );
 
 
   } catch (error) {
 
     console.error(
-      "SHORASH MENU ERROR:",
+      "RESTBR MENU ERROR:",
       error
     );
 
@@ -4582,4 +4582,4 @@ async function startShorash() {
    RUN
 ======================================== */
 
-startShorash();
+startRestbr();

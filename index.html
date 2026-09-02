@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#080604">
-  <script src="js/runtime-config.js?v=1.1"></script>
+  <script src="js/runtime-config.js?v=1.2"></script>
 
   <script>
     window.__smIntroBornAt=Date.now();
@@ -12,11 +12,11 @@
     // Ordering starts fail-closed until the restaurant opening-hours policy
     // has loaded and applied the real state. This removes the first-render
     // window where an add button could briefly be clickable.
-    window.SHORASH_HOURS_READY=false;
+    window.RESTBR_HOURS_READY=false;
     document.documentElement.classList.add("sm-hours-pending");
 
     document.addEventListener("click",function(event){
-      if(window.SHORASH_HOURS_READY===true)return;
+      if(window.RESTBR_HOURS_READY===true)return;
       const target=event.target.closest?.(
         ".sm-add-cart,.sm-direct-add,.sm-choose-options,[data-choice-product],#smCartContinue,#smSendWhatsApp"
       );
@@ -29,10 +29,10 @@
       const templateResetKey="RESTBR_TEMPLATE_RESET_V1";
       if(localStorage.getItem(templateResetKey)!=="done"){
         [
-          "SHORASH_BRAND_CACHE_V1",
-          "SHORASH_MENU_OFFLINE_CACHE_V1",
-          "shorashCartV1",
-          "shorashIntroSeen"
+          "RESTBR_BRAND_CACHE_V1",
+          "RESTBR_MENU_OFFLINE_CACHE_V1",
+          "RESTBR_CART_V1",
+          "RESTBR_INTRO_SEEN_V1"
         ].forEach(key=>localStorage.removeItem(key));
         localStorage.setItem(templateResetKey,"done");
       }
@@ -43,14 +43,14 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="SHORASH Menu">
+  <meta name="apple-mobile-web-app-title" content="Restaurant Menu">
 
-  <title>SHORASH Menu</title>
+  <title>Restaurant Menu</title>
 
   <!-- Restaurant favicon -->
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="manifest" href="manifest.webmanifest?v=1.1">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css?v=4.0">
   <link rel="stylesheet" href="css/cart.css?v=3.6">
 
@@ -220,11 +220,11 @@
   <script>
     (function(){
       try{
-        const raw=localStorage.getItem("SHORASH_BRAND_CACHE_V1");
+        const raw=localStorage.getItem("RESTBR_BRAND_CACHE_V1");
         if(!raw)return;
 
         const cached=JSON.parse(raw)||{};
-        const lang=localStorage.getItem("shorashLang")||"ar";
+        const lang=localStorage.getItem("RESTBR_LANG_V1")||"ar";
 
         const name=
           lang==="ku"
@@ -263,10 +263,10 @@
   <script src="js/dining-gate-language.js?v=1.0"></script>
 
   <!-- Menu + Cart + Live Prices -->
-  <script src="js/app.js?v=17.6"></script>
+  <script src="js/app.js?v=17.7"></script>
   <script src="js/product-image-fallback.js?v=1.1"></script>
   <script src="js/price-safety.js?v=1.0"></script>
-  <script src="js/cart.js?v=4.2"></script>
+  <script src="js/cart.js?v=4.3"></script>
   <script src="js/cart-stale-item-guard.js?v=1.1"></script>
   <script src="js/cart-fab-effects.js?v=1.5"></script>
   <script src="js/live-prices.js?v=1.0"></script>
