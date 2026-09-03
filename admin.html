@@ -5638,7 +5638,12 @@
       ${hasField(product,'is_active')?`<label class="check-card"><input id="p_is_active" type="checkbox" ${product.is_active?'checked':''}> فعال</label>`:''}
       ${hasField(product,'is_visible')?`<label class="check-card"><input id="p_is_visible" type="checkbox" ${product.is_visible?'checked':''}> ظاهر في المنيو</label>`:''}
       ${hasField(product,'is_available')?`<label class="check-card"><input id="p_is_available" type="checkbox" ${product.is_available?'checked':''}> متوفر</label>`:''}
+      ${hasField(product,'is_popular')?`<label class="check-card"><input id="p_is_popular" type="checkbox" ${product.is_popular?'checked':''}> ⭐ الأكثر طلبًا</label>`:''}
+      ${hasField(product,'is_new')?`<label class="check-card"><input id="p_is_new" type="checkbox" ${product.is_new?'checked':''}> ✨ جديد</label>`:''}
+      ${hasField(product,'is_hot')?`<label class="check-card"><input id="p_is_hot" type="checkbox" ${product.is_hot?'checked':''}> 🔥 حار</label>`:''}
+      ${hasField(product,'is_offer')?`<label class="check-card"><input id="p_is_offer" type="checkbox" ${product.is_offer?'checked':''}> 🏷 عرض مميز</label>`:''}
     </div>
+    ${hasField(product,'is_offer')?`<div class="schedule-note" style="margin-top:10px">نسبة الخصم الخضراء تظهر تلقائيًا من قسم الخصومات. خيار «عرض مميز» يضيف ليبل عرض فقط بدون تغيير السعر.</div>`:''}
     ${hasField(product,'availability_schedule_enabled') ? `
     <div class="schedule-editor">
       <div class="schedule-editor-head">
@@ -5740,7 +5745,7 @@
         if(hasField(product,k)) patch[k]=val('p_'+k);
       });
 
-      ['is_active','is_visible','is_available'].forEach(k=>{
+      ['is_active','is_visible','is_available','is_popular','is_new','is_hot','is_offer'].forEach(k=>{
         if(hasField(product,k)) patch[k]=checked('p_'+k);
       });
 
@@ -5946,7 +5951,12 @@
       ${hasField(sample,'is_active')?`<label class="check-card"><input id="np_is_active" type="checkbox" checked> فعال</label>`:''}
       ${hasField(sample,'is_visible')?`<label class="check-card"><input id="np_is_visible" type="checkbox" checked> ظاهر في المنيو</label>`:''}
       ${hasField(sample,'is_available')?`<label class="check-card"><input id="np_is_available" type="checkbox" checked> متوفر</label>`:''}
+      ${hasField(sample,'is_popular')?`<label class="check-card"><input id="np_is_popular" type="checkbox"> ⭐ الأكثر طلبًا</label>`:''}
+      ${hasField(sample,'is_new')?`<label class="check-card"><input id="np_is_new" type="checkbox"> ✨ جديد</label>`:''}
+      ${hasField(sample,'is_hot')?`<label class="check-card"><input id="np_is_hot" type="checkbox"> 🔥 حار</label>`:''}
+      ${hasField(sample,'is_offer')?`<label class="check-card"><input id="np_is_offer" type="checkbox"> 🏷 عرض مميز</label>`:''}
     </div>
+    ${hasField(sample,'is_offer')?`<div class="schedule-note" style="margin-top:10px">نسبة الخصم الخضراء تظهر تلقائيًا من قسم الخصومات. خيار «عرض مميز» يضيف ليبل عرض فقط بدون تغيير السعر.</div>`:''}
     ${hasField(sample,'availability_schedule_enabled') ? `
     <div class="schedule-editor">
       <div class="schedule-editor-head">
@@ -6151,9 +6161,9 @@
 
       if(hasField(sample,'has_options')) insert.has_options=optionRows.length>1;
 
-      // Keep badge defaults safe if the columns exist.
+      // Product labels are optional and default to off for every new item.
       ['is_popular','is_new','is_hot','is_offer'].forEach(k=>{
-        if(hasField(sample,k)) insert[k]=false;
+        if(hasField(sample,k)) insert[k]=checked('np_'+k);
       });
 
       const now=new Date().toISOString();
@@ -6602,6 +6612,10 @@
                 ${escapeAdminHtml(categoryName)}
                 ${product.is_visible===false?'<span class="hidden-badge">مخفي</span>':''}
                 ${product.is_available===false?'<span class="system-badge">غير متوفر</span>':''}
+                ${product.is_popular?'<span class="system-badge">⭐ الأكثر طلبًا</span>':''}
+                ${product.is_new?'<span class="system-badge">✨ جديد</span>':''}
+                ${product.is_hot?'<span class="system-badge">🔥 حار</span>':''}
+                ${product.is_offer?'<span class="system-badge">🏷 عرض مميز</span>':''}
               </div>
 
               ${renderProductOptionChips(product.id)}
