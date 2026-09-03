@@ -9,11 +9,12 @@ html[dir="ltr"] body #smMenu .sm-card .sm-badges{
   top:8px!important;
   left:auto!important;
   right:8px!important;
-  max-width:46%!important;
+  max-width:40%!important;
   display:flex!important;
+  flex-wrap:wrap!important;
   justify-content:flex-end;
   align-items:center;
-  gap:5px!important;
+  gap:3px!important;
   pointer-events:none;
   direction:rtl;
 }
