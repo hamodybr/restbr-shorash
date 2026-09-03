@@ -8,7 +8,7 @@ html[dir="ltr"] body #smMenu .sm-card .sm-badges{
   right:8px!important;
   left:auto!important;
   inset-inline-start:auto!important;
-  inset-inline-end:8px!important;
+  inset-inline-end:auto!important;
   max-width:46%!important;
   display:flex!important;
   justify-content:flex-end;
@@ -105,7 +105,7 @@ body #smMenu .sm-display-badge.sm-badge-suppressed{display:none!important}
     right:6px!important;
     left:auto!important;
     inset-inline-start:auto!important;
-    inset-inline-end:6px!important;
+    inset-inline-end:auto!important;
     max-width:39%!important;
     gap:3px!important;
   }
