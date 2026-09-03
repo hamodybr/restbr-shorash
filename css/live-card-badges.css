@@ -2,6 +2,8 @@
 body #smMenu .sm-card .sm-badges,
 html[dir="rtl"] body #smMenu .sm-card .sm-badges,
 html[dir="ltr"] body #smMenu .sm-card .sm-badges{
+  position:absolute!important;
+  z-index:32!important;
   top:8px!important;
   right:8px!important;
   left:auto!important;
