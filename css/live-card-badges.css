@@ -4,11 +4,11 @@ html[dir="rtl"] body #smMenu .sm-card .sm-badges,
 html[dir="ltr"] body #smMenu .sm-card .sm-badges{
   position:absolute!important;
   z-index:32!important;
-  top:8px!important;
-  right:8px!important;
-  left:auto!important;
   inset-inline-start:auto!important;
   inset-inline-end:auto!important;
+  top:8px!important;
+  left:auto!important;
+  right:8px!important;
   max-width:46%!important;
   display:flex!important;
   justify-content:flex-end;
@@ -101,11 +101,11 @@ body #smMenu .sm-display-badge.sm-badge-suppressed{display:none!important}
   body #smMenu .sm-card .sm-badges,
   html[dir="rtl"] body #smMenu .sm-card .sm-badges,
   html[dir="ltr"] body #smMenu .sm-card .sm-badges{
-    top:6px!important;
-    right:6px!important;
-    left:auto!important;
     inset-inline-start:auto!important;
     inset-inline-end:auto!important;
+    top:6px!important;
+    left:auto!important;
+    right:6px!important;
     max-width:39%!important;
     gap:3px!important;
   }
