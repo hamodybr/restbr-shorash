@@ -236,7 +236,22 @@
     }
   }
 
+  function appendAdminI18nScript(id, src) {
+    if (!isAdmin || document.getElementById(id)) return;
+    const script = document.createElement('script');
+    script.id = id;
+    script.src = src;
+    script.async = false;
+    document.head.appendChild(script);
+  }
+
+  function loadAdminDashboardI18n() {
+    appendAdminI18nScript('restbrAdminI18nScript', 'js/admin-i18n.js?v=1.0');
+    appendAdminI18nScript('restbrShorashAdminI18nScript', 'js/admin-i18n-shorash.js?v=1.0');
+  }
+
   async function initAdmin() {
+    loadAdminDashboardI18n();
     await loadPolicy();
 
     const tryInstall = () => installAdminUI();
