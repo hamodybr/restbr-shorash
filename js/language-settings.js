@@ -201,7 +201,6 @@
   function installMenuPolicyStyle() {
     let style = document.getElementById('smMenuLanguagePolicyStyle');
     if (!style) {
-      style = document.createElement('style');
       style.id = 'smMenuLanguagePolicyStyle';
       document.head.appendChild(style);
     }
@@ -246,8 +245,10 @@
   }
 
   function loadAdminDashboardI18n() {
+    appendAdminI18nScript('restbrAdminI18nAttributeGuardScript', 'js/admin-i18n-attribute-guard.js?v=1.0');
     appendAdminI18nScript('restbrAdminI18nScript', 'js/admin-i18n.js?v=1.0');
     appendAdminI18nScript('restbrShorashAdminI18nScript', 'js/admin-i18n-shorash.js?v=1.1');
+    appendAdminI18nScript('restbrAdminI18nFinalCleanupScript', 'js/admin-i18n-final-cleanup.js?v=1.0');
   }
 
   async function initAdmin() {
