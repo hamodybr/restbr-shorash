@@ -96,6 +96,15 @@
     note.dir = 'ltr';
   }
 
+  function placeUnderUnavailable(note) {
+    const card = note.closest('.sm-card');
+    const unavailable = card?.querySelector('.sm-off');
+    if (!card || !unavailable) return;
+
+    note.classList.add('sm-category-schedule-under-unavailable');
+    if (note.parentElement !== card) card.appendChild(note);
+  }
+
   function enhanceNote(note) {
     if (!(note instanceof Element)) return;
 
@@ -103,7 +112,10 @@
     if (!liveText || liveText === note.dataset.smScheduleRendered) return;
 
     if (!isCategorySchedule(liveText)) {
-      note.classList.remove('sm-category-schedule-highlight');
+      note.classList.remove(
+        'sm-category-schedule-highlight',
+        'sm-category-schedule-under-unavailable'
+      );
       delete note.dataset.smScheduleRendered;
       return;
     }
@@ -123,6 +135,7 @@
       note.dir = 'rtl';
     }
 
+    placeUnderUnavailable(note);
     note.dataset.smScheduleRendered = String(note.textContent || '').replace(/\s+/g, ' ').trim();
   }
 
@@ -138,7 +151,6 @@
     style.id = 'restbrSectionHoursHighlightStyles';
     style.textContent = `
       .sm-schedule-note.sm-category-schedule-highlight{
-        position:relative;
         isolation:isolate;
         overflow:hidden;
         width:max-content;
@@ -166,6 +178,18 @@
         text-align:center;
         line-height:1.25 !important;
         box-sizing:border-box;
+        pointer-events:none;
+      }
+
+      .sm-card > .sm-schedule-note.sm-category-schedule-under-unavailable{
+        position:absolute !important;
+        z-index:24 !important;
+        left:50% !important;
+        right:auto !important;
+        top:calc(50% + 30px) !important;
+        transform:translateX(-50%) !important;
+        margin:0 !important;
+        max-width:calc(100% - 24px) !important;
       }
 
       .sm-schedule-note.sm-category-schedule-highlight::after{
