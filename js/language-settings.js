@@ -201,6 +201,7 @@
   function installMenuPolicyStyle() {
     let style = document.getElementById('smMenuLanguagePolicyStyle');
     if (!style) {
+      style = document.createElement('style');
       style.id = 'smMenuLanguagePolicyStyle';
       document.head.appendChild(style);
     }
