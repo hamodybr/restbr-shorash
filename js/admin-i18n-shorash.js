@@ -104,6 +104,7 @@
       if (node.nodeValue !== next) node.nodeValue = next;
     } else {
       translatedText.delete(node);
+      if (node.nodeValue !== source) node.nodeValue = source;
     }
   }
 
@@ -118,15 +119,15 @@
     ['placeholder','title','aria-label'].forEach(attr => {
       if (!el.hasAttribute(attr)) return;
       const live = el.getAttribute(attr) || '';
-      if (!(attr in cache) || !isEnglish()) cache[attr] = live;
-      if (isEnglish()) {
-        const next = translate(cache[attr]);
-        if (next !== live) el.setAttribute(attr, next);
-      }
+      if (!(attr in cache)) cache[attr] = live;
+      const source = cache[attr];
+      const next = isEnglish() ? translate(source) : source;
+      if (next !== live) el.setAttribute(attr, next);
     });
 
     if (el.classList.contains('restbr-recovery-card')) {
-      el.setAttribute('dir', isEnglish() ? 'ltr' : 'rtl');
+      const direction = isEnglish() ? 'ltr' : 'rtl';
+      if (el.getAttribute('dir') !== direction) el.setAttribute('dir', direction);
     }
   }
 
@@ -157,7 +158,6 @@
     document.addEventListener('restbr:admin-language-change', refresh);
 
     observer = new MutationObserver(() => {
-      if (!isEnglish()) return;
       setTimeout(() => walk(document.body), 0);
     });
     observer.observe(document.body, { subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:['placeholder','title','aria-label','dir'] });
