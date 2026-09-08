@@ -118,6 +118,18 @@ if (RESTBR_CONFIGURED) {
   document.head.appendChild(script);
 })();
 
+// Admin-only: configurable brand atmosphere and announcement motion.
+(() => {
+  if (!RESTBR_IS_ADMIN_PATH) return;
+  if (document.getElementById('restbrAdminBrandUxSettingsScript')) return;
+
+  const script = document.createElement('script');
+  script.id = 'restbrAdminBrandUxSettingsScript';
+  script.src = 'js/admin-brand-ux-settings.js?v=1.0';
+  script.async = false;
+  document.head.appendChild(script);
+})();
+
 // Admin-only: slightly increase all dashboard text without changing layout sizing.
 (() => {
   if (!RESTBR_IS_ADMIN_PATH) return;
