@@ -91,12 +91,26 @@
   async function syncProductMode(productId, mode) {
     if (!productId || typeof supabaseClient === 'undefined' || !supabaseClient) return;
 
+    const expected = normalizeMode(mode);
+
     const { error } = await supabaseClient
       .from('products')
-      .update({ service_mode: normalizeMode(mode) })
+      .update({ service_mode: expected })
       .eq('id', productId);
 
     if (error) throw error;
+
+    const { data: verify, error: verifyError } = await supabaseClient
+      .from('products')
+      .select('service_mode')
+      .eq('id', productId)
+      .maybeSingle();
+
+    if (verifyError) throw verifyError;
+    const actual = normalizeMode(verify?.service_mode);
+    if (actual !== expected) {
+      throw new Error(`service_mode verification failed: expected ${expected}, got ${actual}`);
+    }
   }
 
   async function productIdsByName(nameAr, categoryId) {
