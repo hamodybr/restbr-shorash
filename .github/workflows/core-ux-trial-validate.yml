@@ -1,0 +1,35 @@
+name: Validate Shorash Core UX Trial
+
+on:
+  push:
+    branches:
+      - feature/pasha-core-ux-v1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: JavaScript syntax checks
+        run: |
+          node --check js/category-navigation-v2.js
+          node --check js/brand-background-v1.js
+          node --check js/english-news-ticker.js
+          node --check js/admin-brand-ux-settings.js
+          node --check js/supabase-config.js
+          node --check sw.js
+
+      - name: Wiring checks
+        run: |
+          grep -q "brand-background-v1.js?v=1.0" js/english-news-ticker.js
+          grep -q "category-navigation-v2.js?v=1.0" js/english-news-ticker.js
+          grep -q "admin-brand-ux-settings.js?v=1.0" js/supabase-config.js
+          grep -q "restbr-shorash-core-ux-v19" sw.js
+          grep -q "brand-background-v1.js?v=1.0" sw.js
+          grep -q "category-navigation-v2.js?v=1.0" sw.js
