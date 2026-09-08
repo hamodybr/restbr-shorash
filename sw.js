@@ -1,4 +1,4 @@
-const CACHE_NAME = "restbr-shorash-service-mode-v17";
+const CACHE_NAME = "restbr-shorash-service-mode-v18";
 const SUPABASE_BROWSER_URL = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.114.0";
 
 const CORE = [
@@ -31,7 +31,7 @@ const CORE = [
   "./js/seamless-background-video.js?v=1.0",
   "./js/card-life-effects.js?v=1.0",
   "./js/dining-mode.js?v=1.4",
-  "./js/product-service-mode.js?v=1.0",
+  "./js/product-service-mode.js?v=2.0",
   "./js/dining-gate-language.js?v=1.0",
   "./js/live-card-badges.js?v=1.0",
   "./data/menu.json?v=32",
