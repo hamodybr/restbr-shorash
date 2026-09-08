@@ -5,9 +5,6 @@
 
   const imageById = new Map();
   let decorateQueued = false;
-  let touchState = null;
-  let mouseState = null;
-  let suppressClickUntil = 0;
 
   function safeMedia(value) {
     const raw = String(value || '').trim();
@@ -44,22 +41,27 @@
     const style = document.createElement('style');
     style.id = 'restbrCategoryNavV2Style';
     style.textContent = `
+      /* Proven Pasha-style interaction policy: no snapping or CSS smooth-scroll.
+         The user's finger owns horizontal movement. */
       #smCats.sm-cats{
         gap:8px!important;
         padding:5px 10px 7px!important;
         overflow-x:auto!important;
         overflow-y:hidden!important;
-        scroll-behavior:auto!important;
         scroll-snap-type:none!important;
+        scroll-behavior:auto!important;
         overscroll-behavior-x:contain!important;
+        touch-action:pan-x!important;
         scrollbar-width:none!important;
         -ms-overflow-style:none!important;
         -webkit-user-select:none!important;
         user-select:none!important;
       }
       #smCats.sm-cats::-webkit-scrollbar{display:none!important}
-      #smCats.sm-cats.restbr-manual-drag{cursor:grabbing!important}
-      #smCats.sm-cats .sm-cat{
+
+      #smCats.sm-cats .sm-cat,
+      #smCats.sm-cats .sm-cat:hover,
+      #smCats.sm-cats .sm-cat:focus{
         flex:0 0 auto!important;
         min-width:118px!important;
         max-width:164px!important;
@@ -69,6 +71,7 @@
         align-items:center!important;
         justify-content:flex-start!important;
         gap:8px!important;
+        scroll-snap-align:none!important;
         border:1px solid rgba(216,169,88,.20)!important;
         border-radius:15px!important;
         background:linear-gradient(145deg,rgba(27,19,12,.92),rgba(11,8,5,.90))!important;
@@ -79,17 +82,19 @@
         font-weight:850!important;
         white-space:normal!important;
         text-align:start!important;
-        scroll-snap-align:none!important;
         transform:none!important;
-        touch-action:manipulation!important;
         -webkit-tap-highlight-color:transparent!important;
       }
-      #smCats.sm-cats .sm-cat.active{
+
+      #smCats.sm-cats .sm-cat.active,
+      #smCats.sm-cats .sm-cat.active:hover,
+      #smCats.sm-cats .sm-cat.active:focus{
         border-color:rgba(226,181,94,.68)!important;
         background:linear-gradient(145deg,rgba(72,48,20,.96),rgba(25,16,8,.94))!important;
         color:#f1c977!important;
         box-shadow:0 0 0 1px rgba(226,181,94,.12) inset,0 9px 24px rgba(0,0,0,.16)!important;
       }
+
       .restbr-cat-icon{
         width:36px!important;
         height:36px!important;
@@ -116,6 +121,7 @@
         border-color:rgba(241,201,119,.34)!important;
         background:rgba(241,201,119,.10)!important;
       }
+
       @media(max-width:390px){
         #smCats.sm-cats .sm-cat{
           min-width:108px!important;
@@ -144,6 +150,7 @@
         .from('categories')
         .select('id,image_url');
       if (error) throw error;
+
       imageById.clear();
       (data || []).forEach(row => {
         const id = String(row?.id || '');
@@ -158,11 +165,13 @@
 
   function decorateButton(button) {
     if (!button) return;
-    const label = String(button.textContent || '').trim();
+
+    let holder = button.querySelector(':scope > .restbr-cat-icon');
+    const labelNode = [...button.childNodes].find(node => node.nodeType === Node.TEXT_NODE);
+    const label = String(labelNode?.textContent || button.textContent || '').trim();
     const categoryId = String(button.dataset.catId || '');
     const image = imageById.get(categoryId) || '';
 
-    let holder = button.querySelector(':scope > .restbr-cat-icon');
     if (!holder) {
       holder = document.createElement('span');
       holder.className = 'restbr-cat-icon';
@@ -170,8 +179,10 @@
       button.prepend(holder);
     }
 
-    const key = image ? `img:${image}` : `emoji:${smartIcon(label)}`;
+    const fallbackIcon = smartIcon(label);
+    const key = image ? `img:${image}` : `emoji:${fallbackIcon}`;
     if (holder.dataset.iconKey === key) return;
+
     holder.dataset.iconKey = key;
     holder.replaceChildren();
 
@@ -182,12 +193,13 @@
       img.loading = 'lazy';
       img.src = image;
       img.addEventListener('error', () => {
-        holder.dataset.iconKey = '';
-        holder.textContent = smartIcon(label);
+        holder.replaceChildren();
+        holder.textContent = fallbackIcon;
+        holder.dataset.iconKey = `emoji:${fallbackIcon}`;
       }, { once: true });
       holder.appendChild(img);
     } else {
-      holder.textContent = smartIcon(label);
+      holder.textContent = fallbackIcon;
     }
   }
 
@@ -214,102 +226,45 @@
     } catch (_) {}
   }
 
-  function bindManualDrag() {
+  function bindRail() {
     const rail = document.getElementById('smCats');
-    if (!rail || rail.dataset.restbrDragV2 === '1') return;
-    rail.dataset.restbrDragV2 = '1';
-
-    rail.addEventListener('touchstart', event => {
-      if (event.touches.length !== 1) return;
-      const touch = event.touches[0];
-      touchState = {
-        x: touch.clientX,
-        y: touch.clientY,
-        scrollLeft: rail.scrollLeft,
-        intent: '',
-        moved: false
-      };
-    }, { passive: true });
-
-    rail.addEventListener('touchmove', event => {
-      if (!touchState || event.touches.length !== 1) return;
-      const touch = event.touches[0];
-      const dx = touch.clientX - touchState.x;
-      const dy = touch.clientY - touchState.y;
-
-      if (!touchState.intent && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
-        touchState.intent = Math.abs(dx) > Math.abs(dy) * 1.12 ? 'horizontal' : 'vertical';
-      }
-      if (touchState.intent !== 'horizontal') return;
-
-      event.preventDefault();
-      if (Math.abs(dx) > 7) touchState.moved = true;
-      rail.scrollLeft = touchState.scrollLeft - dx;
-    }, { passive: false });
-
-    const finishTouch = () => {
-      if (touchState?.moved) suppressClickUntil = Date.now() + 260;
-      touchState = null;
-    };
-    rail.addEventListener('touchend', finishTouch, { passive: true });
-    rail.addEventListener('touchcancel', finishTouch, { passive: true });
-
-    rail.addEventListener('pointerdown', event => {
-      if (event.pointerType !== 'mouse' || event.button !== 0) return;
-      mouseState = { x: event.clientX, scrollLeft: rail.scrollLeft, moved: false };
-      rail.classList.add('restbr-manual-drag');
-      rail.setPointerCapture?.(event.pointerId);
-    });
-
-    rail.addEventListener('pointermove', event => {
-      if (!mouseState || event.pointerType !== 'mouse') return;
-      const dx = event.clientX - mouseState.x;
-      if (Math.abs(dx) > 5) mouseState.moved = true;
-      rail.scrollLeft = mouseState.scrollLeft - dx;
-    });
-
-    const finishPointer = event => {
-      if (!mouseState) return;
-      if (mouseState.moved) suppressClickUntil = Date.now() + 220;
-      mouseState = null;
-      rail.classList.remove('restbr-manual-drag');
-      try { rail.releasePointerCapture?.(event.pointerId); } catch (_) {}
-    };
-    rail.addEventListener('pointerup', finishPointer);
-    rail.addEventListener('pointercancel', finishPointer);
+    if (!rail || rail.dataset.restbrCategoryNavV2 === '1') return;
+    rail.dataset.restbrCategoryNavV2 = '1';
 
     rail.addEventListener('click', event => {
       const button = event.target.closest?.('.sm-cat');
       if (!button) return;
-      if (Date.now() < suppressClickUntil) {
-        event.preventDefault();
-        event.stopImmediatePropagation();
-        return;
-      }
-      setTimeout(() => centerClicked(button), 20);
-    }, true);
+      setTimeout(() => centerClicked(button), 25);
+    });
   }
 
   function start() {
     installStyles();
-    bindManualDrag();
+    bindRail();
     decorate();
     void loadCategoryImages();
 
     const rail = document.getElementById('smCats');
     if (rail) {
       const observer = new MutationObserver(scheduleDecorate);
-      observer.observe(rail, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+      observer.observe(rail, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['class']
+      });
     }
 
     window.addEventListener('restbr:ready', () => {
-      bindManualDrag();
+      bindRail();
       scheduleDecorate();
       void loadCategoryImages();
     });
 
     document.addEventListener('click', event => {
-      if (event.target.closest?.('[data-lang]')) setTimeout(scheduleDecorate, 40);
+      if (event.target.closest?.('[data-lang],[data-sm-gate-lang]')) {
+        setTimeout(scheduleDecorate, 40);
+      }
     });
   }
 
