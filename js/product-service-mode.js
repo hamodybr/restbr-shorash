@@ -9,11 +9,12 @@
   let channel = null;
   let switchingCategory = false;
   let refreshTimer = 0;
+  let modeWatchTimer = 0;
+  let lastMode = '';
 
   function normalizeMode(value) {
-    return ['both', 'dinein', 'takeaway'].includes(String(value || '').trim())
-      ? String(value).trim()
-      : 'both';
+    const mode = String(value || '').trim();
+    return ['both', 'dinein', 'takeaway'].includes(mode) ? mode : 'both';
   }
 
   function currentMode() {
@@ -36,9 +37,7 @@
     if (document.getElementById('smProductServiceModeStyles')) return;
     const style = document.createElement('style');
     style.id = 'smProductServiceModeStyles';
-    style.textContent = `
-      .sm-service-mode-hidden{display:none!important}
-    `;
+    style.textContent = `.sm-service-mode-hidden{display:none!important}`;
     document.head.appendChild(style);
   }
 
@@ -50,7 +49,6 @@
       .select('id,category_id,service_mode,is_active,is_visible');
 
     if (error) {
-      // Keep older databases fully functional until the migration is applied.
       if (/service_mode/i.test(String(error.message || error))) {
         supported = false;
         loaded = true;
@@ -94,11 +92,6 @@
     const count = [...document.querySelectorAll('#smMenu [data-product-card]')]
       .filter(card => !card.classList.contains('sm-service-mode-hidden'))
       .length;
-
-    if (typeof window.updateSearchCount === 'function') {
-      window.updateSearchCount(count);
-      return;
-    }
 
     const holder = document.getElementById('smSearchCount');
     if (!holder) return;
@@ -201,19 +194,17 @@
       .subscribe();
   }
 
-  window.addEventListener('restbr:ready', () => {
-    void refreshModes();
-    subscribeProducts();
-  });
-
-  window.addEventListener('restbr:prices-updated', event => {
-    if (event?.detail?.source !== 'dining-mode') return;
-    if (loaded) {
-      applyVisibility();
-    } else {
-      void refreshModes();
-    }
-  });
+  function startModeWatcher() {
+    if (modeWatchTimer) return;
+    modeWatchTimer = window.setInterval(() => {
+      const mode = currentMode();
+      if (mode !== lastMode) {
+        lastMode = mode;
+        if (loaded) applyVisibility();
+        else void refreshModes();
+      }
+    }, 200);
+  }
 
   function observeRenders() {
     const observer = new MutationObserver(scheduleApply);
@@ -223,9 +214,32 @@
     if (cats) observer.observe(cats, { childList: true, subtree: true });
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', observeRenders, { once: true });
-  } else {
+  function boot() {
+    installStyles();
     observeRenders();
+    startModeWatcher();
+    subscribeProducts();
+    void refreshModes();
+  }
+
+  window.addEventListener('restbr:ready', () => {
+    void refreshModes();
+    subscribeProducts();
+  });
+
+  window.addEventListener('restbr:prices-updated', event => {
+    if (event?.detail?.source !== 'dining-mode') return;
+    if (loaded) applyVisibility();
+    else void refreshModes();
+  });
+
+  window.addEventListener('pageshow', () => {
+    void refreshModes();
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot, { once: true });
+  } else {
+    boot();
   }
 })();
