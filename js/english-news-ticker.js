@@ -1,4 +1,18 @@
 (() => {
+  [
+    ['restbrBrandBackgroundV1Script', 'js/brand-background-v1.js?v=1.0'],
+    ['restbrCategoryNavigationV2Script', 'js/category-navigation-v2.js?v=1.0']
+  ].forEach(([id, src]) => {
+    if (document.getElementById(id)) return;
+    const script = document.createElement('script');
+    script.id = id;
+    script.src = src;
+    script.defer = true;
+    document.head.appendChild(script);
+  });
+})();
+
+(() => {
   if (!document.getElementById('smSeamlessBackgroundVideoLoader')) {
     const script = document.createElement('script');
     script.id = 'smSeamlessBackgroundVideoLoader';
