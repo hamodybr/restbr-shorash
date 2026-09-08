@@ -80,11 +80,7 @@
       .eq('id', productId)
       .maybeSingle();
 
-    if (error) {
-      console.debug('Service mode read fallback:', error?.message || error);
-      return 'both';
-    }
-
+    if (error) throw error;
     return normalizeMode(data?.service_mode);
   }
 
@@ -100,14 +96,7 @@
 
     if (error) throw error;
 
-    const { data: verify, error: verifyError } = await supabaseClient
-      .from('products')
-      .select('service_mode')
-      .eq('id', productId)
-      .maybeSingle();
-
-    if (verifyError) throw verifyError;
-    const actual = normalizeMode(verify?.service_mode);
+    const actual = await fetchProductMode(productId);
     if (actual !== expected) {
       throw new Error(`service_mode verification failed: expected ${expected}, got ${actual}`);
     }
@@ -128,11 +117,11 @@
     return (data || []).map(row => String(row.id));
   }
 
-  function showModeSaveError(message) {
-    console.error(message);
+  function showModeSaveError(error) {
+    console.error('Service mode save failed:', error);
     if (typeof window.showEditorMsg === 'function') {
       window.showEditorMsg(
-        'تم حفظ بيانات الصنف لكن تعذر حفظ مكان ظهوره. تأكد من تطبيق تحديث قاعدة البيانات.',
+        'تعذر حفظ مكان ظهور الصنف. حاول مرة ثانية.',
         false
       );
     }
@@ -153,12 +142,19 @@
     const oldEditAdminProduct = window.editAdminProduct;
     window.editAdminProduct = function(productId) {
       const result = oldEditAdminProduct.apply(this, arguments);
-      injectField('p_service_mode', 'both');
 
-      void fetchProductMode(productId).then(mode => {
-        const select = document.getElementById('p_service_mode');
-        if (select) select.value = mode;
-      });
+      const cached = Array.isArray(window.adminProducts)
+        ? window.adminProducts.find(row => String(row?.id) === String(productId))
+        : null;
+
+      injectField('p_service_mode', cached?.service_mode || 'both');
+
+      void fetchProductMode(productId)
+        .then(mode => {
+          const select = document.getElementById('p_service_mode');
+          if (select) select.value = mode;
+        })
+        .catch(error => console.debug('Service mode read fallback:', error?.message || error));
 
       return result;
     };
@@ -173,6 +169,14 @@
     const oldSaveAdminProduct = window.saveAdminProduct;
     window.saveAdminProduct = async function(productId) {
       const mode = readMode('p_service_mode');
+
+      try {
+        await syncProductMode(productId, mode);
+      } catch (error) {
+        showModeSaveError(error);
+        return;
+      }
+
       const result = await oldSaveAdminProduct.apply(this, arguments);
 
       try {
