@@ -3,14 +3,12 @@
 
   const PRODUCTS_TABLE = 'products';
   const modeByProduct = new Map();
-  const metaByProduct = new Map();
+  let sourceProducts = null;
   let loaded = false;
-  let supported = true;
   let channel = null;
-  let switchingCategory = false;
-  let refreshTimer = 0;
-  let modeWatchTimer = 0;
   let lastMode = '';
+  let modeWatchTimer = 0;
+  let applying = false;
 
   function normalizeMode(value) {
     const mode = String(value || '').trim();
@@ -18,9 +16,12 @@
   }
 
   function currentMode() {
+    if (document.documentElement.classList.contains('sm-mode-dinein')) return 'dinein';
+    if (document.documentElement.classList.contains('sm-mode-takeaway')) return 'takeaway';
+
     const mode = String(
-      window.RESTBR_ORDER_MODE ||
       document.documentElement.dataset.smDiningMode ||
+      window.RESTBR_ORDER_MODE ||
       ''
     ).trim();
 
@@ -28,9 +29,9 @@
   }
 
   function allowedForMode(serviceMode, orderMode) {
-    const normalized = normalizeMode(serviceMode);
+    const mode = normalizeMode(serviceMode);
     if (!orderMode) return true;
-    return normalized === 'both' || normalized === orderMode;
+    return mode === 'both' || mode === orderMode;
   }
 
   function installStyles() {
@@ -42,199 +43,148 @@
   }
 
   async function fetchModes() {
-    if (typeof supabaseClient === 'undefined' || !supabaseClient) return;
+    if (typeof supabaseClient === 'undefined' || !supabaseClient) return false;
 
     const { data, error } = await supabaseClient
       .from(PRODUCTS_TABLE)
-      .select('id,category_id,service_mode,is_active,is_visible');
+      .select('id,service_mode');
 
-    if (error) {
-      if (/service_mode/i.test(String(error.message || error))) {
-        supported = false;
-        loaded = true;
-        modeByProduct.clear();
-        metaByProduct.clear();
-        console.debug('Product service mode is waiting for its database migration.');
-        return;
-      }
-      throw error;
-    }
+    if (error) throw error;
 
-    supported = true;
-    loaded = true;
     modeByProduct.clear();
-    metaByProduct.clear();
-
     (data || []).forEach(row => {
       if (!row?.id) return;
-      const id = String(row.id);
-      const serviceMode = normalizeMode(row.service_mode);
-      modeByProduct.set(id, serviceMode);
-      metaByProduct.set(id, {
-        categoryId: row.category_id == null ? '' : String(row.category_id),
-        serviceMode,
-        isActive: row.is_active !== false,
-        isVisible: row.is_visible !== false
-      });
+      modeByProduct.set(String(row.id), normalizeMode(row.service_mode));
     });
+
+    loaded = true;
+    return true;
   }
 
-  function clearVisibilityFilters() {
-    document
-      .querySelectorAll('.sm-service-mode-hidden')
-      .forEach(element => element.classList.remove('sm-service-mode-hidden'));
-  }
+  function captureSourceProducts() {
+    const db = window.RESTBR_DB;
+    if (!db || !Array.isArray(db.products)) return false;
 
-  function updateSearchCountFromVisibleCards() {
-    const input = document.getElementById('smSearchInput');
-    if (!input?.value?.trim()) return;
-
-    const count = [...document.querySelectorAll('#smMenu [data-product-card]')]
-      .filter(card => !card.classList.contains('sm-service-mode-hidden'))
-      .length;
-
-    const holder = document.getElementById('smSearchCount');
-    if (!holder) return;
-    const lang = localStorage.getItem('RESTBR_LANG_V1') || 'ar';
-    holder.textContent =
-      lang === 'en'
-        ? `${count} result${count === 1 ? '' : 's'}`
-        : lang === 'ku'
-          ? `${count} ئەنجام`
-          : `${count} نتيجة`;
-  }
-
-  function ensureVisibleActiveCategory() {
-    const searchValue = document.getElementById('smSearchInput')?.value?.trim() || '';
-    if (searchValue || switchingCategory) return;
-
-    const activeButton = document.querySelector('#smCats .sm-cat.active');
-    if (!activeButton?.classList.contains('sm-service-mode-hidden')) return;
-
-    const firstAllowed = [...document.querySelectorAll('#smCats .sm-cat')]
-      .find(button => !button.classList.contains('sm-service-mode-hidden'));
-
-    if (!firstAllowed) return;
-
-    switchingCategory = true;
-    queueMicrotask(() => {
-      try {
-        firstAllowed.click();
-      } finally {
-        switchingCategory = false;
-      }
-    });
-  }
-
-  function applyVisibility() {
-    installStyles();
-
-    if (!loaded || !supported) {
-      clearVisibilityFilters();
-      return;
+    if (!sourceProducts) {
+      sourceProducts = db.products.slice();
     }
 
-    const orderMode = currentMode();
-    if (!orderMode) {
-      clearVisibilityFilters();
-      return;
-    }
+    return true;
+  }
 
-    const allowedCategories = new Set();
+  function idsOf(list) {
+    return (list || []).map(item => String(item?.id || '')).join('|');
+  }
 
-    metaByProduct.forEach(meta => {
-      if (!meta.isActive || !meta.isVisible || !meta.categoryId) return;
-      if (allowedForMode(meta.serviceMode, orderMode)) {
-        allowedCategories.add(meta.categoryId);
-      }
-    });
-
+  function applyDomFallback(orderMode) {
     document.querySelectorAll('#smMenu [data-product-card]').forEach(card => {
       const id = String(card.dataset.productCard || '');
-      const allowed = allowedForMode(modeByProduct.get(id) || 'both', orderMode);
+      const allowed = allowedForMode(modeByProduct.get(id), orderMode);
       card.classList.toggle('sm-service-mode-hidden', !allowed);
     });
-
-    document.querySelectorAll('#smCats .sm-cat[data-cat-id]').forEach(button => {
-      const categoryId = String(button.dataset.catId || '');
-      button.classList.toggle(
-        'sm-service-mode-hidden',
-        !!categoryId && !allowedCategories.has(categoryId)
-      );
-    });
-
-    updateSearchCountFromVisibleCards();
-    ensureVisibleActiveCategory();
   }
 
-  function scheduleApply() {
-    cancelAnimationFrame(refreshTimer);
-    refreshTimer = requestAnimationFrame(applyVisibility);
+  function ensureActiveCategory() {
+    if (document.getElementById('smSearchInput')?.value?.trim()) return;
+    if (document.querySelector('#smCats .sm-cat.active')) return;
+
+    const first = document.querySelector('#smCats .sm-cat');
+    if (first) first.click();
   }
 
-  async function refreshModes() {
+  function rerenderMenu() {
+    try {
+      if (typeof window.renderCats === 'function') window.renderCats();
+      if (typeof window.render === 'function') window.render();
+    } catch (error) {
+      console.debug('Service-mode rerender fallback:', error?.message || error);
+    }
+
+    requestAnimationFrame(ensureActiveCategory);
+  }
+
+  function applyFilter(forceRender = false) {
+    if (applying || !loaded || !captureSourceProducts()) return;
+
+    const db = window.RESTBR_DB;
+    const orderMode = currentMode();
+    const next = orderMode
+      ? sourceProducts.filter(product =>
+          allowedForMode(modeByProduct.get(String(product?.id || '')), orderMode)
+        )
+      : sourceProducts.slice();
+
+    const changed = idsOf(db.products) !== idsOf(next);
+
+    applying = true;
+    try {
+      db.products = next;
+
+      if (changed || forceRender) {
+        rerenderMenu();
+      }
+
+      applyDomFallback(orderMode);
+    } finally {
+      applying = false;
+    }
+  }
+
+  async function refreshModes(forceRender = false) {
     try {
       await fetchModes();
+      applyFilter(forceRender);
     } catch (error) {
-      console.debug('Product service mode refresh fallback:', error?.message || error);
+      console.error('Product service-mode load failed:', error);
     }
-    applyVisibility();
   }
 
   function subscribeProducts() {
     if (channel || typeof supabaseClient === 'undefined' || !supabaseClient) return;
 
     channel = supabaseClient
-      .channel('restbr-product-service-mode')
+      .channel('restbr-product-service-mode-v2')
       .on(
         'postgres_changes',
         { event: '*', schema: 'public', table: PRODUCTS_TABLE },
-        () => void refreshModes()
+        () => void refreshModes(true)
       )
       .subscribe();
   }
 
   function startModeWatcher() {
     if (modeWatchTimer) return;
+
     modeWatchTimer = window.setInterval(() => {
       const mode = currentMode();
-      if (mode !== lastMode) {
-        lastMode = mode;
-        if (loaded) applyVisibility();
-        else void refreshModes();
-      }
-    }, 200);
-  }
+      if (mode === lastMode) return;
 
-  function observeRenders() {
-    const observer = new MutationObserver(scheduleApply);
-    const menu = document.getElementById('smMenu');
-    const cats = document.getElementById('smCats');
-    if (menu) observer.observe(menu, { childList: true, subtree: true });
-    if (cats) observer.observe(cats, { childList: true, subtree: true });
+      lastMode = mode;
+      if (loaded) applyFilter(true);
+      else void refreshModes(true);
+    }, 150);
   }
 
   function boot() {
     installStyles();
-    observeRenders();
     startModeWatcher();
     subscribeProducts();
-    void refreshModes();
+    void refreshModes(false);
   }
 
   window.addEventListener('restbr:ready', () => {
-    void refreshModes();
+    captureSourceProducts();
     subscribeProducts();
+    void refreshModes(true);
   });
 
   window.addEventListener('restbr:prices-updated', event => {
     if (event?.detail?.source !== 'dining-mode') return;
-    if (loaded) applyVisibility();
-    else void refreshModes();
+    applyFilter(true);
   });
 
   window.addEventListener('pageshow', () => {
-    void refreshModes();
+    void refreshModes(true);
   });
 
   if (document.readyState === 'loading') {
