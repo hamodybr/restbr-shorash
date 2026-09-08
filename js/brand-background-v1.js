@@ -58,7 +58,7 @@
         background:
           radial-gradient(ellipse 86% 48% at 5% 2%, rgba(var(--restbr-brand-primary-rgb),var(--restbr-brand-primary-a)) 0%, transparent 67%),
           radial-gradient(ellipse 76% 46% at 98% 30%, rgba(var(--restbr-brand-secondary-rgb),var(--restbr-brand-secondary-a)) 0%, transparent 70%),
-          radial-gradient(ellipse 84% 42% at 12% 88%, rgba(var(--restbr-brand-secondary-rgb),calc(var(--restbr-brand-secondary-a) * .58)) 0%, transparent 72%),
+          radial-gradient(ellipse 84% 42% at 12% 88%, rgba(var(--restbr-brand-secondary-rgb),var(--restbr-brand-secondary-soft-a)) 0%, transparent 72%),
           linear-gradient(180deg,#0b0805 0%,#070503 48%,#050403 100%)!important;
         background-attachment:fixed!important;
       }
@@ -71,7 +71,7 @@
             rgba(5,4,3,var(--restbr-brand-dark-bottom))
           ),
           radial-gradient(circle at 50% 11%,rgba(var(--restbr-brand-primary-rgb),var(--restbr-brand-overlay-a)),transparent 37%),
-          radial-gradient(circle at 92% 58%,rgba(var(--restbr-brand-secondary-rgb),calc(var(--restbr-brand-overlay-a) * .62)),transparent 44%)!important;
+          radial-gradient(circle at 92% 58%,rgba(var(--restbr-brand-secondary-rgb),var(--restbr-brand-overlay-secondary-a)),transparent 44%)!important;
       }
 
       html.restbr-brand-atmosphere .sm-app,
@@ -136,16 +136,18 @@
     const primaryRgb = hexToRgb(primary).join(',');
     const secondaryRgb = hexToRgb(secondary).join(',');
 
-    const primaryA = (0.055 + (strength / 100) * 0.30).toFixed(3);
-    const secondaryA = (0.045 + (strength / 100) * 0.24).toFixed(3);
-    const overlayA = (0.035 + (strength / 100) * 0.20).toFixed(3);
+    const primaryA = 0.055 + (strength / 100) * 0.30;
+    const secondaryA = 0.045 + (strength / 100) * 0.24;
+    const overlayA = 0.035 + (strength / 100) * 0.20;
     const darkBase = darkness / 100;
 
     root.style.setProperty('--restbr-brand-primary-rgb', primaryRgb);
     root.style.setProperty('--restbr-brand-secondary-rgb', secondaryRgb);
-    root.style.setProperty('--restbr-brand-primary-a', primaryA);
-    root.style.setProperty('--restbr-brand-secondary-a', secondaryA);
-    root.style.setProperty('--restbr-brand-overlay-a', overlayA);
+    root.style.setProperty('--restbr-brand-primary-a', primaryA.toFixed(3));
+    root.style.setProperty('--restbr-brand-secondary-a', secondaryA.toFixed(3));
+    root.style.setProperty('--restbr-brand-secondary-soft-a', (secondaryA * .58).toFixed(3));
+    root.style.setProperty('--restbr-brand-overlay-a', overlayA.toFixed(3));
+    root.style.setProperty('--restbr-brand-overlay-secondary-a', (overlayA * .62).toFixed(3));
     root.style.setProperty('--restbr-brand-dark-top', Math.max(.35, darkBase - .24).toFixed(3));
     root.style.setProperty('--restbr-brand-dark-mid', Math.max(.46, darkBase - .10).toFixed(3));
     root.style.setProperty('--restbr-brand-dark-bottom', Math.min(.94, darkBase + .07).toFixed(3));
