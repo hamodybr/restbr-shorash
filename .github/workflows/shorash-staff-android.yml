@@ -1,0 +1,54 @@
+name: SHORASH Staff APK (pilot)
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feat/shorash-staff-offline-apk
+    paths:
+      - "staff/**"
+      - ".github/workflows/shorash-staff-android.yml"
+      - "assets/shorash-logo.jpeg"
+      - "js/runtime-config.js"
+
+permissions:
+  contents: read
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    defaults:
+      run:
+        working-directory: staff
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: android-actions/setup-android@v3
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+      - name: Unit tests
+        run: npm test
+      - name: Build bundled staff web assets
+        run: npm run build
+      - name: Generate Android project
+        run: npx cap add android
+      - name: Sync native plugins and web bundle
+        run: npx cap sync android
+      - name: Build debug APK
+        run: |
+          chmod +x android/gradlew
+          cd android
+          ./gradlew assembleDebug --no-daemon
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: shorash-staff-debug-apk
+          path: staff/android/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 14
+          if-no-files-found: error

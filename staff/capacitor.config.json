@@ -1,0 +1,7 @@
+{
+  "appId": "com.restbr.shorash.staff",
+  "appName": "SHORASH Staff Menu",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "plugins": { "SplashScreen": { "launchShowDuration": 0 } }
+}
