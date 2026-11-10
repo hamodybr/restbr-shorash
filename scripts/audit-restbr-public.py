@@ -42,3 +42,5 @@ out = root / "imports" / "restbr-public-current.json"
 out.parent.mkdir(exist_ok=True, parents=True)
 out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 print("Saved read-only public RESTBR catalog", out.stat().st_size, "bytes")
+
+# Re-read public catalog after November 10 Juice category reconciliation.
