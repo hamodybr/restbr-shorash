@@ -44,3 +44,5 @@ out.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 print("Saved read-only public RESTBR catalog", out.stat().st_size, "bytes")
 
 # Re-read public catalog after November 10 Juice category reconciliation.
+
+# Recheck after final independence migration of all 16 Kurdunus category image URLs.
