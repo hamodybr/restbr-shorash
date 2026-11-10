@@ -1,0 +1,27 @@
+name: Audit live RESTBR public catalog (read-only)
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - chore/kurdunus-live-source-audit
+    paths:
+      - ".github/workflows/restbr-public-source-audit.yml"
+      - "scripts/audit-restbr-public.py"
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read public menu tables only
+        run: python3 scripts/audit-restbr-public.py
+      - name: Commit public snapshot to isolated audit branch
+        run: |
+          git config user.name "restbr-audit-bot"
+          git config user.email "restbr-audit-bot@users.noreply.github.com"
+          git add imports/restbr-public-current.json
+          git diff --cached --quiet && exit 0
+          git commit -m "data: capture RESTBR public menu tables for read-only comparison"
+          git push origin HEAD:chore/kurdunus-live-source-audit
