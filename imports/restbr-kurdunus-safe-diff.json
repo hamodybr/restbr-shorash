@@ -1,0 +1,414 @@
+{
+  "source": "Kurdunus public API (2026-11-10)",
+  "destination": "RESTBR public select (2026-11-10)",
+  "writeActionsPerformed": false,
+  "counts": {
+    "sourceCategories": 17,
+    "sourceProducts": 235,
+    "destPublicCategories": 16,
+    "destPublicProducts": 167,
+    "destPublicOptions": 237,
+    "matched": 145,
+    "ambiguous": 2,
+    "unmatchedExisting": 0,
+    "newProductsInMappedCategories": 9,
+    "newProductsInMissingCategories": 0,
+    "priceUpdateCandidates": 1,
+    "imageUpdateCandidates": 31
+  },
+  "missingCategories": [
+    {
+      "sourceCategoryId": "ve7rkL2R3k",
+      "order": 17,
+      "name": "العصائر|شەربەت|Juice"
+    }
+  ],
+  "matchedWithSourceChanges": [
+    {
+      "id": "2WeRgKVR8E",
+      "name": "كافيه لاتي|كافيه لاتي|Latte",
+      "target": "7c4a5a9a-e1f7-55bd-8d31-ea1097959e2f",
+      "sourceVariants": 3,
+      "targetOptions": 4
+    },
+    {
+      "id": "2WeRgZbr8E",
+      "name": "أيس لاتيه|أيس لاتيه|Iced Latte",
+      "target": "9541222f-952b-5b89-a51c-b542fdc2808d",
+      "sourceVariants": 3,
+      "targetOptions": 1
+    },
+    {
+      "id": "KeXd7bNBoE",
+      "name": "فطور صباحي |تێشتا سپێدا|Morning Meals",
+      "target": "8d19d870-ec38-5481-a5e0-77a001f1eb25",
+      "sourceVariants": 4,
+      "targetOptions": 4
+    },
+    {
+      "id": "ve7rk72r3k",
+      "name": "دجاج على الفحم|مريشكا سه ر به لا|Charcoal Chicken",
+      "target": "227f933c-b60c-5cd9-8b26-4cb23a4af923",
+      "sourceVariants": 2,
+      "targetOptions": 2
+    },
+    {
+      "id": "NWwr5mzrE7",
+      "name": "گص لحم مع ارز|گەسا گوشتی لسەر برنجێ|Meat Shawarma with Rice",
+      "target": "b2f18f4a-7071-5531-b85f-fe5e72e74978",
+      "sourceVariants": 2,
+      "targetOptions": 2
+    },
+    {
+      "id": "Ygkr2yXdm4",
+      "name": "تشريب كص لحم|تەشریبا گەسا گوشتی|Tashreb Shawrma Meet",
+      "target": "b86e12d2-d0b1-5285-8edf-0b5bb5c3117f",
+      "sourceVariants": 2,
+      "targetOptions": 2
+    },
+    {
+      "id": "KeXd7LnroE",
+      "name": "لحم بعجين|هەڤیر گوشت|Meat Lahimajeen",
+      "target": "a1bccd1e-21f2-5bd1-99a7-ad9104520db5",
+      "sourceVariants": 3,
+      "targetOptions": 3
+    },
+    {
+      "id": "lOPdwoydk6",
+      "name": "بيتزا كوردي|بيتزا كوردي|Kurdish pizza",
+      "target": "ccde7d94-25b9-5aea-9539-64778758862c",
+      "sourceVariants": 6,
+      "targetOptions": 6
+    },
+    {
+      "id": "N05BbPZrw3",
+      "name": "تشريب شاورما|تشريب شاورما|",
+      "target": "7e3fc01e-ab5f-5727-9464-97c0f2bfe895",
+      "sourceVariants": 2,
+      "targetOptions": 2
+    },
+    {
+      "id": "1qoBWJQRnE",
+      "name": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+      "target": "9e68d1f9-5a51-5bf1-af6a-986d2f9ab38a",
+      "sourceVariants": 1,
+      "targetOptions": 1
+    }
+  ],
+  "newProductsToReview": [
+    {
+      "id": "5WVRlALBAX",
+      "name": "باشن فروت|پاشن فروت|Passionfruit",
+      "category": "موهيتو|موهيتو|Mojito",
+      "optionCount": 1
+    },
+    {
+      "id": "7jQB48NBWY",
+      "name": "مانگو|مانگو|Mango",
+      "category": "موهيتو|موهيتو|Mojito",
+      "optionCount": 1
+    },
+    {
+      "id": "2kWd0njR9q",
+      "name": "سبانش لاتي|سپانش لاتێ|Spanish latte",
+      "category": "القهوة الباردة|آیس کوفی|Cold Coffee",
+      "optionCount": 1
+    },
+    {
+      "id": "LlaRAn4BAb",
+      "name": "ايس سبانش لاتي ستروبيري|ايس سبانش لاتي ستروبيري|Ice Spanish latte strawberry",
+      "category": "القهوة الباردة|آیس کوفی|Cold Coffee",
+      "optionCount": 1
+    },
+    {
+      "id": "D0qd6nWd4x",
+      "name": "آيس شوكوليت|ايس شوكوليت|Ice chocolate",
+      "category": "القهوة الباردة|آیس کوفی|Cold Coffee",
+      "optionCount": 1
+    },
+    {
+      "id": "bZyRKnErzO",
+      "name": "ايس وايت موكا|ايس وايت موكا|Ice white mocha",
+      "category": "القهوة الباردة|آیس کوفی|Cold Coffee",
+      "optionCount": 1
+    },
+    {
+      "id": "v7ZremXr4O",
+      "name": "سبانش لاتي|سبانش لاتي|Spanish latte",
+      "category": "القهوة|قەهوە|Coffee",
+      "optionCount": 1
+    },
+    {
+      "id": "Kg5rXVmBzx",
+      "name": "نيسكافي|نيسكافي|Nescafé",
+      "category": "القهوة|قەهوە|Coffee",
+      "optionCount": 1
+    },
+    {
+      "id": "a7pBMnGdWP",
+      "name": "حليب|شير|Milk",
+      "category": "القهوة|قەهوە|Coffee",
+      "optionCount": 1
+    }
+  ],
+  "unmatchedExisting": [],
+  "ambiguous": [
+    {
+      "id": "ogDRJp8dM5",
+      "name": "بان كيك|پان کێک|Pancakes",
+      "reason": "low-confidence/duplicate",
+      "maxScore": 5,
+      "matches": [
+        {
+          "name": "پان كيك",
+          "score": 5
+        }
+      ]
+    },
+    {
+      "id": "2WeRg0wB8E",
+      "name": "قلي مع بيض|قەلی هێک|Qali With Egg",
+      "reason": "low-confidence/duplicate",
+      "maxScore": 2,
+      "matches": [
+        {
+          "name": "قلي بيض",
+          "score": 2
+        }
+      ]
+    }
+  ],
+  "imageUpdateCandidates": [
+    {
+      "sourceProductId": "NWwr5z5RE7",
+      "targetProductId": "0ef2cee3-c057-5cce-87d5-e7922f1e986a",
+      "name": "اسبريسو|اسبريسو|Espresso",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/f1979e9f-6f33-43d8-ae60-40ee9299ea68.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/0ef2cee3-c057-5cce-87d5-e7922f1e986a/migrated-1788321180798-df6929a5.jpg"
+    },
+    {
+      "sourceProductId": "AmbBYKDrVk",
+      "targetProductId": "22a18281-761d-58f4-82b6-c20c65c3d13b",
+      "name": "كابتشينو|كابتشينو|Cappuccino",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/0d51ed11-0cdd-4401-b131-4e56423db201.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/22a18281-761d-58f4-82b6-c20c65c3d13b/migrated-1788321185147-0e3d9fa3.jpg"
+    },
+    {
+      "sourceProductId": "2WeRgKVR8E",
+      "targetProductId": "7c4a5a9a-e1f7-55bd-8d31-ea1097959e2f",
+      "name": "كافيه لاتي|كافيه لاتي|Latte",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/9374125c-e730-447c-9149-e44e5d28d1ea.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/7c4a5a9a-e1f7-55bd-8d31-ea1097959e2f/migrated-1788321325117-a9cbdf0b.png"
+    },
+    {
+      "sourceProductId": "ZLYdVXwR4P",
+      "targetProductId": "2364753e-ef5b-5d32-a13a-36eb27a85345",
+      "name": "ماكياتو|ماكياتو|Macchiato",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/a13eb3ab-bc5f-498f-a8a5-b75c211a3bdc.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/2364753e-ef5b-5d32-a13a-36eb27a85345/migrated-1788321186185-f0e50f73.jpg"
+    },
+    {
+      "sourceProductId": "Ygkr2GZRm4",
+      "targetProductId": "e366b1b0-e8e3-55e5-9bae-919180b9ec47",
+      "name": "امريكانو|امريكانو|Americano",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/1ef19d2e-6ca0-47a6-814b-a5bc96ed04a6.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/e366b1b0-e8e3-55e5-9bae-919180b9ec47/migrated-1788321358501-04cfbf25.jpg"
+    },
+    {
+      "sourceProductId": "ogDRJPOdM5",
+      "targetProductId": "17d176b8-6fb8-5b9a-ba66-c469edd0b4da",
+      "name": "هوت شوكليت|هوت شوكليت|Hot Chocolate",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/8ad56976-9436-41ca-b616-571074dd681d.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/17d176b8-6fb8-5b9a-ba66-c469edd0b4da/migrated-1788321182739-1fbe1552.jpg"
+    },
+    {
+      "sourceProductId": "G7XrOmMBz2",
+      "targetProductId": "84d49d7e-2863-5656-9cf7-be2d2ff48506",
+      "name": "سحلب|سحلب|Sahlep",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/63e6562a-7ce8-4f9c-8942-1489324b26b1.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/84d49d7e-2863-5656-9cf7-be2d2ff48506/migrated-1788321326109-37cf162e.jpg"
+    },
+    {
+      "sourceProductId": "N05BbZ5Bw3",
+      "targetProductId": "2e53fea7-aa63-558e-9263-2d845f95845a",
+      "name": "قهوه البطم|قەهوا کەزانا|Qazwan Coffee",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/eea90ef0-8b99-4c80-ab5d-8c2e156de3be.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/2e53fea7-aa63-558e-9263-2d845f95845a/migrated-1788321189452-cc0e8d46.jpg"
+    },
+    {
+      "sourceProductId": "2WeRgZbr8E",
+      "targetProductId": "9541222f-952b-5b89-a51c-b542fdc2808d",
+      "name": "أيس لاتيه|أيس لاتيه|Iced Latte",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/85f2c24f-69a6-4815-b3a0-df5fbb520ea8.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/9541222f-952b-5b89-a51c-b542fdc2808d/migrated-1788321330031-44143056.jpg"
+    },
+    {
+      "sourceProductId": "pzLdp5arbX",
+      "targetProductId": "96692abc-5af8-5a37-b9f5-bce4257047cd",
+      "name": "أيس موكا|أيس موكا|Iced Mocha",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/bc22fbda-2ffb-4ca2-88b3-09408d9d8daa.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/96692abc-5af8-5a37-b9f5-bce4257047cd/migrated-1788321330337-29898cb0.jpg"
+    },
+    {
+      "sourceProductId": "DXvd3PLr0o",
+      "targetProductId": "247f358e-257a-537d-9258-5912d29f992a",
+      "name": "ايس أمريكانو|ايس أمريكانو|Iced Americano",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/a51f42c3-1cbb-4252-a9ab-f29ab764dbee.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/247f358e-257a-537d-9258-5912d29f992a/migrated-1788321186491-4b0b230f.jpg"
+    },
+    {
+      "sourceProductId": "JoqdaZAr1K",
+      "targetProductId": "1096a4df-082e-5ee4-865b-c3cd0730fbc4",
+      "name": "ميلك شيك فانيلا|ميلك شيك فانيلا|Vanilla Milkshake",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/934c30f0-fc30-45fc-ab7a-149a982de528.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/1096a4df-082e-5ee4-865b-c3cd0730fbc4/migrated-1788321182241-2230c4ac.jpg"
+    },
+    {
+      "sourceProductId": "WDYrEMVr0b",
+      "targetProductId": "b677646b-b18f-53d8-aa21-74a16ed34cc7",
+      "name": "ميلك شيك فراولة|ميلك شيك فراولة|Strawberry Milkshake",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/f65c29ae-c19d-47eb-a02e-070431bcc937.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/b677646b-b18f-53d8-aa21-74a16ed34cc7/migrated-1788321336404-1c286248.jpg"
+    },
+    {
+      "sourceProductId": "8aYRPMzBXv",
+      "targetProductId": "738ef8c5-635c-56b3-aae0-36a99265ff23",
+      "name": "ميلك شيك فستق|ميلك شيك فستق|Pistachio Milkshake",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/4648cae6-e940-49c3-86cc-7b579f020afa.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/738ef8c5-635c-56b3-aae0-36a99265ff23/migrated-1788321322957-8cb8a1ae.jpg"
+    },
+    {
+      "sourceProductId": "N3QrvVErGa",
+      "targetProductId": "ecab3858-afd3-5bb7-8abb-a2fabae968bf",
+      "name": "ميلك شيك كرميل|ميلك شيك كرميل|Caramel Milkshake",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/79ca3f64-6284-41e5-acd7-ceea960f5ceb.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/ecab3858-afd3-5bb7-8abb-a2fabae968bf/migrated-1788321359199-53eaf9dc.jpg"
+    },
+    {
+      "sourceProductId": "QJ3dNMZBPN",
+      "targetProductId": "1e23591e-0e23-567e-84db-b1ed258416d7",
+      "name": "ميلك شيك نوتيلا|ميلك شيك نوتيلا|Nutella Milkshake",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/254d3682-c8ee-4466-999a-168a6cfc993e.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/1e23591e-0e23-567e-84db-b1ed258416d7/migrated-1788321184157-3381bf14.jpg"
+    },
+    {
+      "sourceProductId": "QVwRGM7dlE",
+      "targetProductId": "40e76e0d-be15-588f-a16e-2dbedfb9e0b6",
+      "name": "كريب نوتيلا|كرێپا نوتیلایێ|Nutella Crêpe",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/8aad1c54-982a-4589-8167-55e9c06cb017.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/40e76e0d-be15-588f-a16e-2dbedfb9e0b6/migrated-1788321193557-a61422cf.jpg"
+    },
+    {
+      "sourceProductId": "N05Bbj5Bw3",
+      "targetProductId": "613a5074-328b-54ef-891b-84e2756d3051",
+      "name": "كربب رول بنانا|كرێپا رۆل موز|Banana Roll Crêpe",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/5ce0c24a-951c-410c-833e-7407c32699b5.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/613a5074-328b-54ef-891b-84e2756d3051/migrated-1788321320323-caa0a048.jpg"
+    },
+    {
+      "sourceProductId": "AmbBYmqBVk",
+      "targetProductId": "ad90abf5-b8cd-578b-982d-e27c240da0ab",
+      "name": "كريب فوتشيني|كرێپا فوتشيني|Fettuccine Crepe",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/0e45a49e-eade-485e-9bff-30377fcdacc4.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/ad90abf5-b8cd-578b-982d-e27c240da0ab/migrated-1788321334928-544e7abd.jpg"
+    },
+    {
+      "sourceProductId": "Ygkr2Vxrm4",
+      "targetProductId": "3a22b055-05a0-52f8-aec6-49f7783aba15",
+      "name": "وافل |وآفڵ|Waffle",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/e217adca-a01c-4e36-afd4-03ff670dca03.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/3a22b055-05a0-52f8-aec6-49f7783aba15/migrated-1788321191860-d34b3baf.jpg"
+    },
+    {
+      "sourceProductId": "jV8dZvXdOn",
+      "targetProductId": "29368e1b-2ab0-5cc9-b652-7bcf40acf629",
+      "name": "ميلك شيك اوريو|ميلك شيك اوريو|Oreo Milkshake",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/63f8d595-f004-4ebf-a4d7-f54873e2ed3e.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/29368e1b-2ab0-5cc9-b652-7bcf40acf629/migrated-1788321188639-c1a41458.webp"
+    },
+    {
+      "sourceProductId": "XbDd9a8deP",
+      "targetProductId": "ff7180e2-9021-526f-a088-46028d251896",
+      "name": "ميلك شيك كيندر|ميلك شيك كيندر|Kinder Milkshake",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/91b2bb64-988f-464a-8170-a65637ec2dd3.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/ff7180e2-9021-526f-a088-46028d251896/migrated-1788321362388-d61b30b6.jpg"
+    },
+    {
+      "sourceProductId": "ZLYdVaAB4P",
+      "targetProductId": "c006755d-cc77-59ab-9338-b37d4d5fd807",
+      "name": "بلو بيري|بلو بيري|Blueberry",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/f4a228b6-85c3-4336-9af2-96b381631dd1.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/c006755d-cc77-59ab-9338-b37d4d5fd807/migrated-1788321338341-7966bfc5.webp"
+    },
+    {
+      "sourceProductId": "Ygkr2pOBm4",
+      "targetProductId": "e7fd94d4-6ff3-51d3-865e-e7ca199ba4c0",
+      "name": "مانكو|مانكو|Mango",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/143f0991-101e-4997-9146-418784f4c5b0.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/e7fd94d4-6ff3-51d3-865e-e7ca199ba4c0/migrated-1788321358665-60ecfc08.jpg"
+    },
+    {
+      "sourceProductId": "Dnyr8OZd98",
+      "targetProductId": "2ccfbc2c-3193-5aa1-b84e-b6de5454b962",
+      "name": " پاشن|پاشن|Passion Fruit",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/a312a0d7-0ea4-4412-83e8-76b6e3a3d7a2.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/2ccfbc2c-3193-5aa1-b84e-b6de5454b962/migrated-1788321189117-8dddad86.jpg"
+    },
+    {
+      "sourceProductId": "JoqdaG4R1K",
+      "targetProductId": "3c5b213d-b7d6-5986-8859-19573b788b4c",
+      "name": "فراولة|فراولة|Strawberry",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/fc8344bd-2ccd-4162-a107-213181222551.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/3c5b213d-b7d6-5986-8859-19573b788b4c/migrated-1788321192891-9c95d432.jpg"
+    },
+    {
+      "sourceProductId": "AmbBYPmRVk",
+      "targetProductId": "903deae1-e0cc-578a-b725-9a94612a9bd7",
+      "name": "نعناع|نعناع|Mint",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/362cbf65-9a3a-4b13-9498-2ba2c6d76689.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/903deae1-e0cc-578a-b725-9a94612a9bd7/migrated-1788321328400-a2d3e87f.jpg"
+    },
+    {
+      "sourceProductId": "2WeRg0kB8E",
+      "targetProductId": "2d13c6c2-6406-566f-9caf-d0056209fb50",
+      "name": "فراولة|فراولة|Strawberry",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/bceb2596-91b2-47a2-9b08-2a812c950671.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/2d13c6c2-6406-566f-9caf-d0056209fb50/migrated-1788321189309-2123151a.jpg"
+    },
+    {
+      "sourceProductId": "DXvd333d0o",
+      "targetProductId": "25c521e0-0d4b-5187-bc78-d0c03e6fd603",
+      "name": "بلو|بلو|Blue",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/4d053f01-3113-4983-b650-f8240ca32a1b.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/25c521e0-0d4b-5187-bc78-d0c03e6fd603/migrated-1788321186865-12b2febe.jpg"
+    },
+    {
+      "sourceProductId": "ogDRJ0LdM5",
+      "targetProductId": "27f756c2-2428-5bc7-824a-b8ffd056d41d",
+      "name": "بلوبيري|بلوبيري|Blueberry",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/69761a28-6ff6-4b8a-9ea8-70118fbeb5be.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/27f756c2-2428-5bc7-824a-b8ffd056d41d/migrated-1788321187484-c97405b6.webp"
+    },
+    {
+      "sourceProductId": "Dnyr8Obd98",
+      "targetProductId": "be0d8dde-ebc4-5a86-8e6a-bf3d69046141",
+      "name": "اناناس|اناناس|Pineapple",
+      "newSourceImage": "https://catalog.kurdunus.com/Public/0578c0b8-c133-41e0-8f9a-e04d535aad9f.jpeg",
+      "existingDestinationImage": "https://lwwiceogsuxiuorgvwod.supabase.co/storage/v1/object/public/menu-images/products/be0d8dde-ebc4-5a86-8e6a-bf3d69046141/migrated-1788321337170-c9b2fef9.webp"
+    }
+  ],
+  "priceUpdateCandidates": [
+    {
+      "name": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+      "sourceProductId": "1qoBWJQRnE",
+      "targetProductId": "9e68d1f9-5a51-5bf1-af6a-986d2f9ab38a",
+      "optionId": "6c796fea-29c8-58da-b8e7-606f567277b4",
+      "optionName": "بوكس شاورما",
+      "oldSourcePrice": 4000,
+      "newSourcePrice": 5000,
+      "currentRestbrPrice": 4000,
+      "currentTakeawayPrice": 4000,
+      "status": "can_apply_after_review"
+    }
+  ]
+}
