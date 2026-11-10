@@ -1,0 +1,4766 @@
+{
+  "info": {
+    "title": "Shoresh Rest & Caffe",
+    "logo": "d416e782-3d4a-4e87-8c34-47429ee2865d.png",
+    "theme": 1,
+    "primaryColor": "#85633d",
+    "secondaryColor": "#85633d",
+    "footer": "Made by Eaak tech",
+    "introImage": "4068155b-7f42-473c-8b63-1bee679ee191.jpeg",
+    "languages": [
+      {
+        "icon": "عربيه",
+        "title": "عربيه"
+      },
+      {
+        "icon": "كوردي",
+        "title": "كوردي"
+      },
+      {
+        "icon": "English",
+        "title": "English"
+      }
+    ],
+    "links": [
+      {
+        "icon": "436d1308-c38c-4728-8f3c-3fdc24313752.png",
+        "title": "https://www.instagram.com/shorashrest"
+      },
+      {
+        "icon": "0b704787-11c0-4d96-b208-30e3de7d8fb2.png",
+        "title": "https://www.facebook.com/shorashrest"
+      },
+      {
+        "icon": "f465cfb7-e18e-4914-a86a-6aecde49c034.png",
+        "title": "https://www.tiktok.com/@shorashrest"
+      }
+    ],
+    "linksHeader": [
+      {
+        "icon": "",
+        "title": ""
+      },
+      {
+        "icon": "",
+        "title": ""
+      }
+    ],
+    "latitude": 0,
+    "longitude": 0,
+    "distance": 0
+  },
+  "categories": [
+    {
+      "id": "oxmr1z0R5e",
+      "departmentId": "5oeryErVbN",
+      "order": 1,
+      "name": "فطور صباحي |تيشت سبيده|Morning meals ",
+      "image": "53450a37-83ed-4924-9dd0-8cfa88e3dc45.png"
+    },
+    {
+      "id": "Joqdaj5r1K",
+      "departmentId": "5oeryErVbN",
+      "order": 2,
+      "name": "منسف|مەنسەف|Large portions",
+      "image": "a493898a-61c6-4e76-a045-400f54380cbf.png"
+    },
+    {
+      "id": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "order": 3,
+      "name": "لأطباق الشرقيه|خوارنێن شەرقی|Oriental cuisine ",
+      "image": "14a27792-1ade-4eca-b903-8e75f471f405.png"
+    },
+    {
+      "id": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "order": 4,
+      "name": "مشاوي|مشویات|Barbecue",
+      "image": "bbfd6df9-e710-4cee-bebc-fd9cf74a42fd.png"
+    },
+    {
+      "id": "2kWd09Wr9q",
+      "departmentId": "5oeryErVbN",
+      "order": 5,
+      "name": "قلية|قەلی|Qali",
+      "image": "e35103fe-3c77-4ea7-bd91-ad5ad9fc7003.png"
+    },
+    {
+      "id": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "order": 6,
+      "name": "الوجبات الغربي |خارنێن غەربی|Western meals",
+      "image": "e801d494-3b76-4e7c-af95-73baad17fa5b.png"
+    },
+    {
+      "id": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "order": 7,
+      "name": "بركر |برگر|Burger",
+      "image": "8eafe11a-184b-4003-8177-ca94ec296c6e.png"
+    },
+    {
+      "id": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "order": 8,
+      "name": "بيتزا  |بيتزا  |Pizza",
+      "image": "c609590d-8ef9-478c-a41d-2d937b82f133.png"
+    },
+    {
+      "id": "D0qd608R4x",
+      "departmentId": "5oeryErVbN",
+      "order": 9,
+      "name": "السندويشات|السندويشات|Sandwiches",
+      "image": "448f73dd-ec72-4f84-9e64-b590928d72b7.png"
+    },
+    {
+      "id": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "order": 10,
+      "name": "مشروبات بارده|فەخارنێن سار|Cold drinks",
+      "image": "385ea9c0-339d-4089-95b1-2d2aca0aed6c.png"
+    },
+    {
+      "id": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "order": 11,
+      "name": "القهوة|قەهوە|Coffee",
+      "image": "a78bd3d1-87e2-4423-bbbd-44714ea644b2.png"
+    },
+    {
+      "id": "DG0rLOJdN1",
+      "departmentId": "5oeryErVbN",
+      "order": 12,
+      "name": "القهوة الباردة|آیس کوفی|Cold Coffee",
+      "image": "8adee767-5549-49c4-90dc-6dbc51b20ed3.png"
+    },
+    {
+      "id": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "order": 13,
+      "name": "موهيتو|موهيتو|Mojito",
+      "image": "e1951922-aeba-40ce-b77b-3406662bd6f1.png"
+    },
+    {
+      "id": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "order": 14,
+      "name": "سموذي|سموذي|Smoothie",
+      "image": "9bdb651f-7c46-4070-b208-76bccbef3b5f.png"
+    },
+    {
+      "id": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "order": 15,
+      "name": "ميلك شيك|ميلك شيك|Milkshake",
+      "image": "9b4da6ba-ff68-4d86-8dfa-f933b96af756.png"
+    },
+    {
+      "id": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "order": 16,
+      "name": "حلويات|شريناهي|Sweets",
+      "image": "3f9c01b6-5362-43a1-847d-274db52f73c7.png"
+    },
+    {
+      "id": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "order": 17,
+      "name": "العصائر|شەربەت|Juice",
+      "image": "bdbfae05-e13c-4012-9fa3-2dcf35d0bbfb.png"
+    }
+  ],
+  "products": [
+    {
+      "id": "NWwr5z5RE7",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "اسبريسو|اسبريسو|Espresso",
+      "image": "f1979e9f-6f33-43d8-ae60-40ee9299ea68.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "اسبريسو|اسبريسو|Single",
+            "description": null
+          },
+          {
+            "price": 4000,
+            "title": "اسبريسو دبل|اسبريسو دبل|Double",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "AmbBYKDrVk",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "كابتشينو|كابتشينو|Cappuccino",
+      "image": "0d51ed11-0cdd-4401-b131-4e56423db201.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "كابتشينو|كابتشينو|Cappuccino",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRgKVR8E",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "كافيه لاتي|كافيه لاتي|Latte",
+      "image": "9374125c-e730-447c-9149-e44e5d28d1ea.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "كافيه لاتي|كافيه لاتي|Latte",
+            "description": null
+          },
+          {
+            "price": 4000,
+            "title": "لاتي فانيلا|لاتي فانيلا|vanilla Latte",
+            "description": null
+          },
+          {
+            "price": 4000,
+            "title": "كاراميل لاتي|كاراميل لاتي|Caramel Latte",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "pzLdpeXrbX",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "كافيه موكا|كافيه موكا|Mocha",
+      "image": "2c41115d-6bd2-4242-a625-3fdc2252d648.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "كافيه موكا|كافيه موكا|Mocha",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DXvd3vnB0o",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "كون بانا|كون بانا|Con Panna",
+      "image": "0787971d-91d4-4eb1-b82f-eb8143deae3c.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "كون بانا|كون بانا|Con Panna",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ZLYdVXwR4P",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "ماكياتو|ماكياتو|Macchiato",
+      "image": "a13eb3ab-bc5f-498f-a8a5-b75c211a3bdc.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ماكياتو|ماكياتو|Macchiato",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Ygkr2GZRm4",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "امريكانو|امريكانو|Americano",
+      "image": "1ef19d2e-6ca0-47a6-814b-a5bc96ed04a6.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "امريكانو|امريكانو|Americano",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJPOdM5",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "هوت شوكليت|هوت شوكليت|Hot Chocolate",
+      "image": "8ad56976-9436-41ca-b616-571074dd681d.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "هوت شوكليت|هوت شوكليت|Hot Chocolate",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Dnyr81PR98",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "وايت شوكليت |وايت شوكليت |White Chocolate",
+      "image": "434979b8-88d4-4d7d-bff6-9df45584fb71.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "وايت شوكليت|وايت شوكليت|White Chocolate",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrOmMBz2",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "سحلب|سحلب|Sahlep",
+      "image": "63e6562a-7ce8-4f9c-8942-1489324b26b1.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "سحلب|سحلب|Sahlep",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "JoqdaKkR1K",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "قهوه تركيه|قەهوا تورکی|Turkish Coffee",
+      "image": "d8c588be-6790-4f98-867f-43f70d07959a.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "قهوه تركيه|قەهوا تورکی|Turkish Coffee",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr5y3rE7",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "قهوه عربي ساده|قەهوا عەرەبی ساده|Arabic Coffee",
+      "image": "4c821a8d-78a2-4605-8a49-528eda0382c7.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "قهوه عربي ساده|قەهوا عەرەبی ساده|Arabic Coffee",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05BbZ5Bw3",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "قهوه البطم|قەهوا کەزانا|Qazwan Coffee",
+      "image": "eea90ef0-8b99-4c80-ab5d-8c2e156de3be.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "قهوه البطم|قەهوا کەزانا|Qazwan Coffee",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "AmbBY9qBVk",
+      "categoryId": "2WeRgbwr8E",
+      "departmentId": "5oeryErVbN",
+      "name": " شاي اضافي|چا|Tea",
+      "image": "d59a4396-3486-4a57-85da-5c4cbd643ef2.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 500,
+            "title": "شاي|چا|Tea",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRgZbr8E",
+      "categoryId": "DG0rLOJdN1",
+      "departmentId": "5oeryErVbN",
+      "name": "أيس لاتيه|أيس لاتيه|Iced Latte",
+      "image": "85f2c24f-69a6-4815-b3a0-df5fbb520ea8.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "ساده|ساده|Iced Latte",
+            "description": null
+          },
+          {
+            "price": 5000,
+            "title": "كرميل|کەرەمێل|Caramel",
+            "description": null
+          },
+          {
+            "price": 5000,
+            "title": "ڤانيلا|ڤانێلا|Vanilla",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "pzLdp5arbX",
+      "categoryId": "DG0rLOJdN1",
+      "departmentId": "5oeryErVbN",
+      "name": "أيس موكا|أيس موكا|Iced Mocha",
+      "image": "bc22fbda-2ffb-4ca2-88b3-09408d9d8daa.jpeg",
+      "description": null,
+      "container": {
+        "link": "أيس موكا",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "أيس موكا|أيس موكا|Iced Mocha",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DXvd3PLr0o",
+      "categoryId": "DG0rLOJdN1",
+      "departmentId": "5oeryErVbN",
+      "name": "ايس أمريكانو|ايس أمريكانو|Iced Americano",
+      "image": "a51f42c3-1cbb-4252-a9ab-f29ab764dbee.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ايس أمريكانو|ايس أمريكانو|Iced Americano",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Ygkr27xRm4",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "كابتشينو الفريدو|كابتشينو الفريدو|Cappuccino Al Freddo",
+      "image": "350c53f3-fe5e-4e20-8561-a3a095c2004b.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "كابتشينو الفريدو|كابتشينو الفريدو|Cappuccino Al Freddo",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJM8rM5",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "أسبريسو تونيك|أسبريسو تونيك|Espresso Tonic",
+      "image": "6fcd6cdc-f2bb-40c4-90e7-295e9d219e3a.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "أسبريسو تونيك|أسبريسو تونيك|Espresso Tonic",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrOo3rz2",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "اورانج أمريكانو|اورانج أمريكانو|Orange Americano",
+      "image": "e94cb3d3-5792-48c4-9a70-5c5180546f83.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "اورانج أمريكانو|اورانج أمريكانو|Orange Americano",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "JoqdaZAr1K",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك فانيلا|ميلك شيك فانيلا|Vanilla Milkshake",
+      "image": "934c30f0-fc30-45fc-ab7a-149a982de528.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك فانيلا|ميلك شيك فانيلا|Vanilla Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "WDYrEMVr0b",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك فراولة|ميلك شيك فراولة|Strawberry Milkshake",
+      "image": "f65c29ae-c19d-47eb-a02e-070431bcc937.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك فراولة|ميلك شيك فراولة|Strawberry Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "KeXd7NDBoE",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك شكولاته|ميلك شيك شكولاته|Chocolate Milkshake",
+      "image": "c0d4806f-dbd1-4124-8ae9-ee33c01fdc94.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك شكولاته|ميلك شيك شكولاته|Chocolate Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "8aYRPMzBXv",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك فستق|ميلك شيك فستق|Pistachio Milkshake",
+      "image": "4648cae6-e940-49c3-86cc-7b579f020afa.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك فستق|ميلك شيك فستق|Pistachio Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N3QrvVErGa",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك كرميل|ميلك شيك كرميل|Caramel Milkshake",
+      "image": "79ca3f64-6284-41e5-acd7-ceea960f5ceb.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك كرميل|ميلك شيك كرميل|Caramel Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "5oery8EdVb",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك ليمون|ميلك شيك ليمون|Lemon Milkshake",
+      "image": "a3890f88-3d08-464d-afd3-e458f4c2933a.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك ليمون|ميلك شيك ليمون|Lemon Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "32WBzOYdb0",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك لوتس|ميلك شيك لوتس|Lotus Milkshake",
+      "image": "e15712f9-3e30-43d1-ac72-e5dbdb227bc6.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك لوتس|ميلك شيك لوتس|Lotus Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QJ3dNMZBPN",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك نوتيلا|ميلك شيك نوتيلا|Nutella Milkshake",
+      "image": "254d3682-c8ee-4466-999a-168a6cfc993e.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك نوتيلا|ميلك شيك نوتيلا|Nutella Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "MKYdmZDrNp",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "كوكتيل فواكي|كوكتيلا فێقی|Fruit Cocktail",
+      "image": "a756ca28-3375-4eb8-955f-131314a1aeb0.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "كوكتيل فواكي|كوكتيلا فێقی|Fruit Cocktail",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "oxmr1GeB5e",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "كوكتيل موز حليب|كوكتيلا شیر موز|Banana and Milk Cocktail ",
+      "image": "1abf6c30-9355-41d6-ba57-31670fe75b8d.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "كوكتيل موز حليب|كوكتيلا شیر موز|Banana and Milk Cocktail",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DG0rLoldN1",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "كوكتيل موز حليب فراولة| كوكتيلا شیر موز فراولة|Banana Strawberry Milk Cocktail",
+      "image": "043bc116-9541-4ccb-98db-d888504c15c7.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "كوكتيل موز حليب فراولة| كوكتيلا شیر موز فراولة|Banana Strawberry Milk Cocktail",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ve7rkZEd3k",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "كوكتيل الجنة|كوكتيلا بەهەشت|Heaven Cocktail",
+      "image": "b7f095fe-bc93-4860-88c6-06dc2fc36ea0.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "كوكتيل الجنة|كوكتيلا بەهەشت|Heaven Cocktail",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "me8dQM4dOo",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "كوكتيل بينا كولادا |كوكتيل بينا كولادا |Piña Colada Cocktail",
+      "image": "3908f787-472b-4323-8ed4-e94df772032e.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "كوكتيل بينا كولادا|كوكتيل بينا كولادا|Piña Colada Cocktail",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "1qoBWZKRnE",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "كوكتيل إمبراطور|كوكتيل إمبراطور|Emperor Cocktail",
+      "image": "244ea4b5-3c1d-434d-9381-69e34ab04c35.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "كوكتيل إمبراطور|كوكتيل إمبراطور|Emperor Cocktail",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "qWvrxJJBGA",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "كوكتيل موز حليب نوتيلا |كوكتيلا شیر موز نوتيلا |Banana Milk Nutella Cocktail ",
+      "image": "2e8e95fe-c3c2-42a9-90b1-96b7a0cdcc57.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "كوكتيل موز حليب نوتيلا|كوكتيلا شیر موز نوتيلا |Banana Milk Nutella Cocktail",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "5WVRlZMdAX",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "كوكتيل أڤو كاتو|كوكتيلا أڤو كاتو|Avocado Cocktail",
+      "image": "e2a573fa-179f-4230-8eeb-501e36c2aede.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "كوكتيل أڤو كاتو|كوكتيلا أڤو كاتو|Avocado Cocktail",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "7jQB4vDrWY",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير برتقال|شەربەتا پرتەقالێ|Orange Juice",
+      "image": "e85e4c9a-1fab-4cfa-be6b-a985866ee073.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير برتقال|شەربەتا پرتەقالێ|Orange Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2kWd0avr9q",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير ليمون|شەربەتا نيموكێ|Lemon Juice",
+      "image": "eca4937d-14b9-46a6-9a87-b83aeee6edab.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير ليمون|شەربەتا نيموكێ|Lemon Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "LlaRAMmRAb",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير برتقال ليمون| شەربەتا پرتەقالو نيموكێ|Orange Lemon Juice",
+      "image": "cc2d9d0e-2915-4602-bd95-fa1cd2157b0c.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير برتقال ليمون| شەربەتا پرتەقالو نيموكێ|Orange Lemon Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "D0qd6z1d4x",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير ليمون زنجبيل عسل|شەربەتا نيموكو زەنجەبیلو هنگڤینی|Honey Ginger Lemon Juice",
+      "image": "099fb2dc-d490-4c27-b5ae-f47cba8a8293.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "عصير ليمون زنجبيل عسل|شەربەتا نيموكو زەنجەبیلو هنگڤینی|Honey Ginger Lemon Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "bZyRKMqdzO",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير فراولة|شەربەتا فراولة|Strawberry Juice",
+      "image": "634707c3-545f-4b3a-8d32-4ce5072a73fc.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير فراولة|شەربەتا فراولة|Strawberry Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "v7ZreZyR4O",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير رمان|شەربەتا هنارێ|Pomegranate Juice",
+      "image": "b04fe5f8-3bba-4f16-80cc-2ff93e43d2de.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير رمان|شەربەتا هنارێ|Pomegranate Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Kg5rXZ5Bzx",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير اناناس|شەربەتا اناناسێ|Pineapple Juice",
+      "image": "d66a7219-2ebd-42a1-b87f-aa76a8d997cd.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير اناناس|شەربەتا اناناسێ|Pineapple Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "a7pBMqoBWP",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير خوخ|شەربەتا خوخێ|Peach Juice",
+      "image": "7e618375-eb66-4fd4-b1a2-e15dac8b2bf3.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير خوخ|شەربەتا خوخێ|Peach Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ANOBDMVdgk",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير فرنسي|شەربەتا فەرەنسی|French Juice",
+      "image": "d5a4c9fd-d0fa-4bff-8d5a-594e93e475e2.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير فرنسي|شەربەتا فەرەنسی|French Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "OkmrqbMRAx",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير جمايكا |شەربەتا جمايكا |Jamaica Juice",
+      "image": "5c9ada9d-e374-470f-a242-cd23a604ae92.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير جمايكا|شەربەتا جمايكا |Jamaica Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "lOPdw25Bk6",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير كيوي|شەربەتا کیوی|Kiwi Juice",
+      "image": "21d7580e-0e29-40c6-a8a7-88dcc306c6a9.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير كيوي|شەربەتا كيوي|Kiwi Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "jV8dZZndOn",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير بلو هاواي|شەربەتا بلو هاواي|Blue Hawaiian Juice",
+      "image": "433d2d00-229b-42f3-8d0b-32d75e2a50ad.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير بلو هاواي|شەربەتا بلو هاواي|Blue Hawaiian Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "XbDd91VdeP",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير مانكا|شەربەتا مانگوی|Mango Juice",
+      "image": "0498075c-b5f0-406c-9c01-69fd9c706dee.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "عصير مانكا|شەربەتا مانگوی|Mango Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "4ebRjZYR1N",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير بولو|شەربەتا بولو|Lemonade Juice",
+      "image": "6fda0766-6b11-45d9-8099-635e573146b4.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير بولو|شەربەتا بولو|Lemonade Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "g8KdoZ0BPD",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "عصير بلو اوشن|شەربەتا بلو اوشن|Blue Ocean Juice",
+      "image": "ca9b50fa-3325-441a-a023-e283531f2fec.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "عصير بلو اوشن|شەربەتا بلو اوشن|Blue Ocean Juice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QVwRGM7dlE",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كريب نوتيلا|كرێپا نوتیلایێ|Nutella Crêpe",
+      "image": "8aad1c54-982a-4589-8167-55e9c06cb017.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "نوتيلا|نوتیلایێ|Nutella",
+            "description": null
+          },
+          {
+            "price": 4000,
+            "title": "لوتوس|لوتوس|Lotus",
+            "description": null
+          },
+          {
+            "price": 4000,
+            "title": "كيندر|كينده ر|Kinder",
+            "description": null
+          },
+          {
+            "price": 4000,
+            "title": "فستق|بستاشيو|Pistachio",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr583dE7",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كريب فواكي|كرێپا فێقی|Fruit Crêpe",
+      "image": "ff233842-82e8-45fd-a448-6fb79cc82719.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "كريب فواكي|كرێپا فێقی|Fruit Crêpe",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05Bbj5Bw3",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كربب رول بنانا|كرێپا رۆل موز|Banana Roll Crêpe",
+      "image": "5ce0c24a-951c-410c-833e-7407c32699b5.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "كربب رول بنانا|كرێپا رۆل موز|Banana Roll Crêpe",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "AmbBYmqBVk",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كريب فوتشيني|كرێپا فوتشيني|Fettuccine Crepe",
+      "image": "0e45a49e-eade-485e-9bff-30377fcdacc4.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "كريب فوتشيني|كرێپا فوتشيني|Fettuccine Crepe",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRgGbR8E",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كريب لوتس|كرێپا لوتس|Lotus Crepe",
+      "image": "7078cce5-1c44-47b5-b190-3b56b4491985.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "كريب لوتس|كرێپا لوتس|Lotus Crepe",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "pzLdpMarbX",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كريب كيندر|كرێپا كيندر|Kinder Crepe",
+      "image": "7db89a96-d120-454c-aded-c4ecf775a830.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "كريب كيندر|كرێپا كيندر|Kinder Crepe",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DXvd32LB0o",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كنافه فستق|كونافا فستەقێ|Pistachio Kunafa",
+      "image": "13a0d363-e2d4-452a-8e65-74112c90f623.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "كنافه فستق|كونافا فستەقێ|Pistachio Kunafa",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ZLYdVyZB4P",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كنافة الجبن|كونافا پەنیری|Cheese kunafa",
+      "image": "07eb7367-9830-421c-9491-4cafb5c8eb65.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "كنافة الجبن|كونافا پەنیری|Cheese kunafa",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Ygkr2Vxrm4",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "وافل |وآفڵ|Waffle",
+      "image": "e217adca-a01c-4e36-afd4-03ff670dca03.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "وافل|وآفڵ|Waffle",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJp8dM5",
+      "categoryId": "8aYRP5GBXv",
+      "departmentId": "5oeryErVbN",
+      "name": "بان كيك|پان کێک|Pancakes",
+      "image": "f0794332-3c0a-45bf-9c80-ced83922e37c.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "بان كيك|پان کێک|Pancakes",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "ميني بان كيك|ميني پان کێک|Mini Pancakes",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "KeXd7aDRoE",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "صحن فواكه كبير|سێنیکا فێقی مەزن|Large Fruit Plate",
+      "image": "5e8ff1e1-127b-4b00-ab77-79dbbee0125d.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "صحن فواكه كبير|سێنیکا فێقی مەزن|Large Fruit Plate",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "8aYRPOzrXv",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "صحن فواكه صغير|سێنیکا فێقی بجیک|Small Fruit Plate",
+      "image": "75bc91bd-44e1-4468-97a2-1ea3a44386c0.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "صحن فواكه صغير|سێنیکا فێقی بجیک|Small Fruit Plate",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N3QrvMEdGa",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "سلطه فواكه|سەلەتا فێقی|Fruit Salad",
+      "image": "60b83c87-f3c1-4050-bc29-11c3b49c1404.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "سلطه فواكه|سەلەتا فێقی|Fruit Salad",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "5oeryoEBVb",
+      "categoryId": "ve7rkL2R3k",
+      "departmentId": "5oeryErVbN",
+      "name": "ريدبول مكسيكي|رێدبوڵا مەکسیکی|Mexican Red Bull",
+      "image": "29e3c896-945e-4c12-93d0-654025250f29.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "ريدبول مكسيكي|رێدبوڵا مەکسیکی|Mexican Red Bull",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "32WBz5YRb0",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "ببسي|ببسي|PEPSI",
+      "image": "6805b88c-e1ba-4aff-b20a-037be9c7db65.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 500,
+            "title": "ببسي|ببسي|PEPSI",
+            "description": null
+          },
+          {
+            "price": 250,
+            "title": "ببسي صغير|ببسي بجيك|Mini PEPSI",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QJ3dNJZdPN",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "ميرندا |مێرەندا|Miranda",
+      "image": "98c1a98d-6cfa-421f-ab98-dccf8ad05498.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 500,
+            "title": "ميرندا|مێرەندا|Miranda",
+            "description": null
+          },
+          {
+            "price": 250,
+            "title": "ميرندا صغير|مێرەندا بجيك|Mini Miranda",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "MKYdmMDdNp",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "سفن |سەڤن|7up",
+      "image": "42d6f704-6a6e-41eb-8412-1fee0c27cec4.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 500,
+            "title": "سفن|سەڤن|7up",
+            "description": null
+          },
+          {
+            "price": 250,
+            "title": "سفن صغير|سەڤن بجيك|Mini 7up",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "oxmr13eB5e",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "صودا ساده|صودا ساده|Sparkling Mineral Water",
+      "image": "d1a41b73-caf4-446e-b72a-6bc626b87306.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 1000,
+            "title": "صودا ساده|صودا ساده|Sparkling Mineral Water",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DG0rLVlBN1",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "صودا ليمون|صودا نیموکێ|Sparkling Lemon Mineral Water ",
+      "image": "26a759d2-fd7c-498c-81a0-2054fada9080.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 1000,
+            "title": "صودا ليمون|صودا نیموکێ|Sparkling Lemon Mineral Water",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ve7rkMEB3k",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر لحم جبن|بورگەرا گۆشتێ پەنیر|Cheese Burger",
+      "image": "b19bc46e-cd89-4632-b20a-0a7543990f95.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "بركر لحم جبن|بورگەرا گۆشتێ پەنیر|Cheeseburger",
+            "description": null
+          },
+          {
+            "price": 10000,
+            "title": "بركر لحم جبن دبل|بورگەرا گۆشتێ پەنیر دەبل|Double Cheeseburger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "me8dQa4dOo",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر دجاج جبن|بورگەرا مریشکێ پەنیر|Chicken Cheeseburger",
+      "image": "e470f039-5960-452a-af20-b7e0aa2ff126.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "بركر دجاج جبن|بورگەرا مریشکێ پەنیر|Chicken Cheeseburger",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "بركر  دجاج دبل|بورگەرا مریشکێ پەنیر دەبل|Double Chicken Cheeseburger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "1qoBWzKRnE",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر باربيكيو|بورگەرا باربیکیۆ|Barbecue Burger",
+      "image": "09e214c1-006a-4473-b0c4-b5d5a3367d81.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بركر باربيكيو|بورگەرا باربیکیۆ|Barbecue Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "qWvrxMJRGA",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر شورش|بورگەرا شۆرەش|Shorash Burger",
+      "image": "e0f10f7c-cb9f-4519-a798-1f64f86634c5.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "بركر شورش|بورگەرا شۆرەش|Shorash Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "5WVRlMMBAX",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر ماشروم|بورگەرا كڤارک|Mushroom Burger",
+      "image": "50b4e8b3-6e11-4192-94f8-97129a466e32.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بركر ماشروم|بورگەرا كڤارک|Mushroom Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "7jQB4JDrWY",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر هاني ماسترد |بورگەرا هانی مآستەرد|Honey Mustard Burger",
+      "image": "321acd6e-42bd-418a-aeff-78ef5d47ef93.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 9000,
+            "title": "لحم|گوشت|Meat",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "دجاج|مریشک|Chicken",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2kWd0pvd9q",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "زنجر بركر بل جبن|زینجەر بورگەر پەنیر|Zinger Cheeseburger",
+      "image": "49ad2d7d-1fac-449f-96bc-fb47f88c3d51.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "زنجر بركر بل جبن|زینجەر بورگەر پەنیر|Zinger Cheeseburger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "LlaRALmrAb",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر بصوص الفستق الحلبي|بورگەرا بصوصا فستەقێ|Pistachio Sauce Burger",
+      "image": "970f0b83-e5a5-4d60-890d-46cfa1e1a933.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بركر بصوص الفستق الحلبي|بورگەرا بصوصا فستەقێ|Pistachio Sauce Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "D0qd6O1r4x",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر جيتوز|بورگەرا چیتوس|Cheetos Burger",
+      "image": "04605388-d175-4189-b5e6-071f1b9eafbd.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بركر جيتوز|بورگەرا چیتوس|Cheetos Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "bZyRK3qRzO",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "سبيايسي بركر لحم|بورگەرا گۆشتێ يا تیژ|Spicy Meat Burger",
+      "image": "d8c1e066-5a3a-4bbd-aada-47d38bd2c8b8.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "سبيايسي بركر لحم|بورگەرا گۆشتێ يا تیژ|Spicy Meat Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "v7ZreMyr4O",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "سموكي بركر لحم|بورگەرا گۆشتێ يا سموکی|Smokey Burger",
+      "image": "ed63f6ec-42fe-41f3-b472-1b8bf132a0d7.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "سموكي بركر لحم|بورگەرا گۆشتێ يا سموکی|Smokey Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Kg5rXN5Bzx",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر اكسترا سبيشل|بورگەرا ئێکسترا سپێشەڵ|Burger Extra Special",
+      "image": "d13698ed-07af-4ac1-a00f-3185495422fa.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "بركر اكسترا سبيشل|بورگەرا ئێکسترا سپێشەڵ|Burger Extra Special",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "a7pBM2odWP",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "كرسبي|كرێسبی|Crispy Chicken",
+      "image": "47f0047f-65cf-4afe-a1a8-ca9c11a6ada7.jpg",
+      "description": null,
+      "container": {
+        "link": "كرسبي",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "كرسبي|كرێسبی|Crispy Chicken",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "OkmrqqMrAx",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "زنجر سبايسي|سپایسی زنجەر|Spicy Zinger",
+      "image": "c1bf7c7c-8473-4745-bc28-abd51efc5687.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "زنجر سبايسي|سپایسی زنجەر|Spicy Zinger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "lOPdwM5Rk6",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "ستيك دجاج|ستێکا مریشکێ|Chicken Steak",
+      "image": "a292e40d-0a6e-45ff-b3ce-4c0a9f4c024d.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "ستيك دجاج|ستێکا مریشکێ|Chicken Steak",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "jV8dZ1nBOn",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بيكاتا دجاج|پیکاتا مریشک|Chicken Piccata",
+      "image": "fe1e7c20-6a09-4c9b-884b-06a1ba09604a.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "بيكاتا دجاج|پیکاتا مریشک|Chicken Piccata",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "4ebRjMYr1N",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "ريزو دجاج|ریزویا مريشکێ|Chicken Rizzo",
+      "image": "1da23b96-81d2-4dbd-a0ee-a0d4112bd58c.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "ريزو دجاج|ریزویا مريشکێ|Chicken Rizzo",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "g8KdoM0RPD",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بيكاتا لحم|پیکاتا گۆشت|Meat Piccata",
+      "image": "470863b4-0cfc-4913-9eb7-a2ee02be4617.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "بيكاتا لحم|پیکاتا گۆشت|Meat Piccata",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "PeXdnMQB5K",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "ستربس دجاج|سترێپس مریشک|Chicken Strips",
+      "image": "84cb8f3b-2e9f-4845-8cf7-fd42a2a08bac.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "ستربس دجاج|سترێپس مریشک|Chicken Strips",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QVwRGb7rlE",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "تويستر دجاج رول|تویستەر رووڵ مریشک|Twister Chicken Roll",
+      "image": "16635032-c2b6-4cc8-99b2-eea78ae467f2.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "تويستر دجاج رول|تویستەر رووڵ مریشک|Twister Chicken Roll",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr5D3dE7",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "مكسيكانو لحم |مەکسیکانو گوشت|Mexicano Beef",
+      "image": "4dd241a7-8c25-435c-a7e3-2f4c36601c7e.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "مكسيكانو لحم|مەکسیکانو گوشت|Mexicano Beef",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJ18rM5",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "بيتزا  مشكل|پیتزا مشەکەل|Mixed Pizza",
+      "image": "19fc3cae-0795-431d-a202-be8e3a14c0dd.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "بيتزا  مشكل|پیتزا مشەکەل|Mixed Pizza",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Dnyr8YxR98",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "بيتزا دجاج|پیتزا مریشکێ|Chicken Pizza",
+      "image": "c5af56ba-bf12-4502-a3bb-4e5b5e1965e3.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بيتزا دجاج|پیتزا مریشکێ|Chicken Pizza",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrOx3Rz2",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "بيتزا خضروات|پیتزا زەرزەواتی|Vegetable Pizza",
+      "image": "5b59a356-552a-4777-8808-5fabcca6a15c.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بيتزا خضروات|پیتزا زەرزەواتی|Vegetable Pizza",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "JoqdayAd1K",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "بيتزا بابروني|پیتزا پەپەرونی|Pepperoni Pizza",
+      "image": "abfcc67f-0e1f-48af-a843-f7d2d661c0c1.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "بيتزا بابروني|پیتزا پەپەرونی|Large pepperoni pizza",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr5D6dE7",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بيتزا تونه|پیترا تونا|Tuna Pizza",
+      "image": "61ef4400-369e-40b9-9af0-f38bc7a3c5d5.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بيتزا تونه|پیترا تونا|Tuna Pizza",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05Bbz9Bw3",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "بيتزا ماركريتا|پیترا مارگرێتا|Pizza Margherita",
+      "image": "13cb3779-516b-4ef5-9730-fb21a67cf7d7.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 9000,
+            "title": "بيتزا ماركريتا|پیترا مارگرێتا|Pizza Margherita",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRgkwR8E",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بيدا دجاج|پیدا مریشک|Chicken Pide",
+      "image": "171af188-83e2-48db-bc91-c07a2c24c9dd.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 9000,
+            "title": "بيدا دجاج|پیدا مریشک|Chicken Pide",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "pzLdppgdbX",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بيدا لحم|پیدا گوشتی|Meat Pide",
+      "image": "4aad28ae-fb06-415f-b01f-6e8a9bdc85cd.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 11000,
+            "title": "بيدا لحم|پیدا گوشتی|ـMeat Pide",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DXvd3DMr0o",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بيدا جبن|پیدا پەنیری|Cheese Pide",
+      "image": "5ae213f3-387a-4099-abd6-91c6ae404140.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "بيدا جبن|پیدا پەنیری|Cheese Pide",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Dnyr8YZR98",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "فنكر |فینگەر|Fries",
+      "image": "a21a5061-2203-4dc9-a93f-fe14ce9d55da.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "فنكر|فینگەر|Fries",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "فنكر بل جبن|فینگەر و پەنیر|Cheese fries",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrOxVRz2",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": " فنكر بل جبن|فینگەر و پەنیر|Cheese fries",
+      "image": "c48f54cc-a5b7-48a5-807c-f87a3a08621f.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "فنكر بل جبن|فینگەر و پەنیر|Cheese fries",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "WDYrEvGR0b",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "سکالوب دجاج|سکالوپ مریشک|Chicken Escalope",
+      "image": "9a01b9a9-429c-4565-8705-96280f1d1c04.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "سکالوب دجاج|سکالوپ مریشک|Chicken Escalope",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "KeXd7bNBoE",
+      "categoryId": "oxmr1z0R5e",
+      "departmentId": "5oeryErVbN",
+      "name": "فطور صباحي |تێشتا سپێدا|Morning Meals",
+      "image": "06005da1-dec5-49a2-bd7f-bdf7c1a8d55a.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "فطور صباحي  1 شخص|1 كەس|1 person",
+            "description": null
+          },
+          {
+            "price": 16000,
+            "title": "فطور صباحي 2 شخص|2 كەس|2 person",
+            "description": null
+          },
+          {
+            "price": 24000,
+            "title": "فطور صباحي 3 شخص| 3 كەس|3 person",
+            "description": null
+          },
+          {
+            "price": 32000,
+            "title": "فطور صباحي  4 شخص|4 كەس|4 person",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "LlaRApQrAb",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "سمارت|سمارت|Smart Energy Drink  ",
+      "image": "3fd514ba-6b4d-474e-b998-e511cb09fb93.jfif",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 2000,
+            "title": "سمارت|سمارت|Smart Energy Drink",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "D0qd6L8R4x",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "وايت تايكر|وايت تایگەر|White Tiger Energy Drink",
+      "image": "a0fef299-826d-496b-8e1f-ec03664ae69c.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "وايت تايكر|وايت تایگەر|White Tiger Energy Drink",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "jV8dZvXdOn",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك اوريو|ميلك شيك اوريو|Oreo Milkshake",
+      "image": "63f8d595-f004-4ebf-a4d7-f54873e2ed3e.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك اوريو|ميلك شيك اوريو|Oreo Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "XbDd9a8deP",
+      "categoryId": "QJ3dN2XdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "ميلك شيك كيندر|ميلك شيك كيندر|Kinder Milkshake",
+      "image": "91b2bb64-988f-464a-8170-a65637ec2dd3.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "ميلك شيك كيندر|ميلك شيك كيندر|Kinder Milkshake",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "4ebRjG3B1N",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "فرابي كوفي|فرابي كوفي|Frappe Coffee",
+      "image": "4b70224f-60e5-4537-a7a6-a5b77758e6fe.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "فرابي كوفي|فرابي كوفي|Frappe Coffee",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "g8KdojVBPD",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "فرابي فانيلا|فرابي فانيلا|Frappe Vanilla",
+      "image": "c916072b-1c06-4c27-85cf-42af09507c58.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "فرابي فانيلا|فرابي فانيلا|Frappe Vanilla",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05BbQ9Rw3",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بيض|هێک|Egg",
+      "image": "95b2eedf-4b5c-41a0-91d7-2af923053d8e.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "بيض|هێک|Egg",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "AmbBYPoRVk",
+      "categoryId": "oxmr1z0R5e",
+      "departmentId": "5oeryErVbN",
+      "name": "قلي|قەلی|Qali",
+      "image": "a1909cbf-8aae-43ce-961c-f54b8d1e8d1e.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "قلي|قەلی|Qali",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRg0wB8E",
+      "categoryId": "oxmr1z0R5e",
+      "departmentId": "5oeryErVbN",
+      "name": "قلي مع بيض|قەلی هێک|Qali With Egg",
+      "image": "45f39621-02b4-4276-a275-cbf773a9848f.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "قلي مع بيض|قەلی هێک|Qali With Egg",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DXvd33Md0o",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "لبن|ئافا ماست|Ayran",
+      "image": "2977d480-88ca-477d-84ad-eb9402a4b23f.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 500,
+            "title": "لبن|ئافا ماست|Ayran",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ZLYdVaAB4P",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "بلو بيري|بلو بيري|Blueberry",
+      "image": "f4a228b6-85c3-4336-9af2-96b381631dd1.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "بلو بيري|بلو بيري|Blueberry",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Ygkr2pOBm4",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "مانكو|مانكو|Mango",
+      "image": "143f0991-101e-4997-9146-418784f4c5b0.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "مانكو|مانكو|Mango",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJ0kdM5",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "ايجاز|هرمیک|Pear",
+      "image": "4d9a0d10-f3fe-4986-9255-080882474907.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "ايجاز|هرمیک|Pear",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Dnyr8OZd98",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": " پاشن|پاشن|Passion Fruit",
+      "image": "a312a0d7-0ea4-4412-83e8-76b6e3a3d7a2.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "پاشن|پاشن|Passion Fruit",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrOpVRz2",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "رازبيري|رازبيري|Raspberry",
+      "image": "ff36219f-d414-4ebe-bb01-b77360e8b628.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "رازبيري|رازبيري|Raspberry",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "JoqdaG4R1K",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "فراولة|فراولة|Strawberry",
+      "image": "fc8344bd-2ccd-4162-a107-213181222551.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "فراولة|فراولة|Strawberry",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr52zRE7",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "خوخ|خوخ|Peach",
+      "image": "6eda306f-917b-407c-a0c3-d09731f53ac5.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "خوخ|خوخ|Peach",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05BbQZRw3",
+      "categoryId": "5oeryQzrVb",
+      "departmentId": "5oeryErVbN",
+      "name": "ليتشي|ليتشي|Lychee",
+      "image": "8f84a25f-f240-4825-89d6-140f6d09eb70.webp",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "ليتشي|ليتشي|Lychee",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "AmbBYPmRVk",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "نعناع|نعناع|Mint",
+      "image": "362cbf65-9a3a-4b13-9498-2ba2c6d76689.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "نعناع|نعناع|Mint",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRg0kB8E",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "فراولة|فراولة|Strawberry",
+      "image": "bceb2596-91b2-47a2-9b08-2a812c950671.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "فراولة|فراولة|Strawberry",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "pzLdpjQRbX",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "تفاح اخضر|سێڤاڤا کەسک|Green Apple ",
+      "image": "57a58e72-21f4-405c-8c74-0bb49bc27220.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "تفاح اخضر|سێڤاڤا کەسک|Green Apple",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DXvd333d0o",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "بلو|بلو|Blue",
+      "image": "4d053f01-3113-4983-b650-f8240ca32a1b.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "بلو|بلو|Blue",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ZLYdVajB4P",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "رازبيري|رازبيري|Raspberry",
+      "image": "cef0a487-7fcd-4f66-9bb4-460b07061a39.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "رازبيري|رازبيري|Raspberry",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Ygkr2pXBm4",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "علك|علك|Bubble Gum",
+      "image": "a3a4bd29-f644-4d1f-af18-28315eb67870.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "علك|علك|Bubble Gum",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJ0LdM5",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "بلوبيري|بلوبيري|Blueberry",
+      "image": "69761a28-6ff6-4b8a-9ea8-70118fbeb5be.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "بلوبيري|بلوبيري|Blueberry",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Dnyr8Obd98",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "اناناس|اناناس|Pineapple",
+      "image": "0578c0b8-c133-41e0-8f9a-e04d535aad9f.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "اناناس|اناناس|Pineapple",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrOpDRz2",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "شوربة عدس|شوربا نیسکێ|Lentil Soup",
+      "image": "4032811c-da58-41fd-9f6d-6a69de0b9198.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "شوربة عدس|شوربا نیسکێ|Lentil Soup",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "JoqdaG5R1K",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "جرزات|چەرەزات|Nuts",
+      "image": "34f7afc4-526a-4afe-a266-8073136e7799.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "جرزات|چەرەزات|Nuts",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "KeXd78nroE",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "ماء زجاجي مع قدح ليمون|ئاڤا شیسەی دگەل لەیمونێ|Glass bottle of water with lemon",
+      "image": "2d170009-0e57-4ee5-bd2d-8b153b2603c4.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 1000,
+            "title": "ماء زجاجي مع قدح ليمون|ئاڤا شیسەی دگەل لەیمونێ|Glass bottle of water with lemon",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N3Qrvj0rGa",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "اجنحة دجاج|چەنگێن مریشكێ|Chicken Wings",
+      "image": "bde236e6-93af-41b2-8a17-edc588888656.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "نصف نفر|نيف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "5oeryjzRVb",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "تکە گوشت|تكه لحم|Meat Tikka",
+      "image": "e5b0d311-0905-480c-99d8-a4cb4c50a115.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نصف نفر|نيف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "32WBzj9Bb0",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": " كباب لحم| كباب گوشت|Meat Kebab",
+      "image": "de2938fe-adc2-4958-b22b-6416465a5c0d.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نصف نفر|نيف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QJ3dNgXrPN",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "تکە دجاج|تکێ مریشکێ|Chicken Tikka",
+      "image": "7d31bf22-c25c-45f8-849d-e1adfdbcd441.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "نصف نفر|نيف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "MKYdmjgrNp",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "کبد|مێلاك|Liver",
+      "image": "f36e479d-19ab-4e4d-b6ed-8ba84dbd0a0a.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نص|نيف|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "oxmr1vqR5e",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "كباب دجاج|كباب مریشك|Chicken Kabab",
+      "image": "ce7b3aaa-cb1f-4b44-a542-f002a2ff740f.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "نصف نفر|نيف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DG0rLjJBN1",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "مشاوي مشكل|مەشویات مشەکەل|Mix grills",
+      "image": "9c162aa3-4a42-450c-939c-cd098dafc6f6.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نصف نفر|نيف نه فه ر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ve7rk72r3k",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "دجاج على الفحم|مريشكا سه ر به لا|Charcoal Chicken",
+      "image": "71208be2-66b1-408e-8b0e-45433b300c8b.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 24000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 12000,
+            "title": "نصف نفر|نيف نه فه ر|Half portıon",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "me8dQjQrOo",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "دجاج مشوي علي تمن|مریشك سەر برنجێ|Chicken on Rice",
+      "image": "5db97fcb-4120-4848-9888-9b40bb9828e9.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "ربع|چارێك|Quarter",
+            "description": null
+          },
+          {
+            "price": 10000,
+            "title": "نص|نیڤ|Half",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ANOBDjArgk",
+      "categoryId": "2kWd09Wr9q",
+      "departmentId": "5oeryErVbN",
+      "name": "قەلیا شڤانا|قلي شفان|Qaly Shvan",
+      "image": "111b6be0-8af4-4c93-8701-7d6977f0a7d6.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "نصف نفر|نیف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "OkmrqmprAx",
+      "categoryId": "2kWd09Wr9q",
+      "departmentId": "5oeryErVbN",
+      "name": "قليه|قەلی|Meat Qali",
+      "image": "37d29ddf-39bc-432e-958b-1d3874f3a00c.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "نصف نفر|نیف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "lOPdwxyrk6",
+      "categoryId": "2kWd09Wr9q",
+      "departmentId": "5oeryErVbN",
+      "name": "قلية عقرة|قه لي ئاكري|Qalı Akrı",
+      "image": "56ae6a59-00f2-4d12-9a66-c1f938eae4d3.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "نصف نفر|نیف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "jV8dZjAdOn",
+      "categoryId": "2kWd09Wr9q",
+      "departmentId": "5oeryErVbN",
+      "name": "قلية القرية|قه ليا  كوندا|Villagers Qalı",
+      "image": "f1800062-7cf8-4816-aef8-38087823b12d.JPG",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "نصف نفر|نیف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "XbDd9QzdeP",
+      "categoryId": "2kWd09Wr9q",
+      "departmentId": "5oeryErVbN",
+      "name": "قلي سيل|قه لي سيل|Pan Qali",
+      "image": "33bc95e5-8311-4c75-b6f2-2f911cf32bc8.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "نصف نفر|نیف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "4ebRjE7r1N",
+      "categoryId": "2kWd09Wr9q",
+      "departmentId": "5oeryErVbN",
+      "name": "قلي معلاك|قه لي ميلاك|Liver Qali",
+      "image": "0f61f1ed-0766-462c-9156-74d076666233.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "نصف نفر|نیف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "g8Kdoz1BPD",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "جلاوي|جلاوی|Chalawi",
+      "image": "c8403fca-6a47-4de5-b675-e54d1b29b888.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 14000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نصف نفر|نيف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "PeXdnyvB5K",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "بيض غنم|بيض غنم|Sheep testicles",
+      "image": "78319f29-aa48-4f25-905a-cab8067332e1.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 14000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نصف نفر|نیڤ نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QVwRGjGrlE",
+      "categoryId": "5WVRlknrAX",
+      "departmentId": "5oeryErVbN",
+      "name": "برزولة|پەڕزولە|Ribs",
+      "image": "39d9d312-1954-4554-8629-84bcc0bbbdd8.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 20000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 12000,
+            "title": "نصف نفر|نيف نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr5mzrE7",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "گص لحم مع ارز|گەسا گوشتی لسەر برنجێ|Meat Shawarma with Rice",
+      "image": "981bc893-2471-438d-b435-029f37d29a2c.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "||",
+            "description": null
+          },
+          {
+            "price": 10000,
+            "title": "",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05BbpZrw3",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "قوزي محشي |قوزی حەشاندی|Stuffed Quzi with Rise",
+      "image": "72fdf86c-5a4f-4a64-a0ee-92fe08cd64ee.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 17000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "AmbBYjmdVk",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "قوزي مع ارز|قوزی لسەر برنجێ|Quzi With rise ",
+      "image": "5a5baf16-bccb-4b8e-9d1b-6d8b68f84364.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 17000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRg8kB8E",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "قوزی شام|قوزی شام|Quzi Sham",
+      "image": "7fb1aa17-23f6-4e94-9a64-b306405b5e2f.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 17000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "pzLdpNQRbX",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "قلية مع ارز|قەلی دگەل برنجێ|Qali with rice",
+      "image": "c051a861-c546-4300-812e-93765d64388d.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 10000,
+            "title": "نصف|نيف|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DXvd3z3B0o",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "كبه حامض|ترشك|kibbeh",
+      "image": "1f56f469-590b-4aaa-a3b1-47758cf7d50b.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نصف|نيف|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ZLYdVjjd4P",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "تشريب قوزي|تەشریبا قوزي|Meet Quzi Tashrib",
+      "image": "e5f98df9-99fc-4744-93ae-6ea6e2128b7c.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 17000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Ygkr2yXdm4",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "تشريب كص لحم|تەشریبا گەسا گوشتی|Tashreb Shawrma Meet",
+      "image": "b8d8ce07-c56b-44a4-afe9-3386fb409b92.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 10000,
+            "title": "نصف|نیڤ|",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJjLRM5",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "ماعون كص لحم|ماعونا گەسا گوشتی|Meat Shawarma Plate",
+      "image": "0178032f-9d17-4326-a274-ccd29df25715.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 14000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نصف نفر|نیڤ نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Dnyr8kbd98",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "ماعون شاورما دجاج|نەفەر شاورمە مریشک|Chicken Shawarma plate",
+      "image": "113c8633-097f-4a52-8c69-1286d7c680b1.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "نصف نفر|نیڤ نەفەر|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrOjDdz2",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "دیك کوردي|دیکلێ کوردی|Kurdish Rooster ",
+      "image": "8f63e78f-6071-4e8d-9fac-848dc35db0d5.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 20000,
+            "title": "نصف|نیف|Half",
+            "description": null
+          },
+          {
+            "price": 40000,
+            "title": "كامل|كامل|Whole",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Joqdag5R1K",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "دولمه|یاپراخ|Dolma",
+      "image": "bcb568c1-360a-429f-a9ac-c6d925197801.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "نصف|نيف|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "WDYrEjlR0b",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "تشريب قلية|ته شريب قه لي|Qali Tashreb",
+      "image": "50995adc-5b54-486d-8ea5-341270ee0852.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 14000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          },
+          {
+            "price": 10000,
+            "title": "نصف|نيف|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "KeXd7LnroE",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "لحم بعجين|هەڤیر گوشت|Meat Lahimajeen",
+      "image": "5215603f-5e2c-4c03-ae61-909c034b9cca.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "عادي|نور مال|",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "مشكل جبن| مشەکەل پەنیر|",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "بيض|هيك|",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "8aYRPjGdXv",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "پیتزا ایطالي|پیتزا ئیطالی|Italian Pizza",
+      "image": "d2e57e42-ac97-412b-96a7-4e2b78bddafb.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "عائلي|عائلي|Large",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N3QrvW0RGa",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "ستيك لحم|ستێکا گوشتی|Meat steak",
+      "image": "54a479a4-dae1-439a-8236-7543d4db0432.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 17000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "5oeryGzBVb",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "ماعون فلافل مشكل|ماعون فەلافل مشەکەل|Mixed Falafel Plate",
+      "image": "538a4d3f-e694-4762-8159-07daf3b5a979.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "نفر|نەفەر|One portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "32WBz09rb0",
+      "categoryId": "KeXd73NdoE",
+      "departmentId": "5oeryErVbN",
+      "name": "ماء|ئاڤ|Water",
+      "image": "f44c1112-85f6-4df2-91eb-54542413b621.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 250,
+            "title": "ماء|ئاڤ|Water",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QJ3dNjXdPN",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "كص دجاج مع ارز|گەسا مریشکێ لسەر برنجێ|Shawarma with rice",
+      "image": "1b4e0424-a938-4673-95e9-f8fef6003142.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "ماعون|كامل|One Portion",
+            "description": null
+          },
+          {
+            "price": 10000,
+            "title": "نصف ماعون|نيف|Half Portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "MKYdmvgrNp",
+      "categoryId": "LlaRAwQdAb",
+      "departmentId": "5oeryErVbN",
+      "name": "نودلز لحم|نودلز گوشت|Meat Noodles",
+      "image": "779529df-916b-4fa2-be59-9f8e49ec615c.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "نودلز لحم|نودلز گوشت|Meat Noodles",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "oxmr1Xqd5e",
+      "categoryId": "LlaRAwQdAb",
+      "departmentId": "5oeryErVbN",
+      "name": "نودلز دجاج|نودلز مریشک|Chicken Noodles",
+      "image": "6e84f07b-1908-4d93-825b-c87267344339.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "نودلز دجاج|نودلز مریشک|Chicken Noodles",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DG0rLeJRN1",
+      "categoryId": "LlaRAwQdAb",
+      "departmentId": "5oeryErVbN",
+      "name": "نودلز دجاج خضار|نودلز مریشک زەرزەوات|Chicken Noodles Vegetables",
+      "image": "7f2f03e0-817b-41bb-a060-e5401c66df9d.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "نودلز دجاج خضار| نودلز مریشک زەرزەوات|Chicken Noodles Vegetables",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ve7rkQ2B3k",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "فيتوتشيني ألفريدو|فيتوتشيني ألفريدو|Fettuccine Alfredo",
+      "image": "02462836-d496-49c6-a640-eec185587136.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "فيتوتشيني ألفريدو|فيتوتشيني ألفريدو|Fettuccine Alfredo",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "me8dQZQrOo",
+      "categoryId": "LlaRAwQdAb",
+      "departmentId": "5oeryErVbN",
+      "name": "باستا مكسيكي دجاج|پاستا مەکسیکی مریشک|Mexican Chicken Pasta",
+      "image": "2e1f0262-8f5c-4c25-8e10-b4eefe09815d.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "باستا مكسيكي دجاج|پاستا مەکسیکی مریشک|Mexican Chicken Pasta",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "1qoBWg6BnE",
+      "categoryId": "LlaRAwQdAb",
+      "departmentId": "5oeryErVbN",
+      "name": "بيستو باستا|بيستو باستا|Pesto Pasta",
+      "image": "97d263ef-a76c-4847-9b57-51edcf8d16c8.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بيستو باستا|بيستو باستا|Pesto Pasta",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "qWvrxqoRGA",
+      "categoryId": "LlaRAwQdAb",
+      "departmentId": "5oeryErVbN",
+      "name": "باستا دجاد بصوص البشاميل| پاستا مریشکێ بصوصا بەشەمێل|Bechamel Chicken Pasta",
+      "image": "35f9a37a-581a-41b5-bd45-93c9e6a74288.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "باستا دجاد بصوص البشاميل|پاستا مریشکێ بصوصا بەشەمێل|Bechamel  Chicken Pasta",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ANOBDeAdgk",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "فنكر|فینگەر|French fries",
+      "image": "58ab8673-c632-4538-a82c-91e8d37f1190.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "فنكر|فینگەر|French fries",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "فنكر بالجبن|فینگەر پەنیر|French fries with Cheese",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "OkmrqAprAx",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بيف ستروغونوف|بيف ستروغونوف|Beef Stroganoff",
+      "image": "e3600256-3e12-4bc8-a962-509f3e2723ff.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 15000,
+            "title": "بيف ستروغونوف|بيف ستروغونوف|Beef Stroganoff",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "lOPdwoydk6",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "بيتزا كوردي|بيتزا كوردي|Kurdish pizza",
+      "image": "aab31fb9-f87a-4f69-9795-71d87a4ce1a7.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "بيتزا كوردي طويل مشكل|بيتزا كوردي طويل مشكل|",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "بيتزا كوردي طويل بيض|بيتزا كوردي طويل بيض|",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "بيتزا كوردي طويل|بيتزا كوردي طويل |",
+            "description": null
+          },
+          {
+            "price": 8000,
+            "title": "بيتزا كوردي دائري مشكل|بيتزا كوردي دائري مشكل|",
+            "description": null
+          },
+          {
+            "price": 7000,
+            "title": "بيتزا كوردي دائري بيض|بيتزا كوردي دائري بيض|",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "بيتزا كوردي دائري|بيتزا كوردي دائري|",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "jV8dZVAdOn",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "بيتزا قمبلة|بيتزا قومبلة|Qumbala Pizza",
+      "image": "483fa5f4-23a5-4e8c-bb31-cddd7c0d8162.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 20000,
+            "title": "بيتزا قمبلة|بيتزا قومبلة|Qumbala Pizza",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "XbDd9ezdeP",
+      "categoryId": "D0qd608R4x",
+      "departmentId": "5oeryErVbN",
+      "name": "وجبة عربي شاورما|وەجبا شاورمێ عەرەبی|Arabic Shawarma meal",
+      "image": "3263d3fe-4c4f-40ac-b168-5184067e906f.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "وجبة عربي شاورما دجاج|وەجبا شاورمێ عەرەبی|Arabic Shawarma meal",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "4ebRjk7B1N",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "صاج شاورما|صاجا شاورمێ|Shawarma Wrap",
+      "image": "7ff610c1-b078-416e-8500-f0566ff01a6e.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "صاج شاورما|صاجا شاورمێ|Shawarma Wrap",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "g8Kdo41rPD",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "شاورما|شاورمە|Shawarma",
+      "image": "9a89cc50-d029-4462-ba3b-d2d25cd14672.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 2500,
+            "title": "شاورما|شاورمە|Shawarma",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QVwRGeGdlE",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+      "image": "cf122801-43ce-4bb1-a2ac-ea16b4f62772.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 6000,
+            "title": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr5ezrE7",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "دونر دجاج|دونەرا گەسا مریشکێ|Chicken Doner",
+      "image": "979f093f-4db9-48c5-8da1-d66864d0304c.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "دونر دجاج|دونەرا گەسا مریشکێ|Chicken Doner",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05BbPZrw3",
+      "categoryId": "7jQB4obRWY",
+      "departmentId": "5oeryErVbN",
+      "name": "تشريب شاورما|تشريب شاورما|",
+      "image": "b8aa4521-419d-43a7-a103-ad897ea65c4e.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 14000,
+            "title": "نفر|نفر|",
+            "description": null
+          },
+          {
+            "price": 10000,
+            "title": "نصف نفر|نصف نفر|",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "4ebRj4pd1N",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "سموك بركر|سموك بركر|Smoked burger",
+      "image": "27540479-ec56-4a88-be81-5808144186d9.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "سموك بركر|سموك بركر|Smoked burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "g8Kdoe8RPD",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "كرانشي بركر دجاج|كرانشي بركر مريشك|Crunchy Chicken Burger",
+      "image": "035d0f9a-ffee-4669-9023-e2425a5e46ff.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "كرانشي بركر دجاج|كرانشي بركر مريشك|Crunchy Chicken Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "PeXdnK8r5K",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "فلافل|فەلافل|Falafel",
+      "image": "17fb09a7-f6c6-4994-9713-d27a5cf57fda.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 2500,
+            "title": "فلافل|فەلافل|Falafel",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QVwRG03BlE",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "شيش طاوق|شيش طاوق|Shesh Tawq",
+      "image": "549daa7d-4f3d-463b-b3fa-95522322159d.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 2500,
+            "title": "شيش طاوق|شيش طاوق|Shesh Tawq",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr5OVBE7",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "كص لحم|کەسا گوشتی|Meat Shawrma",
+      "image": "9970f7d6-0ac0-41e0-b4b1-3ed44780581d.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "كص لحم|کەسا گوشتی|Meat Shawarma",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05BbmVRw3",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "شوربة المرضى|شوربا نەساخا|Patient soup",
+      "image": "66a9aaed-fc69-42f2-8f75-c37ab862e301.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "شوربة المرضى|شوربا نەساخا|Patient soup",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "AmbBYOXrVk",
+      "categoryId": "oxmr1z0R5e",
+      "departmentId": "5oeryErVbN",
+      "name": "مخلمة|مەخلەمە|Makhlama",
+      "image": "7c41f7ec-b287-48a3-be01-1c12660f9bbc.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "مخلمة لحم|مەخلەما گوشتی|Makhlama with meat",
+            "description": null
+          },
+          {
+            "price": 4000,
+            "title": "مخلمة بدون لحم|مەخلەما بێ گوشت|Makhlama without meat",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRgWgR8E",
+      "categoryId": "Joqdaj5r1K",
+      "departmentId": "5oeryErVbN",
+      "name": "ديك كامل تمن|دیکل کامل سەر برنجێ|Whole rooster with rice",
+      "image": "88ab2a4c-a9bd-488d-92ad-d297d89e3ca8.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 40000,
+            "title": "ديك كامل|دیکل کامل|whole rooster",
+            "description": null
+          },
+          {
+            "price": 20000,
+            "title": "نصف ديك|نیڤ دیکل|Half rooster",
+            "description": null
+          },
+          {
+            "price": 12000,
+            "title": "ربع ديك|ربع دیکل|Quarter rooster",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "pzLdpXldbX",
+      "categoryId": "Joqdaj5r1K",
+      "departmentId": "5oeryErVbN",
+      "name": "منسف قوزی|مەنسەفا قوزي|Large Quzi plate",
+      "image": "613eba07-81c5-4f7c-961f-9ecf5648e4d0.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 35000,
+            "title": "2 نفر|2 نەفەر|For Tow",
+            "description": null
+          },
+          {
+            "price": 50000,
+            "title": "3 نفر|3 نەفەر|For Three",
+            "description": null
+          },
+          {
+            "price": 70000,
+            "title": "4 نفر|4 نەفەر|For Four",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DXvd3JmB0o",
+      "categoryId": "Joqdaj5r1K",
+      "departmentId": "5oeryErVbN",
+      "name": "منسف دجاج شوي|مەنسفا مریشکا بژارتی|Large Grilled Chicken Plate ",
+      "image": "a0e5f223-724c-48ce-8ba7-1c46a108d932.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 30000,
+            "title": "دجاجە کاملە على منسف تمن|مریشکا بژارتی کامل سەر برنجێ|Grilled Chicken On Rice",
+            "description": null
+          },
+          {
+            "price": 35000,
+            "title": "5 عادی منسف|5 عادی منسف|5 Quarter Chicken on Rice",
+            "description": null
+          },
+          {
+            "price": 24000,
+            "title": "4 عادی منسف|4 عادی منسف|4 Quarter Chicken on Rice",
+            "description": null
+          },
+          {
+            "price": 18000,
+            "title": "3 عادی منسف|3 عادی منسف|3 Quarter Chicken on Rice",
+            "description": null
+          },
+          {
+            "price": 12000,
+            "title": "2 عادی منسف|2 عادی منسف|2 Quarter Chicken on Rice",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ZLYdV2Ed4P",
+      "categoryId": "Joqdaj5r1K",
+      "departmentId": "5oeryErVbN",
+      "name": "منسف دجاج محشی|مەنسەفا مریشکا حەشاندی|Stuffed Chicken Large Plate",
+      "image": "08e59dce-d654-4854-aae1-0c903943a3ed.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 35000,
+            "title": "منسف دجاج محشی|مەنسەفا مریشکا حەشاندی|Stuffed Chicken Large Plate",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Ygkr22mrm4",
+      "categoryId": "Joqdaj5r1K",
+      "departmentId": "5oeryErVbN",
+      "name": "منسف شورش|مەنسەفا شورەش|Shorash Special large plate",
+      "image": "47718d35-f955-4716-be6d-9f22c3290ae8.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 30000,
+            "title": "منسف شورش|مەنسەفا شورەش|Shorash Special",
+            "description": "دجاج و قلية"
+          },
+          {
+            "price": 25000,
+            "title": "منسف شورش|مەنسەفا شورەش|Shorash Special",
+            "description": "دجاج و قلية"
+          },
+          {
+            "price": 20000,
+            "title": "منسف شورش|مەنسەفا شورەش|Shorash Special",
+            "description": "دجاج و قلية"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJKaBM5",
+      "categoryId": "Joqdaj5r1K",
+      "departmentId": "5oeryErVbN",
+      "name": "منسف مشكل|مەنسەفا تێکەل|Mixed Large Plate",
+      "image": "c660d09c-7a9b-4430-b11f-d76a76a9cc16.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 45000,
+            "title": "منسف 2 عادي 2 قوزي|منسف 2 عادي 2 قوزي|2 Quarter Chicken 2 Quzi",
+            "description": null
+          },
+          {
+            "price": 30000,
+            "title": "منسف 2 عادي 2 قلي|منسف 2 عادي 2 قلي|2 Quarter Chicken 2 Qaly",
+            "description": null
+          },
+          {
+            "price": 22000,
+            "title": "منسف 1 عادي 1 قوزي|منسف 1 عادي 1 قوزي|1 Quarter Chicken 1 Quzi",
+            "description": null
+          },
+          {
+            "price": 16000,
+            "title": "منسف 1 عادي 1 قلي|منسف 1 عادي 1 قلي|1 Quarter Chicken 1 Qaly",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Dnyr876d98",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "لبن|ماست|Yogurt",
+      "image": "c6f34254-8011-4e37-aac5-e538fc1295a6.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "لبن|ماست|Yogurt",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrO54Bz2",
+      "categoryId": "oxmr1z0R5e",
+      "departmentId": "5oeryErVbN",
+      "name": "قلي بيض|قەلی هێک|Qaly With Egg",
+      "image": "f79a9c4b-ed0f-4a6f-a469-be6fa8aa74d3.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "ماعون|ماعون|One plate",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "نصف ماعون|نيڤ ماعون|Half plate",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "JoqdaNLr1K",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "وجبة اطفال|وه جبا زاروكا|Kids Meal",
+      "image": "f8813136-93e6-4d4b-bdb6-de74c9642795.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "وجبة اطفال|وه جبا زاروكا|Kids Meal",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "NWwr5OwBE7",
+      "categoryId": "2kWd09Wr9q",
+      "departmentId": "5oeryErVbN",
+      "name": "قلي سيل دجاج|قەلی سێلا مریشکێ|Chicken Qaly Pan",
+      "image": "960a8226-f1ff-4b36-8fe9-aea0ee579870.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "ماعون|ماعون|One portion",
+            "description": null
+          },
+          {
+            "price": 6000,
+            "title": "نصف ماعون|نیڤ ماعون|Half portion",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N05BbmERw3",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "اجنحة باربيكيو|جەنک باربیکیو|Barbecue chicken wings",
+      "image": "f8476e73-827f-4e3f-b6e1-3cdb8eaf2686.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "اجنحة باربيكيو|جەنک باربیکیو|Barbecue chicken wings",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "AmbBYOArVk",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "اجنحة سبايسي|جەنک سبایسی|Spicy chicken wings",
+      "image": "5084e7ab-2786-4960-a23c-0fc67a483125.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "اجنحة سبايسي|جەنک سبایسی|Spicy chicken wings",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2WeRgWDR8E",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "اجنحة هاني ماستر|جەنک هاني ماستر|Honey Mustard Chicken wings",
+      "image": "34b8902e-9500-4a5e-94f7-7762868bbd8d.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "اجنحة هاني ماستر|جەنک هاني ماستر|Honey Mustard Chicken wings",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "pzLdpXmdbX",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "جيكن كاري|جكن كاري|Chicken carry ",
+      "image": "ad60c8a7-9e2d-46cb-ba0a-d1da46142e0f.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "جيكن كاري|جيكن كاري|Chicken carry",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ZLYdV27d4P",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "فوتوشينو بولونيس لحم|فوتوشينو بولونيس گوشت|Bolognese Meat Fettuccine",
+      "image": "fc20c1c1-ad87-4824-bf89-55efea55baeb.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "فوتوشينو بولونيس لحم|فوتوشينو بولونيس گوشت|Bolognese Meat Fettuccine",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Ygkr22vrm4",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "فوتوشينو بولونيس|فوتوشينو بولونيس|Bolognese Fettuccine",
+      "image": "4f6035fd-4751-4acd-9ec1-c5ef7e8176b2.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "فوتوشينو بولونيس|فوتوشينو بولونيس|Bolognese Fettuccine",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "ogDRJKPBM5",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "فيلي دجاج صوص الكريمة|فيلي مریشک صوصا كريمێ|Chicken fillet with cream sauce",
+      "image": "af948823-10dc-451e-8bfc-389b5ca9cb0b.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "فيلي دجاج صوص الكريمة|فيلي مریشک صوصا كريمێ|Chicken fillet with cream sauce",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Dnyr87md98",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "باربيكيو بركر|باربيكيو بركر|Barbecue Burger",
+      "image": "ba11140c-5ab8-42fe-ab49-9599e1f61c00.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "باربيكيو بركر|باربيكيو بركر|Barbecue Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "G7XrO58Bz2",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "بركر شورش|بركر شورش|Shorash Burger",
+      "image": "67014d1a-6df4-461c-b8be-bc268e8313b6.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 10000,
+            "title": "بركر شورش|بركر شورش|Shorash Burger",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "JoqdaNyr1K",
+      "categoryId": "8aYRP8ORXv",
+      "departmentId": "5oeryErVbN",
+      "name": "سبيشل اكسترا لحم|سبيشل اكسترا لحم|Special extra meat",
+      "image": "273c2df2-c288-4f64-b856-8ebae01fff6e.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 12000,
+            "title": "سبيشل اكسترا لحم|سبيشل اكسترا لحم|Special extra meat",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "WDYrElJd0b",
+      "categoryId": "N3QrvJOrGa",
+      "departmentId": "5oeryErVbN",
+      "name": "فنكر ويجز جبن|فنكر ويجز به نير|فنكر ويجز جبن",
+      "image": "9cd92b0e-d2b9-4261-9807-b8e3c7782bf8.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "فنكر ويجز جبن|فنكر ويجز جبن|فنكر ويجز جبن",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "KeXd7E8RoE",
+      "categoryId": "D0qd608R4x",
+      "departmentId": "5oeryErVbN",
+      "name": "وجبة عربي كص|وەجبا گوشتی عەرەبی|Arabic meal Meat",
+      "image": "ec7eae5f-7674-47bd-9530-4f37b4755608.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "وجبة عربي كص|وەجبا گوشتی عەرەبی|Arabic meal Meat",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "8aYRPbjdXv",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "دونر كص لحم|دونەرا گەسا گوشتی|Meat Doner",
+      "image": "5f2d518a-95ce-466d-83fc-f84922c8422f.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "دونر كص لحم|دونەرا گەسا گوشتی|Meat Doner",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "N3QrvgwRGa",
+      "categoryId": "D0qd608R4x",
+      "departmentId": "5oeryErVbN",
+      "name": "بوكس كص لحم|بوکسا گەسا گوشتی|Meat Box",
+      "image": "460b82ee-b69f-4ea6-96ee-fbd8bbbf8406.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 7000,
+            "title": "بوكس كص لحم|بوکسا گەسا گوشتی|Meat Box",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "5oeryVpRVb",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "صاج كص لحم|صاجا گەسا گوشتی|Meat Wrap",
+      "image": "40c185a1-c3bf-4f11-9ff2-e0c8b197a632.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3500,
+            "title": "صاج كص لحم|صاجا گەسا گوشتی|Meat Wrap",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "32WBz2bBb0",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "صاج فلافل|صاجا فەلافلێ|Falafel Wrap",
+      "image": "41ae6ae9-1ef5-466f-860f-b3f17def5c56.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "صاج فلافل|صاجا فەلافلێ|Falafel Wrap",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "QJ3dNDoRPN",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "لفة جام|ڵەفا جامێ|Boiled Chicken Sandwich",
+      "image": "93290c22-b3d8-481e-8107-4fe76ccaf8d2.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 2500,
+            "title": "لفة جام|ڵەفا جامێ|Boiled Chicken Sandwich",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "MKYdm6ErNp",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "لفة بيض|لەفا هێکێ|Egg Sandwich",
+      "image": "39d51a17-9e7f-464b-957f-c6fcf6225501.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 2500,
+            "title": "لفة بيض|لەفا هێکێ|Egg Sandwich",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "oxmr1VVR5e",
+      "categoryId": "NWwr53BE7O",
+      "departmentId": "5oeryErVbN",
+      "name": "لفه قوزي|لەفا قوزی|Quzi Sandwich",
+      "image": "50ffca06-15c9-4872-b1d7-e627b7b1a8be.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "لفه قوزي|لەفا قوزی|Quzi Sandwich",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "DG0rLXnrN1",
+      "categoryId": "QJ3dN6jdPN",
+      "departmentId": "5oeryErVbN",
+      "name": "خبز جبن|صەوکا پەنیری|Cheses Bread ",
+      "image": "08575d4d-799b-47d4-b8cf-13ee98e41245.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 8000,
+            "title": "خبز جبن|صەوکا پەنیری|Cheses Bread",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "me8dQY6dOo",
+      "categoryId": "oxmr1z0R5e",
+      "departmentId": "5oeryErVbN",
+      "name": "كيمر|قه يماغ|Kaymak",
+      "image": "5e4b52b0-ba2f-4526-9fe3-1ceeb3685493.png",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "كيمر|قه يماغ|Kaymak",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "1qoBWJQRnE",
+      "categoryId": "D0qd608R4x",
+      "departmentId": "5oeryErVbN",
+      "name": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+      "image": "b63055fa-e2fa-453f-81ef-118053036421.jpg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "5WVRlALBAX",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "باشن فروت|پاشن فروت|Passionfruit",
+      "image": "eb804e77-e5ee-4c2c-8af3-18386e542ceb.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "باشن فروت|پاشن فروت|Passionfruit",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "7jQB48NBWY",
+      "categoryId": "32WBzz9Bb0",
+      "departmentId": "5oeryErVbN",
+      "name": "مانگو|مانگو|Mango",
+      "image": "b1defc22-ef74-4806-8f74-f92ccd5889ac.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "مانگو|مانگو|Mango",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "2kWd0njR9q",
+      "categoryId": "DG0rLOJdN1",
+      "departmentId": "5oeryErVbN",
+      "name": "سبانش لاتي|سپانش لاتێ|Spanish latte",
+      "image": "24807768-7736-4eea-b5e4-4f842bca7838.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "سبانش لاتي|سپانش لاتێ|Spanish latte",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "LlaRAn4BAb",
+      "categoryId": "DG0rLOJdN1",
+      "departmentId": "5oeryErVbN",
+      "name": "ايس سبانش لاتي ستروبيري|ايس سبانش لاتي ستروبيري|Ice Spanish latte strawberry",
+      "image": "9f18bf3c-19ca-4401-b2e0-957aaaa5d342.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "ايس سبانش لاتي ستروبيري|ايس سبانش لاتي ستروبيري|Ice Spanish latte strawberry",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "D0qd6nWd4x",
+      "categoryId": "DG0rLOJdN1",
+      "departmentId": "5oeryErVbN",
+      "name": "آيس شوكوليت|ايس شوكوليت|Ice chocolate",
+      "image": "a1e453fa-7614-4baa-a452-c1450ddbf107.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "ايس شوكوليت|ايس شوكوليت|Ice chocolate",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "bZyRKnErzO",
+      "categoryId": "DG0rLOJdN1",
+      "departmentId": "5oeryErVbN",
+      "name": "ايس وايت موكا|ايس وايت موكا|Ice white mocha",
+      "image": "b6ddca5a-ff0e-41c6-b206-203842d3caa0.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "ايس وايت موكا|ايس وايت موكا|Ice white mocha",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "v7ZremXr4O",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "سبانش لاتي|سبانش لاتي|Spanish latte",
+      "image": "6a950e46-73a6-4065-aaf0-7cc4b4d24884.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 5000,
+            "title": "سبانش لاتي|سبانش لاتي|Spanish latte",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "Kg5rXVmBzx",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "نيسكافي|نيسكافي|Nescafé",
+      "image": "38cb6fc5-f895-4090-967e-51d622a96aac.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 4000,
+            "title": "نيسكافي|نيسكافي|Nescafé",
+            "description": null
+          }
+        ]
+      }
+    },
+    {
+      "id": "a7pBMnGdWP",
+      "categoryId": "KeXd76nBoE",
+      "departmentId": "5oeryErVbN",
+      "name": "حليب|شير|Milk",
+      "image": "5d149425-312f-4539-87cf-596b5b7eef46.jpeg",
+      "description": null,
+      "container": {
+        "link": "",
+        "variants": [
+          {
+            "price": 3000,
+            "title": "حليب|شير|Milk",
+            "description": null
+          }
+        ]
+      }
+    }
+  ],
+  "carousels": []
+}
