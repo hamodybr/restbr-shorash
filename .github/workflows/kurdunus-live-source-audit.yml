@@ -1,0 +1,57 @@
+name: Read-only Kurdunus public menu snapshot
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - chore/kurdunus-live-source-audit
+    paths:
+      - ".github/workflows/kurdunus-live-source-audit.yml"
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch current public Kurdunus catalog
+        env:
+          SOURCE_URL: https://catalog.kurdunus.com/api/Home/Shorash?utm_source=chatgpt.com
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, urllib.request
+          url = os.environ["SOURCE_URL"]
+          req = urllib.request.Request(url, headers={"Accept":"application/json", "User-Agent":"Mozilla/5.0 (compatible; RestBr-menu-source-audit/1.0)"})
+          with urllib.request.urlopen(req, timeout=35) as resp:
+              body = resp.read(3_000_001)
+              if len(body) > 3_000_000:
+                  raise ValueError("Catalog unexpectedly large")
+              print("Status:", resp.status, "content-type:", resp.headers.get("Content-Type"), "bytes:", len(body))
+          obj = json.loads(body)
+          if not isinstance(obj, (dict, list)):
+              raise ValueError("Unexpected API root type")
+          keys = list(obj) if isinstance(obj, dict) else []
+          print("Root keys:", keys[:30], "records:", len(obj))
+          risky = {"password", "access_token", "refresh_token", "service_role", "authorization", "secret", "apikey", "api_key", "cookie", "jwt"}
+          def walk(value):
+              if isinstance(value, dict):
+                  for k, v in value.items():
+                      if str(k).lower() in risky:
+                          raise ValueError("Sensitive key encountered: refusing to store response")
+                      walk(v)
+              elif isinstance(value, list):
+                  for item in value: walk(item)
+          walk(obj)
+          p = pathlib.Path("imports/kurdunus-source-current.json")
+          p.parent.mkdir(parents=True, exist_ok=True)
+          p.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
+          print("Saved public menu JSON", p, "bytes", p.stat().st_size)
+          PY
+      - name: Commit snapshot to isolated audit branch
+        run: |
+          git config user.name "restbr-audit-bot"
+          git config user.email "restbr-audit-bot@users.noreply.github.com"
+          git add imports/kurdunus-source-current.json
+          git diff --cached --quiet && exit 0
+          git commit -m "data: capture current public Kurdunus Shorash menu for safe comparison"
+          git push origin HEAD:chore/kurdunus-live-source-audit
