@@ -1,0 +1,873 @@
+{
+  "source": "https://catalog.kurdunus.com/api/Home/Shorash",
+  "historical": "menu(1).json (August 2026) original extraction",
+  "currentCaptured": "2026-11-10",
+  "summary": {
+    "oldProducts": 227,
+    "currentProducts": 235,
+    "oldCategories": 17,
+    "currentCategories": 17,
+    "addedProducts": 9,
+    "removedProducts": 1,
+    "imagesChanged": 39,
+    "namesChanged": 17,
+    "variantsChanged": 16,
+    "purePriceChanges": 2,
+    "newCategoriesByExactName": 5
+  },
+  "added": [
+    {
+      "id": "5WVRlALBAX",
+      "name": "باشن فروت|پاشن فروت|Passionfruit",
+      "categoryId": "32WBzz9Bb0",
+      "variants": [
+        {
+          "title": "باشن فروت|پاشن فروت|Passionfruit",
+          "price": 4000
+        }
+      ]
+    },
+    {
+      "id": "7jQB48NBWY",
+      "name": "مانگو|مانگو|Mango",
+      "categoryId": "32WBzz9Bb0",
+      "variants": [
+        {
+          "title": "مانگو|مانگو|Mango",
+          "price": 4000
+        }
+      ]
+    },
+    {
+      "id": "2kWd0njR9q",
+      "name": "سبانش لاتي|سپانش لاتێ|Spanish latte",
+      "categoryId": "DG0rLOJdN1",
+      "variants": [
+        {
+          "title": "سبانش لاتي|سپانش لاتێ|Spanish latte",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "LlaRAn4BAb",
+      "name": "ايس سبانش لاتي ستروبيري|ايس سبانش لاتي ستروبيري|Ice Spanish latte strawberry",
+      "categoryId": "DG0rLOJdN1",
+      "variants": [
+        {
+          "title": "ايس سبانش لاتي ستروبيري|ايس سبانش لاتي ستروبيري|Ice Spanish latte strawberry",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "D0qd6nWd4x",
+      "name": "آيس شوكوليت|ايس شوكوليت|Ice chocolate",
+      "categoryId": "DG0rLOJdN1",
+      "variants": [
+        {
+          "title": "ايس شوكوليت|ايس شوكوليت|Ice chocolate",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "bZyRKnErzO",
+      "name": "ايس وايت موكا|ايس وايت موكا|Ice white mocha",
+      "categoryId": "DG0rLOJdN1",
+      "variants": [
+        {
+          "title": "ايس وايت موكا|ايس وايت موكا|Ice white mocha",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "v7ZremXr4O",
+      "name": "سبانش لاتي|سبانش لاتي|Spanish latte",
+      "categoryId": "KeXd76nBoE",
+      "variants": [
+        {
+          "title": "سبانش لاتي|سبانش لاتي|Spanish latte",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "Kg5rXVmBzx",
+      "name": "نيسكافي|نيسكافي|Nescafé",
+      "categoryId": "KeXd76nBoE",
+      "variants": [
+        {
+          "title": "نيسكافي|نيسكافي|Nescafé",
+          "price": 4000
+        }
+      ]
+    },
+    {
+      "id": "a7pBMnGdWP",
+      "name": "حليب|شير|Milk",
+      "categoryId": "KeXd76nBoE",
+      "variants": [
+        {
+          "title": "حليب|شير|Milk",
+          "price": 3000
+        }
+      ]
+    }
+  ],
+  "removed": [
+    {
+      "id": "ZLYdVMZB4P",
+      "name": "أيس كراميل لاتيه|أيس كراميل لاتيه|Iced Caramel Latte"
+    }
+  ],
+  "imageChanges": [
+    {
+      "id": "NWwr5z5RE7",
+      "name": "اسبريسو|اسبريسو|Espresso",
+      "before": "https://catalog.kurdunus.com/Public/4d99821a-bf16-488f-9bf2-b020607dc805.jpg",
+      "after": "f1979e9f-6f33-43d8-ae60-40ee9299ea68.jpeg"
+    },
+    {
+      "id": "AmbBYKDrVk",
+      "name": "كابتشينو|كابتشينو|Cappuccino",
+      "before": "https://catalog.kurdunus.com/Public/1289c08f-231d-4b28-b853-1b00e802666a.jpg",
+      "after": "0d51ed11-0cdd-4401-b131-4e56423db201.jpeg"
+    },
+    {
+      "id": "2WeRgKVR8E",
+      "name": "كافيه لاتي|كافيه لاتي|Latte",
+      "before": "https://catalog.kurdunus.com/Public/cd33c671-9f08-4ef0-b4eb-9916cb72ba96.png",
+      "after": "9374125c-e730-447c-9149-e44e5d28d1ea.jpeg"
+    },
+    {
+      "id": "ZLYdVXwR4P",
+      "name": "ماكياتو|ماكياتو|Macchiato",
+      "before": "https://catalog.kurdunus.com/Public/f59c6419-3d2e-4038-aabb-f76aa956b436.jpg",
+      "after": "a13eb3ab-bc5f-498f-a8a5-b75c211a3bdc.jpeg"
+    },
+    {
+      "id": "Ygkr2GZRm4",
+      "name": "امريكانو|امريكانو|Americano",
+      "before": "https://catalog.kurdunus.com/Public/0008514a-0174-4738-b445-d5847d6eff5d.jpg",
+      "after": "1ef19d2e-6ca0-47a6-814b-a5bc96ed04a6.jpeg"
+    },
+    {
+      "id": "ogDRJPOdM5",
+      "name": "هوت شوكليت|هوت شوكليت|Hot Chocolate",
+      "before": "https://catalog.kurdunus.com/Public/62f868b7-a00c-4b1e-9842-d55658312e9b.jpg",
+      "after": "8ad56976-9436-41ca-b616-571074dd681d.jpeg"
+    },
+    {
+      "id": "G7XrOmMBz2",
+      "name": "سحلب|سحلب|Sahlep",
+      "before": "https://catalog.kurdunus.com/Public/229d36f7-18ca-4fd5-9324-034c7d08ebdc.jpg",
+      "after": "63e6562a-7ce8-4f9c-8942-1489324b26b1.jpeg"
+    },
+    {
+      "id": "N05BbZ5Bw3",
+      "name": "قهوه البطم|قەهوا کەزانا|Qazwan Coffee",
+      "before": "https://catalog.kurdunus.com/Public/561da205-033c-4fde-ae12-e39ef6fc9859.jpeg",
+      "after": "eea90ef0-8b99-4c80-ab5d-8c2e156de3be.jpeg"
+    },
+    {
+      "id": "2WeRgZbr8E",
+      "name": "أيس لاتيه|أيس لاتيه|Iced Latte",
+      "before": "https://catalog.kurdunus.com/Public/54779d9c-516a-4e1b-932b-68c803d600f5.jpeg",
+      "after": "85f2c24f-69a6-4815-b3a0-df5fbb520ea8.jpeg"
+    },
+    {
+      "id": "pzLdp5arbX",
+      "name": "أيس موكا|أيس موكا|Iced Mocha",
+      "before": "https://catalog.kurdunus.com/Public/7677ecb5-ac0a-4e4d-af5f-2727e9b59830.jpeg",
+      "after": "bc22fbda-2ffb-4ca2-88b3-09408d9d8daa.jpeg"
+    },
+    {
+      "id": "DXvd3PLr0o",
+      "name": "ايس أمريكانو|ايس أمريكانو|Iced Americano",
+      "before": "https://catalog.kurdunus.com/Public/e14aefb2-393e-42d9-9210-04d15dc47d78.jpeg",
+      "after": "a51f42c3-1cbb-4252-a9ab-f29ab764dbee.jpeg"
+    },
+    {
+      "id": "JoqdaZAr1K",
+      "name": "ميلك شيك فانيلا|ميلك شيك فانيلا|Vanilla Milkshake",
+      "before": "https://catalog.kurdunus.com/Public/d0d65aaa-c907-423a-ab84-f3bed2883192.jpeg",
+      "after": "934c30f0-fc30-45fc-ab7a-149a982de528.jpeg"
+    },
+    {
+      "id": "WDYrEMVr0b",
+      "name": "ميلك شيك فراولة|ميلك شيك فراولة|Strawberry Milkshake",
+      "before": "https://catalog.kurdunus.com/Public/f5e939ae-b3e0-4c62-8791-73450f70d446.jpg",
+      "after": "f65c29ae-c19d-47eb-a02e-070431bcc937.jpeg"
+    },
+    {
+      "id": "8aYRPMzBXv",
+      "name": "ميلك شيك فستق|ميلك شيك فستق|Pistachio Milkshake",
+      "before": "https://catalog.kurdunus.com/Public/d222c12c-1d2d-4ff9-bfb4-1b3a4fa92034.jpeg",
+      "after": "4648cae6-e940-49c3-86cc-7b579f020afa.jpeg"
+    },
+    {
+      "id": "N3QrvVErGa",
+      "name": "ميلك شيك كرميل|ميلك شيك كرميل|Caramel Milkshake",
+      "before": "https://catalog.kurdunus.com/Public/33c9f2c5-139c-4648-bb08-fbd6bdf30bb9.jpg",
+      "after": "79ca3f64-6284-41e5-acd7-ceea960f5ceb.jpeg"
+    },
+    {
+      "id": "QJ3dNMZBPN",
+      "name": "ميلك شيك نوتيلا|ميلك شيك نوتيلا|Nutella Milkshake",
+      "before": "https://catalog.kurdunus.com/Public/4f6fae4c-7d7a-4ece-9b85-f9733e0515b6.jpeg",
+      "after": "254d3682-c8ee-4466-999a-168a6cfc993e.jpeg"
+    },
+    {
+      "id": "oxmr1GeB5e",
+      "name": "كوكتيل موز حليب|كوكتيلا شیر موز|Banana and Milk Cocktail ",
+      "before": "https://catalog.kurdunus.com/Public/22413bfe-0ec0-47e6-8243-9544fc256d74.jpg",
+      "after": "1abf6c30-9355-41d6-ba57-31670fe75b8d.jpeg"
+    },
+    {
+      "id": "5WVRlZMdAX",
+      "name": "كوكتيل أڤو كاتو|كوكتيلا أڤو كاتو|Avocado Cocktail",
+      "before": "https://catalog.kurdunus.com/Public/0c5d23f1-f8f8-48f2-9635-6f1884aaa95e.jpg",
+      "after": "e2a573fa-179f-4230-8eeb-501e36c2aede.jpeg"
+    },
+    {
+      "id": "7jQB4vDrWY",
+      "name": "عصير برتقال|شەربەتا پرتەقالێ|Orange Juice",
+      "before": "https://catalog.kurdunus.com/Public/c7137e53-7b35-4ca2-b15c-7df77ab75304.jpeg",
+      "after": "e85e4c9a-1fab-4cfa-be6b-a985866ee073.jpeg"
+    },
+    {
+      "id": "2kWd0avr9q",
+      "name": "عصير ليمون|شەربەتا نيموكێ|Lemon Juice",
+      "before": "https://catalog.kurdunus.com/Public/31619ac3-c61f-4670-8e64-ecfba2df3e74.jpeg",
+      "after": "eca4937d-14b9-46a6-9a87-b83aeee6edab.jpeg"
+    },
+    {
+      "id": "bZyRKMqdzO",
+      "name": "عصير فراولة|شەربەتا فراولة|Strawberry Juice",
+      "before": "https://catalog.kurdunus.com/Public/8433fdb4-43c5-4158-b51b-8c95aae38b52.jpeg",
+      "after": "634707c3-545f-4b3a-8d32-4ce5072a73fc.jpeg"
+    },
+    {
+      "id": "Kg5rXZ5Bzx",
+      "name": "عصير اناناس|شەربەتا اناناسێ|Pineapple Juice",
+      "before": "https://catalog.kurdunus.com/Public/f328ae37-009a-48ef-be33-5efb3ae99cdc.jpg",
+      "after": "d66a7219-2ebd-42a1-b87f-aa76a8d997cd.jpeg"
+    },
+    {
+      "id": "XbDd91VdeP",
+      "name": "عصير مانكا|شەربەتا مانگوی|Mango Juice",
+      "before": "https://catalog.kurdunus.com/Public/f79130fa-fe85-47d5-8c3a-6026a9adb47c.jpg",
+      "after": "0498075c-b5f0-406c-9c01-69fd9c706dee.jpeg"
+    },
+    {
+      "id": "QVwRGM7dlE",
+      "name": "كريب نوتيلا|كرێپا نوتیلایێ|Nutella Crêpe",
+      "before": "https://catalog.kurdunus.com/Public/1d6a1446-dfb6-4147-b56a-5ba669634c51.jpeg",
+      "after": "8aad1c54-982a-4589-8167-55e9c06cb017.jpeg"
+    },
+    {
+      "id": "N05Bbj5Bw3",
+      "name": "كربب رول بنانا|كرێپا رۆل موز|Banana Roll Crêpe",
+      "before": "https://catalog.kurdunus.com/Public/d09325fd-9513-4bd5-ad0e-27f0999d10d5.jpg",
+      "after": "5ce0c24a-951c-410c-833e-7407c32699b5.jpeg"
+    },
+    {
+      "id": "AmbBYmqBVk",
+      "name": "كريب فوتشيني|كرێپا فوتشيني|Fettuccine Crepe",
+      "before": "https://catalog.kurdunus.com/Public/52678ed4-b70f-44cc-a2e5-461bb67041bc.jpg",
+      "after": "0e45a49e-eade-485e-9bff-30377fcdacc4.jpeg"
+    },
+    {
+      "id": "Ygkr2Vxrm4",
+      "name": "وافل |وآفڵ|Waffle",
+      "before": "https://catalog.kurdunus.com/Public/611ec38f-d3ba-47e9-a4ff-1236bd221753.jpg",
+      "after": "e217adca-a01c-4e36-afd4-03ff670dca03.jpeg"
+    },
+    {
+      "id": "ogDRJp8dM5",
+      "name": "بان كيك|پان کێک|Pancakes",
+      "before": "https://catalog.kurdunus.com/Public/0ebbc405-c936-4b44-96c1-17cd9dac935a.jpg",
+      "after": "f0794332-3c0a-45bf-9c80-ced83922e37c.jpeg"
+    },
+    {
+      "id": "jV8dZvXdOn",
+      "name": "ميلك شيك اوريو|ميلك شيك اوريو|Oreo Milkshake",
+      "before": "https://catalog.kurdunus.com/Public/a586bded-8c19-4b9d-96d1-ad42f474277b.webp",
+      "after": "63f8d595-f004-4ebf-a4d7-f54873e2ed3e.jpeg"
+    },
+    {
+      "id": "XbDd9a8deP",
+      "name": "ميلك شيك كيندر|ميلك شيك كيندر|Kinder Milkshake",
+      "before": "https://catalog.kurdunus.com/Public/83b2e8ba-7bfc-4ebb-9363-df8ba2e6a354.jpg",
+      "after": "91b2bb64-988f-464a-8170-a65637ec2dd3.jpeg"
+    },
+    {
+      "id": "ZLYdVaAB4P",
+      "name": "بلو بيري|بلو بيري|Blueberry",
+      "before": "https://catalog.kurdunus.com/Public/5ecf9f8e-2a2d-42a3-8dd7-f6216254f532.webp",
+      "after": "f4a228b6-85c3-4336-9af2-96b381631dd1.jpeg"
+    },
+    {
+      "id": "Ygkr2pOBm4",
+      "name": "مانكو|مانكو|Mango",
+      "before": "https://catalog.kurdunus.com/Public/1075ca60-6f0b-4ef8-bb5c-a012dc441ed9.jpg",
+      "after": "143f0991-101e-4997-9146-418784f4c5b0.jpeg"
+    },
+    {
+      "id": "Dnyr8OZd98",
+      "name": " پاشن|پاشن|Passion Fruit",
+      "before": "https://catalog.kurdunus.com/Public/25b6348d-7625-4a21-9da1-276e62a85a30.jpg",
+      "after": "a312a0d7-0ea4-4412-83e8-76b6e3a3d7a2.jpeg"
+    },
+    {
+      "id": "JoqdaG4R1K",
+      "name": "فراولة|فراولة|Strawberry",
+      "before": "https://catalog.kurdunus.com/Public/08414d45-ad7e-4e36-8862-736dd641ae72.jpg",
+      "after": "fc8344bd-2ccd-4162-a107-213181222551.jpeg"
+    },
+    {
+      "id": "AmbBYPmRVk",
+      "name": "نعناع|نعناع|Mint",
+      "before": "https://catalog.kurdunus.com/Public/debc21dc-df37-415a-983a-5e25209cebf5.jpg",
+      "after": "362cbf65-9a3a-4b13-9498-2ba2c6d76689.jpeg"
+    },
+    {
+      "id": "2WeRg0kB8E",
+      "name": "فراولة|فراولة|Strawberry",
+      "before": "https://catalog.kurdunus.com/Public/415dbc01-e583-4320-920e-ae786514eb42.jpg",
+      "after": "bceb2596-91b2-47a2-9b08-2a812c950671.jpeg"
+    },
+    {
+      "id": "DXvd333d0o",
+      "name": "بلو|بلو|Blue",
+      "before": "https://catalog.kurdunus.com/Public/0282c888-7ff0-4809-8e6d-63f1ba96b712.jpg",
+      "after": "4d053f01-3113-4983-b650-f8240ca32a1b.jpeg"
+    },
+    {
+      "id": "ogDRJ0LdM5",
+      "name": "بلوبيري|بلوبيري|Blueberry",
+      "before": "https://catalog.kurdunus.com/Public/9ccc874f-6b60-4938-a06e-c071cb9ab1df.webp",
+      "after": "69761a28-6ff6-4b8a-9ea8-70118fbeb5be.jpeg"
+    },
+    {
+      "id": "Dnyr8Obd98",
+      "name": "اناناس|اناناس|Pineapple",
+      "before": "https://catalog.kurdunus.com/Public/df735a45-7502-47fc-aa7f-eda611391600.webp",
+      "after": "0578c0b8-c133-41e0-8f9a-e04d535aad9f.jpeg"
+    }
+  ],
+  "nameChanges": [
+    {
+      "id": "Dnyr81PR98",
+      "before": "وايت شوكليت|وايت شوكليت|White Chocolate",
+      "after": "وايت شوكليت |وايت شوكليت |White Chocolate"
+    },
+    {
+      "id": "DG0rLoldN1",
+      "before": "كوكتيل موز حليب فراولة|كوكتيلا شیر موز فراولة|Banana Strawberry Milk Cocktail",
+      "after": "كوكتيل موز حليب فراولة| كوكتيلا شیر موز فراولة|Banana Strawberry Milk Cocktail"
+    },
+    {
+      "id": "me8dQM4dOo",
+      "before": "كوكتيل بينا كولادا|كوكتيل بينا كولادا|Piña Colada Cocktail",
+      "after": "كوكتيل بينا كولادا |كوكتيل بينا كولادا |Piña Colada Cocktail"
+    },
+    {
+      "id": "qWvrxJJBGA",
+      "before": "كوكتيل موز حليب نوتيلا|كوكتيلا شیر موز نوتيلا|Banana Milk Nutella Cocktail",
+      "after": "كوكتيل موز حليب نوتيلا |كوكتيلا شیر موز نوتيلا |Banana Milk Nutella Cocktail"
+    },
+    {
+      "id": "LlaRAMmRAb",
+      "before": "عصير برتقال ليمون|شەربەتا پرتەقالو نيموكێ|Orange Lemon Juice",
+      "after": "عصير برتقال ليمون| شەربەتا پرتەقالو نيموكێ|Orange Lemon Juice"
+    },
+    {
+      "id": "OkmrqbMRAx",
+      "before": "عصير جمايكا|شەربەتا جمايكا|Jamaica Juice",
+      "after": "عصير جمايكا |شەربەتا جمايكا |Jamaica Juice"
+    },
+    {
+      "id": "Ygkr2Vxrm4",
+      "before": "وافل|وآفڵ|Waffle",
+      "after": "وافل |وآفڵ|Waffle"
+    },
+    {
+      "id": "QJ3dNJZdPN",
+      "before": "ميرندا|مێرەندا|Miranda",
+      "after": "ميرندا |مێرەندا|Miranda"
+    },
+    {
+      "id": "MKYdmMDdNp",
+      "before": "سفن|سەڤن|7up",
+      "after": "سفن |سەڤن|7up"
+    },
+    {
+      "id": "7jQB4JDrWY",
+      "before": "بركر هاني ماسترد|بورگەرا هانی مآستەرد|Honey Mustard Burger",
+      "after": "بركر هاني ماسترد |بورگەرا هانی مآستەرد|Honey Mustard Burger"
+    },
+    {
+      "id": "NWwr5D3dE7",
+      "before": "مكسيكانو لحم|مەکسیکانو گوشت|Mexicano Beef",
+      "after": "مكسيكانو لحم |مەکسیکانو گوشت|Mexicano Beef"
+    },
+    {
+      "id": "Dnyr8YZR98",
+      "before": "فنكر|فینگەر|Fries",
+      "after": "فنكر |فینگەر|Fries"
+    },
+    {
+      "id": "KeXd7bNBoE",
+      "before": "فطور صباحي|تێشتا سپێدا|Morning Meals",
+      "after": "فطور صباحي |تێشتا سپێدا|Morning Meals"
+    },
+    {
+      "id": "32WBzj9Bb0",
+      "before": "كباب لحم|كباب گوشت|Meat Kebab",
+      "after": "كباب لحم| كباب گوشت|Meat Kebab"
+    },
+    {
+      "id": "N05BbpZrw3",
+      "before": "قوزي محشي|قوزی حەشاندی|Stuffed Quzi with Rise",
+      "after": "قوزي محشي |قوزی حەشاندی|Stuffed Quzi with Rise"
+    },
+    {
+      "id": "qWvrxqoRGA",
+      "before": "باستا دجاد بصوص البشاميل|پاستا مریشکێ بصوصا بەشەمێل|Bechamel Chicken Pasta",
+      "after": "باستا دجاد بصوص البشاميل| پاستا مریشکێ بصوصا بەشەمێل|Bechamel Chicken Pasta"
+    },
+    {
+      "id": "N05BbPZrw3",
+      "before": "تشريب شاورما|تشريب شاورما|Shawarma Tashreeb",
+      "after": "تشريب شاورما|تشريب شاورما|"
+    }
+  ],
+  "variantChanges": [
+    {
+      "id": "2WeRgKVR8E",
+      "name": "كافيه لاتي|كافيه لاتي|Latte",
+      "old": [
+        {
+          "title": "كافيه لاتي|كافيه لاتي|Latte",
+          "price": 4000
+        },
+        {
+          "title": "لاتي فانيلا|لاتي فانيلا|vanilla Latte",
+          "price": 4000
+        },
+        {
+          "title": "كاراميل لاتي|كاراميل لاتي|Caramel Latte",
+          "price": 4000
+        },
+        {
+          "title": "سبانيش لاتي|سبانيش لاتي|Spanish Latte",
+          "price": 4000
+        }
+      ],
+      "new": [
+        {
+          "title": "كافيه لاتي|كافيه لاتي|Latte",
+          "price": 4000
+        },
+        {
+          "title": "لاتي فانيلا|لاتي فانيلا|vanilla Latte",
+          "price": 4000
+        },
+        {
+          "title": "كاراميل لاتي|كاراميل لاتي|Caramel Latte",
+          "price": 4000
+        }
+      ]
+    },
+    {
+      "id": "2WeRgZbr8E",
+      "name": "أيس لاتيه|أيس لاتيه|Iced Latte",
+      "old": [
+        {
+          "title": "أيس لاتيه|أيس لاتيه|Iced Latte",
+          "price": 5000
+        }
+      ],
+      "new": [
+        {
+          "title": "ساده|ساده|Iced Latte",
+          "price": 5000
+        },
+        {
+          "title": "كرميل|کەرەمێل|Caramel",
+          "price": 5000
+        },
+        {
+          "title": "ڤانيلا|ڤانێلا|Vanilla",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "oxmr1GeB5e",
+      "name": "كوكتيل موز حليب|كوكتيلا شیر موز|Banana and Milk Cocktail ",
+      "old": [
+        {
+          "title": "كوكتيل موز حليب|كوكتيلا شیر موز|Banana and Milk Cocktail",
+          "price": 6000
+        }
+      ],
+      "new": [
+        {
+          "title": "كوكتيل موز حليب|كوكتيلا شیر موز|Banana and Milk Cocktail",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "DG0rLoldN1",
+      "name": "كوكتيل موز حليب فراولة| كوكتيلا شیر موز فراولة|Banana Strawberry Milk Cocktail",
+      "old": [
+        {
+          "title": "كوكتيل موز حليب فراولة|كوكتيلا شیر موز فراولة|Banana Strawberry Milk Cocktail",
+          "price": 6000
+        }
+      ],
+      "new": [
+        {
+          "title": "كوكتيل موز حليب فراولة| كوكتيلا شیر موز فراولة|Banana Strawberry Milk Cocktail",
+          "price": 6000
+        }
+      ]
+    },
+    {
+      "id": "qWvrxJJBGA",
+      "name": "كوكتيل موز حليب نوتيلا |كوكتيلا شیر موز نوتيلا |Banana Milk Nutella Cocktail ",
+      "old": [
+        {
+          "title": "كوكتيل موز حليب نوتيلا|كوكتيلا شیر موز نوتيلا|Banana Milk Nutella Cocktail",
+          "price": 7000
+        }
+      ],
+      "new": [
+        {
+          "title": "كوكتيل موز حليب نوتيلا|كوكتيلا شیر موز نوتيلا |Banana Milk Nutella Cocktail",
+          "price": 7000
+        }
+      ]
+    },
+    {
+      "id": "LlaRAMmRAb",
+      "name": "عصير برتقال ليمون| شەربەتا پرتەقالو نيموكێ|Orange Lemon Juice",
+      "old": [
+        {
+          "title": "عصير برتقال ليمون|شەربەتا پرتەقالو نيموكێ|Orange Lemon Juice",
+          "price": 5000
+        }
+      ],
+      "new": [
+        {
+          "title": "عصير برتقال ليمون| شەربەتا پرتەقالو نيموكێ|Orange Lemon Juice",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "OkmrqbMRAx",
+      "name": "عصير جمايكا |شەربەتا جمايكا |Jamaica Juice",
+      "old": [
+        {
+          "title": "عصير جمايكا|شەربەتا جمايكا|Jamaica Juice",
+          "price": 5000
+        }
+      ],
+      "new": [
+        {
+          "title": "عصير جمايكا|شەربەتا جمايكا |Jamaica Juice",
+          "price": 5000
+        }
+      ]
+    },
+    {
+      "id": "KeXd7bNBoE",
+      "name": "فطور صباحي |تێشتا سپێدا|Morning Meals",
+      "old": [
+        {
+          "title": "فطور صباحي 1 شخص|1 كەس|1 person",
+          "price": 8000
+        },
+        {
+          "title": "فطور صباحي 2 شخص|2 كەس|2 person",
+          "price": 16000
+        },
+        {
+          "title": "فطور صباحي 3 شخص|3 كەس|3 person",
+          "price": 24000
+        },
+        {
+          "title": "فطور صباحي 4 شخص|4 كەس|4 person",
+          "price": 32000
+        }
+      ],
+      "new": [
+        {
+          "title": "فطور صباحي 1 شخص|1 كەس|1 person",
+          "price": 8000
+        },
+        {
+          "title": "فطور صباحي 2 شخص|2 كەس|2 person",
+          "price": 16000
+        },
+        {
+          "title": "فطور صباحي 3 شخص| 3 كەس|3 person",
+          "price": 24000
+        },
+        {
+          "title": "فطور صباحي 4 شخص|4 كەس|4 person",
+          "price": 32000
+        }
+      ]
+    },
+    {
+      "id": "ve7rk72r3k",
+      "name": "دجاج على الفحم|مريشكا سه ر به لا|Charcoal Chicken",
+      "old": [
+        {
+          "title": "نفر|نەفەر|One portion",
+          "price": 24000
+        },
+        {
+          "title": "نصف نفر|نيف نه فه ر|Half portion",
+          "price": 12000
+        }
+      ],
+      "new": [
+        {
+          "title": "نفر|نەفەر|One portion",
+          "price": 24000
+        },
+        {
+          "title": "نصف نفر|نيف نه فه ر|Half portıon",
+          "price": 12000
+        }
+      ]
+    },
+    {
+      "id": "NWwr5mzrE7",
+      "name": "گص لحم مع ارز|گەسا گوشتی لسەر برنجێ|Meat Shawarma with Rice",
+      "old": [
+        {
+          "title": "نفر|نەفەر|One portion",
+          "price": 15000
+        },
+        {
+          "title": "نصف نفر|نیڤ نەفەر|Half portion",
+          "price": 10000
+        }
+      ],
+      "new": [
+        {
+          "title": "||",
+          "price": 15000
+        },
+        {
+          "title": "",
+          "price": 10000
+        }
+      ]
+    },
+    {
+      "id": "Ygkr2yXdm4",
+      "name": "تشريب كص لحم|تەشریبا گەسا گوشتی|Tashreb Shawrma Meet",
+      "old": [
+        {
+          "title": "نفر|نەفەر|One portion",
+          "price": 15000
+        },
+        {
+          "title": "نصف|نیڤ|Half portion",
+          "price": 10000
+        }
+      ],
+      "new": [
+        {
+          "title": "نفر|نەفەر|One portion",
+          "price": 15000
+        },
+        {
+          "title": "نصف|نیڤ|",
+          "price": 10000
+        }
+      ]
+    },
+    {
+      "id": "KeXd7LnroE",
+      "name": "لحم بعجين|هەڤیر گوشت|Meat Lahimajeen",
+      "old": [
+        {
+          "title": "عادي|نور مال|Normal",
+          "price": 6000
+        },
+        {
+          "title": "مشكل جبن|مشەکەل پەنیر|Mixed cheese",
+          "price": 8000
+        },
+        {
+          "title": "بيض|هيك|Egg",
+          "price": 7000
+        }
+      ],
+      "new": [
+        {
+          "title": "عادي|نور مال|",
+          "price": 6000
+        },
+        {
+          "title": "مشكل جبن| مشەکەل پەنیر|",
+          "price": 8000
+        },
+        {
+          "title": "بيض|هيك|",
+          "price": 7000
+        }
+      ]
+    },
+    {
+      "id": "DG0rLeJRN1",
+      "name": "نودلز دجاج خضار|نودلز مریشک زەرزەوات|Chicken Noodles Vegetables",
+      "old": [
+        {
+          "title": "نودلز دجاج خضار|نودلز مریشک زەرزەوات|Chicken Noodles Vegetables",
+          "price": 8000
+        }
+      ],
+      "new": [
+        {
+          "title": "نودلز دجاج خضار| نودلز مریشک زەرزەوات|Chicken Noodles Vegetables",
+          "price": 8000
+        }
+      ]
+    },
+    {
+      "id": "lOPdwoydk6",
+      "name": "بيتزا كوردي|بيتزا كوردي|Kurdish pizza",
+      "old": [
+        {
+          "title": "بيتزا كوردي طويل مشكل|بيتزا كوردي طويل مشكل|Long Kurdish pizza — mixed",
+          "price": 8000
+        },
+        {
+          "title": "بيتزا كوردي طويل بيض|بيتزا كوردي طويل بيض|Long Kurdish pizza — with egg",
+          "price": 7000
+        },
+        {
+          "title": "بيتزا كوردي طويل|بيتزا كوردي طويل|Long Kurdish pizza",
+          "price": 6000
+        },
+        {
+          "title": "بيتزا كوردي دائري مشكل|بيتزا كوردي دائري مشكل|Round Kurdish pizza — mixed",
+          "price": 8000
+        },
+        {
+          "title": "بيتزا كوردي دائري بيض|بيتزا كوردي دائري بيض|Round Kurdish pizza — with egg",
+          "price": 7000
+        },
+        {
+          "title": "بيتزا كوردي دائري|بيتزا كوردي دائري|Round Kurdish pizza",
+          "price": 6000
+        }
+      ],
+      "new": [
+        {
+          "title": "بيتزا كوردي طويل مشكل|بيتزا كوردي طويل مشكل|",
+          "price": 8000
+        },
+        {
+          "title": "بيتزا كوردي طويل بيض|بيتزا كوردي طويل بيض|",
+          "price": 7000
+        },
+        {
+          "title": "بيتزا كوردي طويل|بيتزا كوردي طويل |",
+          "price": 6000
+        },
+        {
+          "title": "بيتزا كوردي دائري مشكل|بيتزا كوردي دائري مشكل|",
+          "price": 8000
+        },
+        {
+          "title": "بيتزا كوردي دائري بيض|بيتزا كوردي دائري بيض|",
+          "price": 7000
+        },
+        {
+          "title": "بيتزا كوردي دائري|بيتزا كوردي دائري|",
+          "price": 6000
+        }
+      ]
+    },
+    {
+      "id": "N05BbPZrw3",
+      "name": "تشريب شاورما|تشريب شاورما|",
+      "old": [
+        {
+          "title": "نفر|نفر|One portion",
+          "price": 14000
+        },
+        {
+          "title": "نصف نفر|نصف نفر|Half portion",
+          "price": 10000
+        }
+      ],
+      "new": [
+        {
+          "title": "نفر|نفر|",
+          "price": 14000
+        },
+        {
+          "title": "نصف نفر|نصف نفر|",
+          "price": 10000
+        }
+      ]
+    },
+    {
+      "id": "1qoBWJQRnE",
+      "name": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+      "old": [
+        {
+          "title": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+          "price": 4000
+        }
+      ],
+      "new": [
+        {
+          "title": "بوكس شاورما|بوکسا شاورمێ|Chicken Box",
+          "price": 5000
+        }
+      ]
+    }
+  ],
+  "newCategoryTitles": [
+    {
+      "id": "oxmr1z0R5e",
+      "name": "فطور صباحي |تيشت سبيده|Morning meals",
+      "order": 1
+    },
+    {
+      "id": "N3QrvJOrGa",
+      "name": "الوجبات الغربي |خارنێن غەربی|Western meals",
+      "order": 6
+    },
+    {
+      "id": "8aYRP8ORXv",
+      "name": "بركر |برگر|Burger",
+      "order": 7
+    },
+    {
+      "id": "QJ3dN6jdPN",
+      "name": "بيتزا |بيتزا |Pizza",
+      "order": 8
+    },
+    {
+      "id": "ve7rkL2R3k",
+      "name": "العصائر|شەربەت|Juice",
+      "order": 17
+    }
+  ]
+}
