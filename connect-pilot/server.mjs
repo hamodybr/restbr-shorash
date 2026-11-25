@@ -5,7 +5,7 @@ import { WebSocketServer, WebSocket } from 'ws';
 
 const cfg = JSON.parse(readFileSync(process.env.CONNECT_CONFIG || 'connect.local.json','utf8'));
 const equal = (a,b) => { const x=Buffer.from(String(a)),y=Buffer.from(String(b)); return x.length===y.length && timingSafeEqual(x,y); };
-if(typeof cfg.adminCode!=='string'||cfg.adminCode.length<16||!Array.isArray(cfg.workers)||!cfg.workers.length||cfg.workers.some(w=>typeof w.id!=='string'||! /^[a-zA-Z0-9_-]{1,40}$/.test(w.id)||typeof w.name!=='string'||typeof w.code!=='string'||w.code.length<16)||new Set(cfg.workers.map(w=>w.id)).size!==cfg.workers.length||new Set([cfg.adminCode,...cfg.workers.map(w=>w.code)]).size!==cfg.workers.length) throw Error('Use unique random codes of at least 16 characters and unique worker IDs.');
+if(typeof cfg.adminCode!=='string'||cfg.adminCode.length<16||cfg.adminCode.length>256||!Array.isArray(cfg.workers)||!cfg.workers.length||cfg.workers.some(w=>typeof w.id!=='string'||! /^[a-zA-Z0-9_-]{1,40}$/.test(w.id)||typeof w.name!=='string'||typeof w.code!=='string'||w.code.length<16||w.code.length>256)||new Set(cfg.workers.map(w=>w.id)).size!==cfg.workers.length||new Set([cfg.adminCode,...cfg.workers.map(w=>w.code)]).size!==cfg.workers.length+1) throw Error('Use unique random codes of at least 16 characters and unique worker IDs.');
 const page = readFileSync(new URL('./index.html',import.meta.url));
 const server=createServer({key:readFileSync(cfg.key),cert:readFileSync(cfg.cert)},(req,res)=>{
   if(req.method!=='GET'||req.url!=='/'){res.writeHead(404).end();return;}
