@@ -26,7 +26,7 @@ else if(m.type==='roster'&&role==='admin')roster(m.workers);
 else if(m.type==='sent')status('أُرسل التنبيه إلى الجهاز (لا يعني أن النادل سمعه)');
 else if(m.type==='error'){closePeer(false);status(m.message);}
 else if(m.type==='alert'&&role==='worker'){tone();navigator.vibrate?.([120,90,120]);$('notice').textContent='🔔 تنبيه من الإدارة';clearTimeout(alertTimer);alertTimer=setTimeout(()=>$('notice').textContent='',5000);}
-else if(m.type==='session'&&role==='admin'){call=m.call;busy=false;}
+else if(m.type==='session'&&role==='admin'){if(!pc){send({type:'end',call:m.call});return;}call=m.call;busy=false;}
 else if(m.type==='offer'&&role==='worker'){closePeer(false);call=m.call;const p=newPeer();p.ontrack=ev=>{if(pc!==p)return;source?.disconnect();source=ctx.createMediaStreamSource(new MediaStream([ev.track]));source.connect(ctx.destination);};await p.setRemoteDescription({type:'offer',sdp:m.sdp});await p.setLocalDescription(await p.createAnswer());await gather(p);if(pc===p)send({type:'answer',call:m.call,sdp:p.localDescription.sdp});}
 else if(m.type==='answer'&&role==='admin'&&call===m.call&&pc)await pc.setRemoteDescription({type:'answer',sdp:m.sdp});
 else if(m.type==='end'&&call===m.call){closePeer(false);status('انتهى الاتصال');}
