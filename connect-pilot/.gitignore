@@ -1,0 +1,4 @@
+node_modules/
+connect.local.json
+*.pem
+*.key
